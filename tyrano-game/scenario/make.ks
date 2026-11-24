@@ -14,5 +14,10 @@ if (Array.isArray(f.game_backlog)) {
 [if exp="f.restore_background"]
 [bg storage=&f.restore_background time=140 wait=true position=center]
 [endif]
-[eval exp="window.parent.dreamhealer.restored(f.game_beat)"]
+[iscript]
+const bridge = window.parent.dreamhealer;
+// A browser can retain the previous title-page script between deploys.
+if (typeof bridge?.restored === "function") bridge.restored(f.game_beat);
+else if (f.game_beat && typeof bridge?.reached === "function") bridge.reached(f.game_beat);
+[endscript]
 [return]
