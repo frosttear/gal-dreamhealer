@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.chapter_assets = ["data/bgimage/interview.webp", "data/bgimage/yuapartment.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/bai.webp", "data/fgimage/yu.webp", "data/fgimage/yuyu.webp"];
+f.chapter_assets = ["data/bgimage/interview.webp", "data/bgimage/yuapartment.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/bai.webp", "data/fgimage/baifocused.webp", "data/fgimage/yu.webp", "data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=su storage=su.webp jname="苏禹"]
@@ -12,6 +12,7 @@ f.chapter_assets = ["data/bgimage/interview.webp", "data/bgimage/yuapartment.web
 [chara_new name=shen storage=shen.webp jname="沈义"]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_new name=bai storage=bai.webp jname="白羽"]
+[chara_face name=bai face=focused storage=baifocused.webp]
 [chara_new name=yu storage=yu.webp jname="余筱玲"]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
 
@@ -332,7 +333,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat25
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=bai left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=bai face=focused left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 25, "scene": "interview", "discoveries": ["tissuecheck"], "chapter": 12};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

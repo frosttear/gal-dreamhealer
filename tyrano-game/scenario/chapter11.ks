@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.chapter_assets = ["data/bgimage/hospitalroom.webp", "data/bgimage/facelesshall.webp", "data/bgimage/mirrorhall.webp", "data/bgimage/mirrorward.webp", "data/bgimage/interview.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yanfocused.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/psychdespair.webp", "data/fgimage/faceless.webp"];
+f.chapter_assets = ["data/bgimage/hospitalroom.webp", "data/bgimage/facelesshall.webp", "data/bgimage/mirrorhall.webp", "data/bgimage/mirrorward.webp", "data/bgimage/interview.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yanfocused.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/psychdespair.webp", "data/fgimage/psychwary.webp", "data/fgimage/faceless.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=su storage=su.webp jname="苏禹"]
@@ -12,13 +12,14 @@ f.chapter_assets = ["data/bgimage/hospitalroom.webp", "data/bgimage/facelesshall
 [chara_new name=shen storage=shen.webp jname="沈义"]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_new name=psych storage=psychdespair.webp jname="女人"]
+[chara_face name=psych face=wary storage=psychwary.webp]
 [chara_new name=faceless storage=faceless.webp jname="无脸人"]
 
 *beat1
 [cm]
 [chara_hide_all time=0 wait=true]
 [bg storage=hospitalroom.webp time=160 wait=true position=center]
-[chara_show name=psych left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=psych face=wary left=640 top=55 height=510 time=0 wait=true]
 [chara_show name=su storage=su.webp left=300 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 1, "scene": "hospital", "discoveries": ["psychid"], "chapter": 11};

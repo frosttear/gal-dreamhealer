@@ -1,8 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp"];
+f.chapter_assets = ["data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/chisuspicious.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=chi storage=chi.webp jname="迟欢"]
+[chara_face name=chi face=suspicious storage=chisuspicious.webp]
 
 *beat1
 [cm]
@@ -42,7 +44,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="梦与嫌疑"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【梦与嫌疑】[r]
-沈义说，余筱玲曾梦见高杉杉死去。迟欢质疑一个梦能否洗清嫌疑，沈义摇头：他并没有排除她。[p]
+沈义说，余筱玲曾梦见高杉杉死去。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=chi face=suspicious left=640 top=55 height=510 time=0 wait=true]
+迟欢质疑：一个梦就能洗清嫌疑吗？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+沈义摇头：他并没有排除她。[p]
 
 *beat4
 [cm]
