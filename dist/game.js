@@ -174,6 +174,27 @@ function openDialog(title) {
   return $('dialog-content');
 }
 
+function catalogPortrait(art) {
+  const slot = document.createElement('div');
+  slot.className = 'catalog-portrait';
+  const placeholder = document.createElement('div');
+  placeholder.className = 'portrait-placeholder';
+  placeholder.textContent = '加载中';
+  const img = document.createElement('img');
+  img.alt = '';
+  img.hidden = true;
+  slot.append(placeholder, img);
+
+  img.src = portraitUrl(art);
+  img.decode().then(() => {
+    img.hidden = false;
+    placeholder.hidden = true;
+  }, () => {
+    placeholder.textContent = '立绘暂未加载';
+  });
+  return slot;
+}
+
 function showCatalog() {
   const content = openDialog('图鉴');
   const tabs = document.createElement('div');
@@ -193,12 +214,7 @@ function showCatalog() {
       const known = unlocked.has(key);
       const card = document.createElement('article');
       card.className = 'card';
-      if (known && art) {
-        const img = document.createElement('img');
-        img.src = portraitUrl(art);
-        img.alt = '';
-        card.append(img);
-      }
+      if (known && art) card.append(catalogPortrait(art));
       const heading = document.createElement('strong');
       const detail = document.createElement('p');
       heading.textContent = known ? name : '未解锁';

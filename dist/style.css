@@ -22,7 +22,26 @@ dialog::backdrop { background: #08080bd0; }
 .tabs button[aria-pressed="true"] { border-color: #f0a393; background: #3a2830; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .65rem; }
 .card { padding: .85rem; border: 1px solid #49414b; background: #20212a; }
-.card img { display: block; width: 100%; height: 115px; object-fit: contain; }
+.catalog-portrait {
+  display: grid;
+  place-items: center;
+  height: 115px;
+  margin-bottom: .45rem;
+  background: radial-gradient(ellipse at center, #2d2732, #181820);
+  border-radius: 3px;
+}
+.catalog-portrait img { display: block; width: 100%; height: 115px; object-fit: contain; }
+.portrait-placeholder { display: grid; justify-items: center; gap: .35rem; color: #e2c8c5; font-size: .875rem; }
+.portrait-placeholder::before {
+  content: "";
+  width: 43px;
+  height: 43px;
+  border: 1px solid #66515a;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 33%, #9b7580 0 6px, transparent 7px),
+    radial-gradient(ellipse at 50% 88%, #9b7580 0 12px, transparent 13px);
+}
 .card p { margin: .4em 0; line-height: 1.5; }
 @media (max-width: 600px) { nav button { padding: .48em .65em; } }
 
