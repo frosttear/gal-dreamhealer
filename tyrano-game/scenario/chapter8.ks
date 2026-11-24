@@ -353,7 +353,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="第八章完"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 第八章完[r]一个猜想，将旧案与眼前的女孩再次联系起来。
-[glink x=342 y=360 width=340 size=30 text="返回主界面" storage=chapter8.ks target="*returnTitle" keyfocus=1]
+[glink x=342 y=360 width=340 size=30 text="继续第九章" storage=chapter9.ks keyfocus=1]
 [s]
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]
