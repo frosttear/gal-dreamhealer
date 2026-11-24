@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp"];
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 
@@ -20,7 +20,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat2
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
-[bg storage=rain.webp time=140 wait=true position=center]
+[call storage=rain-scene.ks target=*enter]
 [iscript]
 f.game_beat = {"n":2,"scene":"rain","discoveries":["li"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -81,7 +81,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 
 *beat5
 [cm]
-[bg storage=office.webp time=140 wait=true position=center]
+[call storage=rain-scene.ks target=*leave]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":5,"scene":"office","discoveries":[],"chapter":3};
@@ -96,7 +96,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
 [bg storage=bistro.webp time=140 wait=true position=center]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":6,"scene":"bistro","discoveries":["threecases"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

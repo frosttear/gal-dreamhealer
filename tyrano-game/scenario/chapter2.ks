@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/qin.webp","data/fgimage/xueinterview.webp"];
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/qin.webp","data/fgimage/xueinterview.webp","data/fgimage/yansmile.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=chi storage=chi.webp jname="迟欢"]
@@ -93,7 +93,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [cm]
 [chara_hide name=xue time=0 wait=true pos_mode=false]
 [bg storage=hall.webp time=140 wait=true position=center]
-[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yu storage=yu.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":5,"scene":"hall","discoveries":["dreamstatement"],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -158,19 +158,19 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat10
 [cm]
 [chara_hide name=chen time=0 wait=true pos_mode=false]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yansmile.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":10,"scene":"bistro","discoveries":["deep35"],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="威士忌的暗号"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【苏禹 · 威士忌的暗号】[r]
-三十五度，不用调，倒三层。颜歆疑惑地抬起头。进了包间才明白，苏禹点的是入梦药剂「深眠35」。[p]
+【颜歆 · 威士忌的暗号】[r]
+进了包间，颜歆才明白苏禹点的是入梦药剂「深眠35」。她笑着朝桌边打招呼：「三水哥，好久不见。」[p]
 
 *beat11
 [cm]
-[chara_hide name=su time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [chara_show name=xue face=interview left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":11,"scene":"bistro","discoveries":["alias"],"chapter":2};
@@ -184,7 +184,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat12
 [cm]
 [chara_hide name=xue time=0 wait=true pos_mode=false]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":12,"scene":"bistro","discoveries":[],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

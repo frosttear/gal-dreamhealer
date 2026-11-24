@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp"];
+f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -181,7 +181,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat12
 [cm]
 [chara_hide name=shen time=0 wait=true pos_mode=false]
-[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yu storage=yucold.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":12,"scene":"case","discoveries":[]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
