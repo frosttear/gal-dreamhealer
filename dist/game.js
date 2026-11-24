@@ -1,5 +1,35 @@
 const $ = id => document.getElementById(id);
-const portraits = ['yu', 'shen', 'su', 'yan'];
+const portraitStage = $('portrait');
+const portraitAssets = new Map();
+let activePortrait = '';
+
+function portraitUrl(art) {
+  return 'assets/' + art + '.webp';
+}
+
+for (const art of new Set([...story.map(beat => beat[4]), ...Object.values(notes).map(note => note[3])])) {
+  if (!art) continue;
+  const img = new Image();
+  img.alt = '';
+  img.src = portraitUrl(art);
+  const asset = { img, decoded: false };
+  asset.ready = img.decode().then(() => { asset.decoded = true; return img; }, () => null);
+  portraitAssets.set(art, asset);
+}
+
+function showPortrait(art) {
+  if (activePortrait === art) return;
+  activePortrait = art;
+  const asset = portraitAssets.get(art);
+  if (asset?.decoded) {
+    portraitStage.replaceChildren(asset.img);
+    return;
+  }
+  portraitStage.replaceChildren();
+  asset?.ready.then(img => {
+    if (img && activePortrait === art) portraitStage.replaceChildren(img);
+  });
+}
 const saveKey = 'dreamhealer.chapter1.save';
 const unlockKey = 'dreamhealer.chapter1.unlocks';
 const overlay = $('overlay');
@@ -32,8 +62,7 @@ function render() {
   $('title').textContent = title;
   $('line').textContent = ended ? '这笔委托，将把两条调查引向同一座小区。' : line;
   $('progress').textContent = (position + 1) + ' / ' + story.length;
-  $('portrait').hidden = !portrait || ended;
-  if (portrait) $('portrait').src = 'assets/' + portrait + '.webp';
+  showPortrait(ended ? '' : portrait);
   $('choices').replaceChildren();
   $('status').textContent = '';
   if (!ended) {
@@ -99,9 +128,9 @@ function showCatalog() {
       const known = unlocked.has(key);
       const card = document.createElement('article');
       card.className = 'card';
-      if (known && portraits.includes(art)) {
+      if (known && art) {
         const img = document.createElement('img');
-        img.src = 'assets/' + art + '.webp';
+        img.src = portraitUrl(art);
         img.alt = '';
         card.append(img);
       }
