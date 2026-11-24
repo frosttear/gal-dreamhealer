@@ -8,6 +8,7 @@ const covers = [
   ['case', '扬城疑案'],
   ['coffee', '舒颜咖啡']
 ];
+const chapters = { 1: ['第一章', 16], 2: ['第二章', 13], 3: ['第三章', 15] };
 const unlocked = new Set(read(unlockKey) ?? []);
 let coverIndex = Math.max(
   0,
@@ -53,6 +54,7 @@ function showMenu(message = '') {
   const [scene, label] = covers[coverIndex];
   $('main-menu').dataset.cover = scene;
   $('menu-scene').textContent = label;
+  $('menu-scene').hidden = scene === 'coffee';
   $('cover').src = 'assets/title-' + scene + '.webp';
   const manualSave = hasSave('quick');
   const canResume = hasSave('auto') || manualSave;
@@ -67,14 +69,14 @@ function showMenu(message = '') {
 
 function launch(mode) {
   launchMode = mode;
-  $('status').textContent = '正在载入第一章…';
+  $('status').textContent = '正在载入剧情…';
   $('main-menu').hidden = true;
   $('game').hidden = false;
   $('stage').setAttribute('aria-busy', 'true');
   $('progress').textContent = '';
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
   frame = document.createElement('iframe');
-  frame.title = '第一章 · TyranoScript 剧情';
+  frame.title = '梦境诊疗师 · TyranoScript 剧情';
   frame.addEventListener('load', () => {
     if (frame && !engine && !frame.contentDocument?.getElementById('tyrano_base')) {
       showMenu('找不到游戏引擎。请确认部署的游戏目录包含 engine/index.html。');
@@ -105,9 +107,11 @@ window.dreamhealer = {
     frame.focus();
   },
 
-  reached({ n, scene, discoveries, ended = false }) {
+  reached({ n, scene, discoveries, chapter = 1, ended = false }) {
     $('stage').setAttribute('aria-busy', 'false');
-    $('progress').textContent = ended ? '已完成' : ' · ' + n + ' / 16';
+    const [title, total] = chapters[chapter];
+    $('chapter-name').textContent = title;
+    $('progress').textContent = ended ? ' · 已完成' : ' · ' + n + ' / ' + total;
     for (const id of ['history', 'save']) $(id).disabled = false;
     $('load').disabled = !hasSave('quick');
     $('status').textContent = '';

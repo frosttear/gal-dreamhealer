@@ -260,8 +260,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-第一章完[r]这笔委托，将把两条调查引向同一座小区。
-[glink x=342 y=360 width=340 size=30 text="返回主界面" storage=chapter1.ks target="*returnTitle" keyfocus="1"]
+第一章完[r]下一站，扬城警察局。
+[glink x=342 y=360 width=340 size=30 text="继续第二章" storage=chapter2.ks keyfocus="1"]
 [s]
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]

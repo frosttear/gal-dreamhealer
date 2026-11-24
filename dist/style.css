@@ -96,3 +96,13 @@ dialog::backdrop { background: #08080bd0; }
   #game-name { white-space: normal; font-size: clamp(3rem, 10vw, 4.4rem); }
   .menu-credit { margin-bottom: 1.4rem; }
 }
+
+@media (max-width: 600px) {
+  #main-menu[data-cover="coffee"] #cover {
+    height: min(62svh, 28rem);
+    object-position: 79% center;
+  }
+  #main-menu[data-cover="coffee"]::after {
+    background: linear-gradient(0deg, #141e1e 43%, #141e1e00 71%);
+  }
+}

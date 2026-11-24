@@ -24,8 +24,8 @@ def install_game(project):
 
     shutil.copyfile(ROOT / "tyrano-game/system/backlog.html", project / "data/system/backlog.html")
 
-    chapter = (source / "chapter1.ks").read_text(encoding="utf-8")
-    for folder, name in sorted(set(re.findall(r"data/(bgimage|fgimage)/([a-z]+\.webp)", chapter))):
+    scenarios = "\n".join(path.read_text(encoding="utf-8") for path in source.glob("chapter*.ks"))
+    for folder, name in sorted(set(re.findall(r"data/(bgimage|fgimage)/([a-z]+\.webp)", scenarios))):
         shutil.copyfile(ROOT / "dist/assets" / name, project / "data" / folder / name)
 
     config = project / "data/system/Config.tjs"
