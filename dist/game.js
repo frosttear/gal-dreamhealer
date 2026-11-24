@@ -8,7 +8,7 @@ const covers = [
   ['case', '扬城疑案'],
   ['coffee', '舒颜咖啡']
 ];
-const chapters = { 1: ['第一章', 16], 2: ['第二章', 13], 3: ['第三章', 15], 4: ['第四章', 20] };
+const chapters = { 1: ['第一章', 16], 2: ['第二章', 13], 3: ['第三章', 15], 4: ['第四章', 20], 5: ['第五章', 22] };
 const unlocked = new Set(read(unlockKey) ?? []);
 let coverIndex = Math.max(
   0,
