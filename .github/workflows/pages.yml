@@ -22,7 +22,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           test -s dist/engine/index.html
-          for chapter in 1 2 3 4 5 6 7 8 9; do test -s "dist/engine/data/scenario/chapter$chapter.ks" || exit 1; done
+          for chapter in 1 2 3 4 5 6 7 8 9 10 11 12; do test -s "dist/engine/data/scenario/chapter$chapter.ks" || exit 1; done
           mkdir -p _site
           cp -R dist _site/dist
           cat > _site/index.html <<'HTML'

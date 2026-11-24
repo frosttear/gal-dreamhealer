@@ -146,7 +146,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="玩偶里的发现"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【玩偶里的发现】[r]
-护工拆开玩偶，发现了遗体。苏禹辨认出其中一块是小指的指骨，颜歆则在楼下厨房找到了另一部分。[p]
+护工拆开玩偶，发现了遗体。苏禹辨认出其中一块是指骨，大概是左手小指；颜歆则在楼下厨房找到了另一部分。[p]
 
 *beat12
 [cm]
@@ -211,7 +211,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="黄英的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【黄英的梦】[r]
-诊疗师找到黄英并强行入梦。黄英承认杀害了穆雨霁，动机却荒唐地指向女孩抱着娃娃睡觉的习惯。[p]
+诊疗师找到黄英并强行入梦，苏禹说事后在现实中也向她确认过，她承认杀害穆雨霁。梦中呈现的动机却荒唐地指向女孩抱着娃娃睡觉的习惯。[p]
 
 *beat17
 [cm]
@@ -237,7 +237,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="缺失的作案过程"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【缺失的作案过程】[r]
-黄英精神健康，作案时却像受到暗示。她承认了杀人，具体过程和现场都留下疑点。苏禹怀疑有人胁迫她，却找不到真正的幕后者。[p]
+据苏禹描述，梦里的黄英作案时像受到暗示；作案过程模糊，现场也留下疑点。他怀疑她受人胁迫，但没有找到能证实的线索。[p]
 
 *beat19
 [cm]

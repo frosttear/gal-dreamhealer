@@ -117,7 +117,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="另一种死因"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【陈清 · 另一种死因】[r]
-看起来像惊吓致死，也可能是深眠药剂引发的异常反应。陈清放下药瓶。苏禹问，如果涉案人也是同行呢？[p]
+陈清说，服用深眠35后三小时内若又摄入150毫升以上提神饮品，可能心跳过速，摄入更多甚至可能心跳骤停，表象像惊吓致死。这只是另一种可能。苏禹问，如果涉案人也是同行呢？[p]
 
 *beat8
 [cm]
@@ -197,7 +197,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="把两条调查线接起来"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [iscript]
-const lead = f.interview_route === "noise" ? "薛淼唯独没听见蝉鸣。" : "五号楼刚装修过，记下楼号。";
+const lead = f.interview_route === "noise" ? "薛淼没听见蝉鸣，迟欢的说法是试探。" : "薛淼记得装修的可能是五幢，楼号还要核实。";
 const rain = f.rain_route === "umbrella" ? "雨夜多出的白伞，要弄清楚是谁带来的。" : "湖边和小区都有人听到哭声，会是同一种异常吗？";
 f.follow_up = lead + rain;
 [endscript]
@@ -216,7 +216,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="一条新委托"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【颜歆 · 一条新委托】[r]
-暗网的页面跳出一个新账号发的公开委托。原帖的措辞还在，但多了连薛淼都没提供的死者资料。[p]
+暗网的页面跳出一个新账号发的公开委托。原帖的措辞还在，但多了苏禹几人此前接触不到的死者资料。[p]
 
 *beat15
 [cm]

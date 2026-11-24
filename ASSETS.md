@@ -1,6 +1,6 @@
 # 素材制作与接入
 
-已完成 12 张基础立绘，以及薛淼的笔录造型、余筱玲的冷静警惕表情和颜歆的熟人见面微笑，共 15 张可用素材。图鉴仍用常态立绘，表情和服装变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘。
+目前跟踪 13 张常态人物立绘和 7 张剧情变体或特殊人物立绘。图鉴使用常态立绘，表情和服装变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘；第十章新增女心理医生，第十一章增加她的疲惫表情和无脸梦中人。
 
 | 人物 | 原作依据与画面处理 |
 | --- | --- |
@@ -29,9 +29,9 @@
 
 | 类别 | `dist/assets/` 中已跟踪的 WebP 文件（省略后缀） |
 | --- | --- |
-| 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu |
-| 变体 | xueinterview、yansmile、yucold、yuyudream |
-| 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream |
+| 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu、psych |
+| 变体与特殊人物 | drowned、faceless、psychdespair、xueinterview、yansmile、yucold、yuyudream |
+| 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream、dreamclass、dreamclassfull、dreamlobby、dreamroom、dreamstairs、dreamstore、mentaloffice、mentalward、station、hospitalroom、facelesshall、mirrorhall、mirrorward |
 | 封面 | title-dream、title-case、title-coffee |
 
 素材目前来自 ImageGen，裁切后导出为独立 WebP。新增变体时以现有常态立绘为参考，保持脸型、发型、年龄、体态、光线和服装连续性，记录原稿依据和改编设定。立绘使用透明背景，检查边缘、头部高度和构图；背景检查透视、时代和地点标识。余筱玲与余雨的身份信息随剧情披露。
@@ -43,4 +43,4 @@
 
 第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。
 
-第八章使用 policecar 表现警方车内调查，blooddream 用于梦境洪水演出。
+第八章使用 policecar 表现警方车内调查，blooddream 用于梦境洪水演出。第十、十一章新增 mentaloffice（精神病院专家诊室）、mentalward（夜间病房）、station（扬城火车站）、hospitalroom（现实病房）、facelesshall、mirrorhall、mirrorward（梦中长廊与镜面病房）和 psych、psychdespair、faceless（心理医生及疲惫表情、匿名无脸人）。这些立绘与背景由 ImageGen 生成并转为透明 WebP 或 1280×720 WebP；医生的年龄、短发和服装属于改编设定，原稿未交代外貌。

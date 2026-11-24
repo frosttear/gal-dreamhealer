@@ -61,7 +61,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="笔录 · 声响"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【薛淼 · 笔录 · 声响】[r]
-「有人说蝉鸣特别响。」迟欢试探着问。薛淼说那里没几棵树，只记得夜里的哭声。两人的证词和他的说法并不完全重合。[p]
+「有人说蝉鸣特别响。」迟欢故意夸大声响试探他。薛淼说那里没几棵树，质疑哪来的蝉鸣；另两人其实回忆许久才想起蝉声。薛淼也可能因专注写作或恐惧而忽略了。[p]
 [jump target=*beat4]
 *building
 [cm]
@@ -75,7 +75,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="笔录 · 五号楼"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【薛淼 · 笔录 · 五号楼】[r]
-薛淼想起有人前阵子刚搬来，装修声很大。好像就在他家前面那幢，五号楼。迟欢把门牌号记了下来。[p]
+薛淼想起有人前阵子刚搬来，装修声很大，好像是他家前面那幢，可能是五幢。迟欢记下这个待核实的楼号。[p]
 [jump target=*beat4]
 
 *beat4
@@ -125,7 +125,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="夜里的哭声"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【沈义 · 夜里的哭声】[r]
-余筱玲说她醒后下过楼，还小声承认，前天夜里哭的人也许就是她。沈义记下了这句话，答应中午带她去吃肯德基。[p]
+余筱玲说醒后下楼看过，天太黑什么也没看见；昨天她还隔一会儿就下楼转一圈。她小声承认，前天夜里哭的人也许就是她。沈义记下这些，答应中午带她去吃肯德基。[p]
 
 *beat8
 [cm]

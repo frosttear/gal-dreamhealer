@@ -68,7 +68,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【女孩 · 红裙】[r]
-楼下有个穿红裙的女人。我把电子钟扔下去求救。碎裂声过后，她忽然回过头，直直地望向我。[p]
+楼下有个穿红裙的女人。我把电子钟扔下去求救，她却像没听见。接着她扭头直直望向我，又看向身后，露出惊恐的表情。[p]
 
 *beat5
 [cm]
@@ -82,7 +82,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【女孩 · 醒来】[r]
-女人倒了下去。片刻后，身后传来一声脆响。[r]我猛地坐起来，摸到自己的脖子，还好好的。只是手腕有点酸。[p]
+女人像喘不过气，手按住咽喉，倒了下去。身后传来一声脆响：她不知何时到了我身后，扭断了我的脖子。[r]我猛地坐起来，摸到脖子，还好好的。只是手腕有点酸。[p]
 
 *beat6
 [cm]
@@ -98,7 +98,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【沈义 · 扬城 · 7 月 26 日】[r]
-我出示证件，跨过警戒线。老小区的路中央躺着一名黑裙女子，周围的人刻意避开她的脸。[p]
+我出示证件，跨过警戒线。民警说九点二十四分接警后，急救人员确认女子已无生命体征，现场才封控。黑裙女子躺在路中央，周围的人刻意避开她的脸。[p]
 
 *beat7
 [cm]
@@ -113,7 +113,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【白羽 · 初步勘验】[r]
-沈叔，没找到刀伤或击打伤。她看起来是被吓死的。[p]
+沈叔，初步没发现明显刀伤或击打伤。她拽着领口，倒下前可能喘不上气。吓死是报案人的猜测，死因还得检验。[p]
 
 *beat8
 [cm]
@@ -128,7 +128,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【薛淼 · 报案人】[r]
-我叫薛淼。九点二十四分报的警。我下楼扔垃圾才看见她，之前戴着耳机，没听见尖叫。
+我叫薛淼。九点二十四分报的警，下楼扔垃圾看见她后只隔了几秒。之前我戴着耳机，没听见尖叫。
 [glink x=352 y=260 width=320 size=28 text="追问周围的人" storage=chapter1.ks target="*beat9" keyfocus="1"]
 [glink x=352 y=330 width=320 size=28 text="记录报案时间" storage=chapter1.ks target="*beat9" keyfocus="2"]
 [s]
@@ -146,7 +146,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【沈义 · 死者身份】[r]
-高杉杉，二十六岁，实验小学的音乐老师。让人去趟学校，我留在现场。[p]
+邻居指认，照片和住户登记也初步对上：高杉杉，二十六岁，实验小学音乐老师。让人去学校确认身份，我留在现场。[p]
 
 *beat10
 [cm]
@@ -176,7 +176,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【沈义 · 小姨】[r]
-自称小姨的女人起初要把筱玲拖回去，听说孩子要去做笔录，又忽然答应了。我接过她写的联系方式。她没有右手小指。[p]
+自称小姨的女人要把筱玲拖回去，却避开监护人的问题。我让同事先陪孩子去警车旁，安排合适的人到场，再核实她的身份。她留下地址和电话，右手没有小指。[p]
 
 *beat12
 [cm]
@@ -220,7 +220,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【颜歆 · 刷新】[r]
-昨晚十一点半发的帖……等等，我刷新一下。[r]今天九点二十四分，他发现一具女尸，已经报警了。[p]
+昨晚十一点半发的帖……等等，我刷新一下。[r]今天九点二十四分前后，他发现一具女尸并报了警。他觉得她像被吓死的，那只是他的猜测。[p]
 
 *beat15
 [cm]
@@ -235,7 +235,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【苏禹 · 要不要下去】[r]
-对梦境诊疗师而言，去现场才叫“下去”。入梦一型能把意识接到患者的梦境，警方也因此盯得紧。这次已经有人报警。[p]
+对梦境诊疗师而言，去现场才叫“下去”。入梦一型能把意识接到患者的梦境，警方也因此盯得紧。梦里看到的未必是亲历，线索还得在现实核实。[p]
 
 *beat16
 [cm]
@@ -248,7 +248,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【苏禹 · 七十万】[r]
-五万定金已经到账，办完一共七十万。等他做完笔录，我们亲自去那个小区。[r]三水哥开出这个价，这单恐怕有点危险。[p]
+五万定金已经到账，办完一共七十万。等他做完笔录，先听清委托，再去小区问人认地方，警戒线里别碰。[r]三水哥开出这个价，这单恐怕有点危险。[p]
 
 *ending
 [cm]

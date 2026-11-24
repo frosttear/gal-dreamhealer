@@ -240,7 +240,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="洋娃娃里的连接器"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【洋娃娃里的连接器】[r]
-苏禹展示便携式连接器的购买页面。旧案中，设备藏在穆雨霁的洋娃娃里，可以远程连接入梦。[p]
+苏禹展示便携式连接器的购买页面。旧案中，设备藏在穆雨霁的洋娃娃里，可以远程连接入梦。他推测，这或许能解释余筱玲目击凶案后为何入睡，但设备当晚是否被使用仍未证实。[p]
 
 *beat19
 [cm]
@@ -305,7 +305,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="一条可能的时间线"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【一条可能的时间线】[r]
-苏禹试着串起三年前的帖子、失忆的穆雨霁、黄英送来的娃娃，以及一年前的失踪。凶手有多少人仍未确定。[p]
+苏禹试着串起一条可能的时间线：三年前出现旧帖，失忆的穆雨霁同年进入福利院；两年前，黄英送来藏有连接器的娃娃；一年前，穆雨霁失踪，另有人遇害并被分尸。这些事是否相关、凶手有多少人，仍未确定。[p]
 
 *beat24
 [cm]
@@ -344,7 +344,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="另一种猜测"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【另一种猜测】[r]
-颜歆猜测，也许余筱玲把妹妹推入河中。苏禹指出，三年前的帖子和后来发生的事仍难以用这一猜测解释。[p]
+颜歆猜测，也许余筱玲把妹妹推入河中。苏禹翻出三年前留存的旧帖截图，指出这一猜测仍难以解释帖子与后来发生的事。截图只能证明他当时读过那些文字，无法证明发帖者是如何知情的。[p]
 
 *beat27
 [cm]
@@ -380,7 +380,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="第九章完"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 第九章完[r]三年前的往事，也许藏着另一条线索。
-[glink x=342 y=360 width=340 size=30 text="返回主界面" storage=chapter9.ks target="*returnTitle" keyfocus=1]
+[glink x=342 y=360 width=340 size=30 text="继续第十章" storage=chapter10.ks keyfocus=1]
 [s]
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]
