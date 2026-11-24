@@ -40,8 +40,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【档案 · 门口还是湖边】[r]
 手电筒扫到门旁的雨伞，哭声则从湖边传来。先留意哪里？
-[glink x=165 y=364 width=320 size=30 text="清点门边雨伞" storage=chapter3.ks target="*umbrella" keyfocus="1"]
-[glink x=530 y=364 width=320 size=30 text="循哭声看湖面" storage=chapter3.ks target="*lake" keyfocus="2"]
+[glink x=352 y=260 width=320 size=28 text="清点门边雨伞" storage=chapter3.ks target="*umbrella" keyfocus="1"]
+[glink x=352 y=330 width=320 size=28 text="循哭声看湖面" storage=chapter3.ks target="*lake" keyfocus="2"]
 [s]
 *umbrella
 [cm]
@@ -238,7 +238,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="第三章完"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 第三章完[r]未结的委托，仍在等人接手。
-[glink x=342 y=360 width=340 size=30 text="返回主界面" storage=chapter3.ks target="*returnTitle" keyfocus=1]
+[glink x=342 y=360 width=340 size=30 text="继续第四章" storage=chapter4.ks keyfocus=1]
 [s]
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]

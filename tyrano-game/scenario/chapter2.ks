@@ -46,8 +46,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【迟欢 · 决定追问方向】[r]
 迟欢把手放回键盘上。下一句，可以顺着声音问，也可以问小区最近有什么变化。
-[glink x=165 y=364 width=320 size=30 text="追问异常声响" storage=chapter2.ks target="*noise" keyfocus="1"]
-[glink x=530 y=364 width=320 size=30 text="追问新住户" storage=chapter2.ks target="*building" keyfocus="2"]
+[glink x=352 y=260 width=320 size=28 text="追问异常声响" storage=chapter2.ks target="*noise" keyfocus="1"]
+[glink x=352 y=330 width=320 size=28 text="追问新住户" storage=chapter2.ks target="*building" keyfocus="2"]
 [s]
 *noise
 [cm]

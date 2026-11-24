@@ -53,8 +53,8 @@ window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【女孩 · 打不开的门】[r]
 门推不动。我一拳砸过去，手上的力气在碰到木板时散得一干二净。外面却传来了脚步声。
-[glink x=165 y=364 width=320 size=30 text="回到窗边" storage=chapter1.ks target="*beat4" keyfocus="1"]
-[glink x=530 y=364 width=320 size=30 text="再听一会儿" storage=chapter1.ks target="*beat4" keyfocus="2"]
+[glink x=352 y=260 width=320 size=28 text="回到窗边" storage=chapter1.ks target="*beat4" keyfocus="1"]
+[glink x=352 y=330 width=320 size=28 text="再听一会儿" storage=chapter1.ks target="*beat4" keyfocus="2"]
 [s]
 
 *beat4
@@ -129,8 +129,8 @@ window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【薛淼 · 报案人】[r]
 我叫薛淼。九点二十四分报的警。我下楼扔垃圾才看见她，之前戴着耳机，没听见尖叫。
-[glink x=165 y=364 width=320 size=30 text="追问周围的人" storage=chapter1.ks target="*beat9" keyfocus="1"]
-[glink x=530 y=364 width=320 size=30 text="记录报案时间" storage=chapter1.ks target="*beat9" keyfocus="2"]
+[glink x=352 y=260 width=320 size=28 text="追问周围的人" storage=chapter1.ks target="*beat9" keyfocus="1"]
+[glink x=352 y=330 width=320 size=28 text="记录报案时间" storage=chapter1.ks target="*beat9" keyfocus="2"]
 [s]
 
 *beat9
