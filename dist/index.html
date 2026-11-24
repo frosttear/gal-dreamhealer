@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>梦境诊疗师 · 第一章</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="story.js"></script><script defer src="game.js"></script>
+</head>
+<body>
+<main id="game" data-scene="dream">
+  <div id="backdrop"></div><img id="portrait" alt="" hidden>
+  <header><div><span class="chapter">第一章</span><strong>梦境诊疗师</strong></div><nav aria-label="游戏菜单"><button id="catalog">图鉴</button><button id="history">回顾</button><button id="save">存档</button><button id="load">读档</button></nav></header>
+  <section id="reading">
+    <div class="scene"><span id="title"></span><span id="progress"></span></div>
+    <div class="panel" aria-live="polite">
+      <h1 id="speaker"></h1><p id="line"></p><div id="choices"></div>
+      <footer><span id="status" role="status"></span><button id="next">继续</button></footer>
+    </div>
+  </section>
+</main>
+<dialog id="overlay"><div class="dialog-head"><h2 id="dialog-title"></h2><form method="dialog"><button>关闭</button></form></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
