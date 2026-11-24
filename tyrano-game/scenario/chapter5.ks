@@ -301,7 +301,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="第五章完"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 第五章完[r]连接已经建立，梦中的调查即将开始。
-[glink x=342 y=360 width=340 size=30 text="返回主界面" storage=chapter5.ks target="*returnTitle" keyfocus=1]
+[glink x=342 y=360 width=340 size=30 text="继续第六章" storage=chapter6.ks keyfocus=1]
 [s]
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]

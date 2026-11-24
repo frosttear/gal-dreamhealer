@@ -7,7 +7,7 @@
 | `dist/index.html`、`style.css` | 原生 HTML/CSS 外壳，主菜单、舞台、按钮和图鉴对话框 |
 | `dist/game.js` | 原生 JavaScript，iframe 生命周期、导航、运行状态、封面和浏览器记录 |
 | `dist/catalog.js`、`dist/assets/` | 图鉴数据与 WebP 源资产 |
-| `tyrano-game/scenario/` | TyranoScript 剧本。first.ks 启动，make.ks 读档钩子，chapter1–5 主线，rain-scene.ks 公用回忆演出 |
+| `tyrano-game/scenario/` | TyranoScript 剧本。first.ks 启动，make.ks 读档钩子，chapter1–6 主线，rain-scene.ks 公用回忆演出 |
 | `tyrano-game/system/backlog.html` | 引擎回顾模板 |
 | `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与回顾模板，注入配置 |
 | `dist/engine/`、`.tyrano-preview/` | 忽略的生成引擎和本地预览目录 |
