@@ -1,7 +1,7 @@
 [position layer=message0 left=48 top=451 width=928 height=240 marginl=25 marginr=25 margint=18 marginb=12 opacity=225 color=0x12121a]
 [layopt layer=message0 visible=true]
 [deffont face="sans-serif" size=38 color=0xfaf4eb]
-[delay speed=1]
+[delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
 f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp"];

@@ -45,11 +45,15 @@ function hasSave(kind) {
   }
 }
 
-function showMenu(message = '') {
+function clearRuntime() {
   clearTimeout(bootTimeout);
   engine = undefined;
   frame?.remove();
   frame = undefined;
+}
+
+function showMenu(message = '') {
+  clearRuntime();
   saving = false;
   const [scene, label] = covers[coverIndex];
   $('main-menu').dataset.cover = scene;
@@ -68,24 +72,33 @@ function showMenu(message = '') {
 }
 
 function launch(mode) {
+  clearRuntime();
   launchMode = mode;
+  $('retry').hidden = true;
   $('status').textContent = '正在载入剧情…';
   $('main-menu').hidden = true;
   $('game').hidden = false;
   $('stage').setAttribute('aria-busy', 'true');
   $('progress').textContent = '';
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
-  frame = document.createElement('iframe');
-  frame.title = '梦境诊疗师 · TyranoScript 剧情';
-  frame.addEventListener('load', () => {
-    if (frame && !engine && !frame.contentDocument?.getElementById('tyrano_base')) {
-      showMenu('找不到游戏引擎。请确认部署的游戏目录包含 engine/index.html。');
+  const runtimeFrame = document.createElement('iframe');
+  frame = runtimeFrame;
+  runtimeFrame.title = '梦境诊疗师 · TyranoScript 剧情';
+  runtimeFrame.addEventListener('load', () => {
+    if (frame === runtimeFrame && !engine && !runtimeFrame.contentDocument?.getElementById('tyrano_base')) {
+      clearTimeout(bootTimeout);
+      runtimeFrame.hidden = true;
+      $('stage').setAttribute('aria-busy', 'false');
+      $('status').textContent = '暂时无法载入游戏引擎。';
+      $('retry').hidden = false;
     }
   });
-  frame.src = 'engine/index.html';
-  $('stage').append(frame);
+  runtimeFrame.src = 'engine/index.html';
+  $('stage').append(runtimeFrame);
   bootTimeout = setTimeout(() => {
-    showMenu('游戏引擎启动超时，请刷新后重试。');
+    if (frame !== runtimeFrame || engine) return;
+    $('status').textContent = '引擎加载较慢，可以继续等待或重新加载。';
+    $('retry').hidden = false;
   }, 12000);
 }
 
@@ -93,6 +106,8 @@ window.dreamhealer = {
   ready(runtime) {
     if (frame?.contentWindow !== runtime) return;
     clearTimeout(bootTimeout);
+    $('retry').hidden = true;
+    $('status').textContent = '正在载入剧情…';
     engine = runtime.TYRANO.kag;
     engine.on('storage-quicksave', () => {
       saving = false;
@@ -190,9 +205,14 @@ $('menu-load').onclick = () => launch('quick');
 $('menu-catalog').onclick = showCatalog;
 $('catalog').onclick = showCatalog;
 $('home').onclick = () => showMenu();
+$('retry').onclick = () => launch(launchMode);
 $('history').onclick = () => engine?.menu.displayLog();
 $('save').onclick = () => {
   if (!engine || saving) return;
+  if (engine.stat.is_adding_text || engine.stat.is_wait) {
+    $('status').textContent = '等当前台词显示完再存档。';
+    return;
+  }
   saving = true;
   $('save').disabled = true;
   engine.stat.f.game_backlog = engine.variable.tf.system.backlog.slice();

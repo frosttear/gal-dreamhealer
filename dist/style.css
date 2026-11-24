@@ -11,7 +11,7 @@ header { padding: .75rem clamp(.75rem, 3vw, 3rem); border-bottom: 1px solid #393
 header strong { display: block; font-family: serif; font-size: 1.4rem; letter-spacing: .12em; }
 .chapter, #status, #menu-status { color: #f1c2ae; font-size: .9rem; }
 #menu-status:empty { display: none; }
-#status { min-height: 2rem; padding: .3rem 1rem; }
+.game-status { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem .85rem; min-height: 2rem; padding: .3rem 1rem; }
 #stage { min-height: 0; background: #08090d; }
 #stage iframe { border: 0; width: 100%; height: 100%; display: block; }
 dialog { width: min(680px, 94vw); max-height: 85svh; background: #15161f; color: inherit; border: 1px solid #78636c; border-radius: 5px; padding: 1.15rem; overflow: auto; }
