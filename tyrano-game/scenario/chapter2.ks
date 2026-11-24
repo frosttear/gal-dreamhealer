@@ -1,12 +1,13 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/qin.webp","data/fgimage/xueinterview.webp","data/fgimage/yansmile.webp"];
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/qin.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=chi storage=chi.webp jname="迟欢"]
 [chara_new name=chen storage=chen.webp jname="陈清"]
 [chara_new name=qin storage=qin.webp jname="秦桥"]
 [chara_face name=xue face=interview storage=xueinterview.webp]
+[chara_face name=xue face=anxious storage=xueanxious.webp]
 
 *beat1
 [cm]
@@ -24,7 +25,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat2
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
-[chara_show name=xue face=interview left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=anxious left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":2,"scene":"interview","discoveries":[],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
