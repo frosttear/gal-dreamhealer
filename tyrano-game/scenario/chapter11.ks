@@ -94,7 +94,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="一场危险的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【医院 · 苏禹的判断】[r]
-苏禹推测，三年前她误判了梦境的危险，也像自己一样进入迷失域。他拿出药品和入梦一型，安慰颜歆说自己有经验；心里却承认，他早已不敢确认世界的虚实，只是妥协了。[p]
+苏禹推测，三年前她误判了梦境的危险，也像自己一样进入迷失域。[p]
+他拿出药品和入梦一型，安慰颜歆说自己有经验；心里却承认，他早已不敢确认世界的虚实，[p]
+只是妥协了。[p]
 
 *beat7
 [cm]
@@ -332,7 +334,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="断指的归属"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【梦境 · 一根手指】[r]
-颜歆指出，现有尸块无法直接尸检，苏禹还发现过一根手指。女人猜那可能是某个“疯子”为了让他们相信谋杀，自己切下来的；这仍只是她的猜测。[p]
+颜歆指出，现有尸块无法直接尸检，苏禹还发现过一根手指。[p]
+女人猜那可能是某个“疯子”为了让他们相信谋杀，自己切下来的；这仍只是她的猜测。[p]
 
 *beat25
 [cm]

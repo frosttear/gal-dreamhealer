@@ -84,7 +84,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【女孩 · 醒来】[r]
-女人像喘不过气，手按住咽喉，倒了下去。身后传来一声脆响：她不知何时到了我身后，扭断了我的脖子。[r]我猛地坐起来，摸到脖子，还好好的。只是手腕有点酸。[p]
+女人像喘不过气，手按住咽喉，倒了下去。身后传来一声脆响：她不知何时到了我身后，[p]
+扭断了我的脖子。[r]我猛地坐起来，摸到脖子，还好好的。只是手腕有点酸。[p]
 
 *beat6
 [cm]
@@ -100,7 +101,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【沈义 · 扬城 · 7 月 26 日】[r]
-我出示证件，跨过警戒线。民警说九点二十四分接警后，急救人员确认女子已无生命体征，现场才封控。黑裙女子躺在路中央，周围的人刻意避开她的脸。[p]
+我出示证件，跨过警戒线。民警说九点二十四分接警后，急救人员确认女子已无生命体征，[p]
+现场才封控。黑裙女子躺在路中央，周围的人刻意避开她的脸。[p]
 
 *beat7
 [cm]
@@ -178,7 +180,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【沈义 · 小姨】[r]
-自称小姨的女人要把筱玲拖回去，却避开监护人的问题。我让同事先陪孩子去警车旁，安排合适的人到场，再核实她的身份。她留下地址和电话，右手没有小指。[p]
+自称小姨的女人要把筱玲拖回去，却避开监护人的问题。我让同事先陪孩子去警车旁，[p]
+安排合适的人到场，再核实她的身份。她留下地址和电话，右手没有小指。[p]
 
 *beat12
 [cm]
@@ -222,7 +225,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【颜歆 · 刷新】[r]
-昨晚十一点半发的帖……等等，我刷新一下。[r]今天九点二十四分前后，他发现一具女尸并报了警。他觉得她像被吓死的，那只是他的猜测。[p]
+昨晚十一点半发的帖……等等，我刷新一下。[r]今天九点二十四分前后，他发现一具女尸并报了警。[p]他觉得她像被吓死的，那只是他的猜测。[p]
 
 *beat15
 [cm]
@@ -237,7 +240,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【苏禹 · 要不要下去】[r]
-对梦境诊疗师而言，去现场才叫“下去”。入梦一型能把意识接到患者的梦境，警方也因此盯得紧。梦里看到的未必是亲历，线索还得在现实核实。[p]
+对梦境诊疗师而言，去现场才叫“下去”。入梦一型能把意识接到患者的梦境，[p]警方也因此盯得紧。[p]梦里看到的未必是亲历，线索还得在现实核实。[p]
 
 *beat16
 [cm]
@@ -250,7 +253,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 【苏禹 · 七十万】[r]
-五万定金已经到账，办完一共七十万。等他做完笔录，先听清委托，再去小区问人认地方，警戒线里别碰。[r]三水哥开出这个价，这单恐怕有点危险。[p]
+五万定金已经到账，办完一共七十万。等他做完笔录，先听清委托，[p]再去小区问人认地方，警戒线里别碰。[r]三水哥开出这个价，这单恐怕有点危险。[p]
 
 *ending
 [cm]

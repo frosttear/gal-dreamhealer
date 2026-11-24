@@ -119,7 +119,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="另一种死因"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【陈清 · 另一种死因】[r]
-陈清说，服用深眠35后三小时内若又摄入150毫升以上提神饮品，可能心跳过速，摄入更多甚至可能心跳骤停，表象像惊吓致死。这只是另一种可能。苏禹问，如果涉案人也是同行呢？[p]
+陈清说，服用深眠35后三小时内若又摄入150毫升以上提神饮品，可能心跳过速，[p]
+摄入更多甚至可能心跳骤停，表象像惊吓致死。这只是另一种可能。苏禹问，如果涉案人也是同行呢？[p]
 
 *beat8
 [cm]

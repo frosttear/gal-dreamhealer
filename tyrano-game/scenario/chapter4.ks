@@ -212,7 +212,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="黄英的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【黄英的梦】[r]
-诊疗师找到黄英并强行入梦，苏禹说事后在现实中也向她确认过，她承认杀害穆雨霁。梦中呈现的动机却荒唐地指向女孩抱着娃娃睡觉的习惯。[p]
+诊疗师找到黄英并强行入梦，苏禹说事后在现实中也向她确认过，[p]她承认杀害穆雨霁。梦中呈现的动机却荒唐地指向女孩抱着娃娃睡觉的习惯。[p]
 
 *beat17
 [cm]

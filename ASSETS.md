@@ -1,6 +1,6 @@
 # 素材制作与接入
 
-目前跟踪 13 张常态人物立绘和 28 张剧情变体或特殊人物立绘。13 张常态立绘均已完成；变体包含 19 张表情或服装变化、9 张剧情形象。图鉴使用常态立绘，变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘，并在雨夜听到哭声时使用戒备表情；余雨在回忆雨夜中使用压抑恐惧表情，刘海继续遮挡身份；余筱玲在梦中教室面对人模时使用决然表情；女心理医生在第十一章病房初醒时使用坐起姿态，第十章新增的她仍保留疲惫表情和无脸梦中人。第五章余家问话新增沈义蹲姿与苏禹专注表情，福利院搜索劈骨刀时新增沈义持手电调查姿态；第三章咖啡馆研判新增颜歆整理线索姿态和迟欢翻阅旧档姿态；第四章颜歆检查洋娃娃中发现的连接器时使用调查姿态；第二章陈清说明入梦风险时使用严肃表情，秦桥发现新线索后使用担忧表情。
+目前跟踪 13 张常态人物立绘、3 张图鉴补充立绘和 28 张剧情变体或特殊人物立绘。剧情变体包含 19 张表情或服装变化、9 张姿态。黄英使用手持旧洋娃娃的独立图鉴立绘；李雄使用遮脸的病号背影，与李护工立绘不同以保留身份悬念；穆雨霁使用不具辨识度的背影剪影，档案缺少照片的设定仍然成立。图鉴使用常态或专用图鉴立绘，变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘，并在雨夜听到哭声时使用戒备表情；余雨在回忆雨夜中使用压抑恐惧表情，刘海继续遮挡身份；余筱玲在梦中教室面对人模时使用决然表情；女心理医生在第十一章病房初醒时使用坐起姿态，第十章新增的她仍保留疲惫表情和无脸梦中人。第五章余家问话新增沈义蹲姿与苏禹专注表情，福利院搜索劈骨刀时新增沈义持手电调查姿态；第三章咖啡馆研判新增颜歆整理线索姿态和迟欢翻阅旧档姿态；第四章颜歆检查洋娃娃中发现的连接器时使用调查姿态；第二章陈清说明入梦风险时使用严肃表情，秦桥发现新线索后使用担忧表情。
 
 | 人物 | 原作依据与画面处理 |
 | --- | --- |
@@ -30,6 +30,7 @@
 | 类别 | `dist/assets/` 中已跟踪的 WebP 文件（省略后缀） |
 | --- | --- |
 | 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu、psych |
+| 图鉴补充立绘 | huangying、lixiong、muyuji |
 | 变体与特殊人物 | baifocused、chenthoughtful、chireviewing、chisuspicious、drowned、faceless、liapprehensive、psychawake、psychdespair、psychwary、qinconcerned、shengentle、shencrouch、shensearch、sufocused、suworried、xueanxious、xueinterview、yanexamining、yanfocused、yanorganizing、yansmile、yucold、yudetermined、yushaken、yuyudream、yuyufearful、yuyutearful |
 | 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream、dreamclass、dreamclassfull、dreamlobby、dreamroom、dreamstairs、dreamstore、mentaloffice、mentalward、station、hospitalroom、facelesshall、mirrorhall、mirrorward |
 | 封面 | title-dream、title-case、title-coffee |

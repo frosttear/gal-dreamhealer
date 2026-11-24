@@ -26,7 +26,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="如何判断自己是谁"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 苏禹的问题】[r]
-苏禹从刚才的沉思中回过神，向沈义提出一个问题：人究竟怎么判断自己是谁？颜歆惊讶地看着他。他从未主动谈起三年前住院的事。[p]
+苏禹从刚才的沉思中回过神，向沈义提出一个问题：人究竟怎么判断自己是谁？[p]颜歆惊讶地看着他。他从未主动谈起三年前住院的事。[p]
 
 *beat2
 [cm]
@@ -39,7 +39,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="迷失域里的五辈子"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 五段记忆】[r]
-苏禹说，他曾在一名精神分裂患者的意识交融地带——迷失域里，带着不同记忆活过五辈子。现实只过去几个瞬息；他与颜歆是在进入深眠域时断开连接的。[p]
+苏禹说，他曾在一名精神分裂患者的意识交融地带——迷失域里，带着不同记忆活过五辈子。[p]
+现实只过去几个瞬息；他与颜歆是在进入深眠域时断开连接的。[p]
 
 *beat3
 [cm]
@@ -92,7 +93,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="五段人生"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【三年前 · 五段人生】[r]
-第一世是私家侦探苏雨，第二世是女法医萧筱，第三世是追凶殉职的警察武尚立，第四世是研究“入梦一型”的心理学博士王颖。第五世，是病榻上的无名患者。[p]
+第一世是私家侦探苏雨，第二世是女法医萧筱，第三世是追凶殉职的警察武尚立，[p]
+第四世是研究“入梦一型”的心理学博士王颖。第五世，是病榻上的无名患者。[p]
 
 *beat7
 [cm]
@@ -131,7 +133,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="是谁给的记忆"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【三年前 · 如果经历不属于自己】[r]
-苏禹问，如果某天发现自己的经历是别人给的、并未真正发生在自己身上，“我”还是“我”吗？五段人生里反复出现的一组细节，有几处后来能在旧档中找到对应记录；他因此怀疑有人借入梦植入记忆，但幕后是谁、为何这么做，都没有查明。[p]
+苏禹问，如果某天发现自己的经历是别人给的、并未真正发生在自己身上，“我”还是“我”吗？[p]
+五段人生里反复出现的一组细节，有几处后来能在旧档中找到对应记录；[p]
+他因此怀疑有人借入梦植入记忆，但幕后是谁、为何这么做，都没有查明。[p]
 
 *beat10
 [cm]
@@ -157,7 +161,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="记忆里的知识"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【三年前 · 医生的另一个问题】[r]
-医生转而问，记忆里的知识能否据为己用。苏禹从她手机屏保上的两个女孩、没有婚戒的痕迹、眼下的黑眼圈，以及她看向右上方的动作，推测她正焦虑自己的未来。[p]
+医生转而问，记忆里的知识能否据为己用。[p]苏禹从她手机屏保上的两个女孩、没有婚戒的痕迹，[p]眼下的黑眼圈，以及她看向右上方的动作，推测她正焦虑自己的未来。[p]
 
 *beat12
 [cm]
@@ -170,7 +174,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="一个主观猜测"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【三年前 · 观察与猜测】[r]
-女医生惊讶地问他是否因为心理学家的经历才会推断。苏禹说，警察的经验也教他观察；提出猜测的胆量同样重要。他心里猜，那份焦虑指向她自己而非女孩的未来，眼神里甚至流露出自私——这只是他的主观判断。[p]
+女医生惊讶地问他是否因为心理学家的经历才会推断。苏禹说，警察的经验也教他观察；[p]
+提出猜测的胆量同样重要。他心里猜，那份焦虑指向她自己而非女孩的未来，[p]
+眼神里甚至流露出自私——这只是他的主观判断。[p]
 
 *beat13
 [cm]
@@ -197,7 +203,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="监控里的夜访"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【三年前 · 第二天夜里】[r]
-苏禹熟睡时，女医生提着黑色手提箱来到病房，在他身旁坐下入梦。苏禹对此没有任何梦境记忆；后来，他才从监控里得知这次夜访。[p]
+苏禹熟睡时，女医生提着黑色手提箱来到病房，在他身旁坐下入梦。[p]苏禹对此没有任何梦境记忆；后来，他才从监控里得知这次夜访。[p]
 
 *beat15
 [cm]
@@ -289,7 +295,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="手提箱夹层里的照片"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 三人合照】[r]
-苏禹打开黑色手提箱，在夹层里找到一张合照：女医生和两个女孩笑得灿烂。沈义认出照片里的女医生是余筱玲的小姨；苏禹也认出她正是自己当年的心理医生。[p]
+苏禹打开黑色手提箱，在夹层里找到一张合照：女医生和两个女孩笑得灿烂。[p]
+沈义认出照片里的女医生是余筱玲的小姨；苏禹也认出她正是自己当年的心理医生。[p]
 
 *beat22
 [cm]
@@ -315,7 +322,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="沈义的假说"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 也许是一场实验】[r]
-沈义猜，她也许在用自己的方式实验苏禹提出的“人如何判断自己是谁”。苏禹只能说，也许她把两个女孩和这个问题联系在了一起。[p]
+沈义猜，她也许在用自己的方式实验苏禹提出的“人如何判断自己是谁”。[p]苏禹只能说，也许她把两个女孩和这个问题联系在了一起。[p]
 
 *beat24
 [cm]
@@ -341,7 +348,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="对梦境的怀疑"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 尚未证实的猜测】[r]
-苏禹猜，她或许每天都对两个女孩入梦；高杉杉死亡的预知梦，也可能与她有关。这些仍是推测。沈义觉得他们离真相近了一步，气氛稍稍松下来。[p]
+苏禹猜，她或许每天都对两个女孩入梦；高杉杉死亡的预知梦，也可能与她有关。[p]这些仍是推测。沈义觉得他们离真相近了一步，气氛稍稍松下来。[p]
 
 *beat26
 [cm]

@@ -80,7 +80,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="福利院与李护工"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹的梦境重述 · 李护工】[r]
-她在梦里知道扬城郊外有一所福利院，还见过李护工。可李护工两年前才去那里上班。她是否早就认识他，仍待调查；梦里见过的脸不能证明三年前相识。[p]
+她在梦里知道扬城郊外有一所福利院，还见过李护工。可李护工两年前才去那里上班。[p]
+她是否早就认识他，仍待调查；梦里见过的脸不能证明三年前相识。[p]
 
 *beat6
 [cm]
@@ -93,7 +94,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="梦中反复排演的案件"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹的梦境重述 · 反复排演】[r]
-苏禹称，女人在梦里一遍遍排演他们正在调查的案件。最初，她梦见自己杀死福利院女孩、再与余筱玲交换身份；这不是现实杀人的证据。[p]
+苏禹称，女人在梦里一遍遍排演他们正在调查的案件。[p]最初，她梦见自己杀死福利院女孩、再与余筱玲交换身份；[p]这不是现实杀人的证据。[p]
 
 *beat7
 [cm]
@@ -106,7 +107,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="从杀人到假死"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹的梦境重述 · 假死】[r]
-按这段梦境，女人发现原来的方案会被警方识破，后来转向假死。苏禹说，一年前的分尸案在梦里成了把余雨接回家的办法；这仍是梦中案情。[p]
+按这段梦境，女人发现原来的方案会被警方识破，后来转向假死。[p]苏禹说，一年前的分尸案在梦里成了把余雨接回家的办法；[p]这仍是梦中案情。[p]
 
 *beat8
 [cm]
@@ -394,7 +395,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="一次改动"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家的秘密 · 姐姐的坦白】[r]
-余筱玲说自己只用过一次：趁小姨接上机器，她改了芯片里原有的内容，本想让对方再也认不出姐妹。她不知道这次改动是否害了高老师，劝余雨不要再碰它。[p]
+余筱玲说自己只用过一次：趁小姨接上机器，她改了芯片里原有的内容，[p]本想让对方再也认不出姐妹。[p]
+她不知道这次改动是否害了高老师，[p]劝余雨不要再碰它。[p]
 
 *beat30
 [cm]
@@ -407,7 +409,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="暂时离开"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余家 · 她们自己作出的选择】[r]
-苏禹和颜歆敲门。沈义已知情，姐妹可以先去安全处住几天，再把知道的事告诉警方。余筱玲和余雨商量后同意，只带换洗衣物，其余留在原处。[p]
+苏禹和颜歆敲门。沈义已知情，姐妹可以先去安全处住几天，再把知道的事告诉警方。[p]余筱玲和余雨商量后同意，只带换洗衣物，[p]其余留在原处。[p]
 
 *beat31
 [cm]

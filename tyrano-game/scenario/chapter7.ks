@@ -138,7 +138,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="被推动的案件"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【被推动的案件】[r]
-苏禹想起两人刚才在梦中见到的死亡场景，却无法确定梦与现实之间的因果。他怀疑所有人看到的线索都不完整，黄英也可能只是被推到台前的一枚棋子。[p]
+苏禹想起两人刚才在梦中见到的死亡场景，却无法确定梦与现实之间的因果。[p]
+他怀疑所有人看到的线索都不完整，黄英也可能只是被推到台前的一枚棋子。[p]
 
 *beat11
 [cm]
