@@ -75,10 +75,15 @@ function launch(mode) {
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
   frame = document.createElement('iframe');
   frame.title = '第一章 · TyranoScript 剧情';
+  frame.addEventListener('load', () => {
+    if (frame && !engine && !frame.contentDocument?.getElementById('tyrano_base')) {
+      showMenu('找不到游戏引擎。请确认部署的游戏目录包含 engine/index.html。');
+    }
+  });
   frame.src = 'engine/index.html';
   $('stage').append(frame);
   bootTimeout = setTimeout(() => {
-    showMenu('引擎启动超时。请运行构建脚本，并通过本地 HTTP 服务打开游戏。');
+    showMenu('游戏引擎启动超时，请刷新后重试。');
   }, 12000);
 }
 

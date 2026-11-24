@@ -17,6 +17,10 @@ python3 -m http.server 8000 --directory dist
 
 主界面初始显示「血红之梦」，读到画面 6 后换为「扬城疑案」，读到画面 13 后换为「舒颜咖啡」。封面记录曾经到达的最远剧情，重玩或读取较早的存档时保留已解锁的封面。Demo 使用章内节点，后续正式版可以按大章节解锁。
 
+## GitHub Pages
+
+[在线游玩](https://frosttear.github.io/gal-dreamhealer/dist/)使用仓库的 Pages 工作流部署。工作流在发布前构建 TyranoScript，并将整个 `dist/` 作为游戏目录上传。仓库的 Pages 发布源需设为 **GitHub Actions**。
+
 ## 改编结构
 
 | 画面 | 视角与地点 | 主要情节 |
