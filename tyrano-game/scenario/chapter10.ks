@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.webp", "data/bgimage/mentalward.webp", "data/bgimage/station.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/yu.webp", "data/fgimage/psych.webp"];
+f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.webp", "data/bgimage/mentalward.webp", "data/bgimage/station.webp", "data/fgimage/su.webp", "data/fgimage/suworried.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/yu.webp", "data/fgimage/psych.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=su storage=su.webp jname="苏禹"]
@@ -18,7 +18,7 @@ f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.
 [cm]
 [chara_hide_all time=0 wait=true]
 [bg storage=yuapartment.webp time=140 wait=true position=center]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 1, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -31,7 +31,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat2
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 2, "scene": "yuapartment", "discoveries": ["fivelives"], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -58,7 +58,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat4
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 4, "scene": "mentaloffice", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -71,7 +71,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat5
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 5, "scene": "mentaloffice", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -84,7 +84,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat6
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 6, "scene": "mentaloffice", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -97,7 +97,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat7
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 7, "scene": "mentaloffice", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -123,7 +123,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat9
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 9, "scene": "mentaloffice", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -203,7 +203,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [cm]
 [chara_hide_all time=0 wait=true]
 [bg storage=yuapartment.webp time=180 wait=true position=center]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 15, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -216,7 +216,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat16
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=suworried.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 16, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -229,7 +229,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat17
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 17, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -242,7 +242,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat18
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 18, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -255,7 +255,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat19
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 19, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -281,7 +281,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat21
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 21, "scene": "yuapartment", "discoveries": ["auntphoto"], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -294,7 +294,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat22
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 22, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -333,7 +333,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat25
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 25, "scene": "yuapartment", "discoveries": [], "chapter": 10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
