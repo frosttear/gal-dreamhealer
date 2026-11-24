@@ -1,5 +1,6 @@
 [title name="梦境诊疗师 · 第一章"]
 [hidemenubutton]
+[sysview type=backlog storage="./data/system/backlog.html"]
 [layopt layer=message0 visible=false]
 [iscript]
 // The virtual cursor has not been hidden yet. Its initial zero would block early clicks.
