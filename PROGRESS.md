@@ -23,8 +23,10 @@
 ## 当前工作
 
 - 新增苏禹克制担忧、颜歆专注分析两张表情立绘，并接入第十章余家回忆和第十一章无脸照片场景。
+- 新增沈义温和表情，用于第一章安排余筱玲安全交接；通过 `chara_face` 保持常态立绘不变。
 - TyranoScript 会保留 `chara_show storage=` 设置的立绘，故第十至十二章后续常态镜头已显式指定基础图，避免变体串场。Chromium 实际检查两个变体镜头和后续常态镜头，源图按预期切回 su.webp、yan.webp；全卷 271 节拍回归通过，无脚本错误或失败请求。
-- 当前改动位于 `dev/character-expression-variants`，验证完成，待提交并推送。
+- Chromium 已实际请求三张新素材并顺序走完全部 12 章的 271 个节拍，无脚本错误或失败资源请求。沈义镜头中加载 shengentle.webp，角色定义仍保留 shen.webp。
+- 当前改动位于 `dev/character-expression-variants`，完成回归，待提交并推送。
 
 ## 接下来
 

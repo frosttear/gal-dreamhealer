@@ -1,6 +1,6 @@
 # 素材制作与接入
 
-目前跟踪 13 张常态人物立绘和 9 张剧情变体或特殊人物立绘。13 张常态立绘均已完成；变体中包含 6 张表情或服装变化、3 张剧情形象。图鉴使用常态立绘，变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘；第十章新增女心理医生，第十一章增加她的疲惫表情和无脸梦中人。
+目前跟踪 13 张常态人物立绘和 10 张剧情变体或特殊人物立绘。13 张常态立绘均已完成；变体中包含 7 张表情或服装变化、3 张剧情形象。图鉴使用常态立绘，变体在对应剧情里调用。李护工在第三章雨夜回忆中登场，同时解锁图鉴立绘；第十章新增女心理医生，第十一章增加她的疲惫表情和无脸梦中人。
 
 | 人物 | 原作依据与画面处理 |
 | --- | --- |
@@ -18,19 +18,19 @@
 | 素材 | 估算 | 说明 |
 | --- | --- | --- |
 | 基础人物立绘 | 12–16 张，已完成 13 张 | 已覆盖苏禹、颜歆、沈义、余家姐妹、薛淼、迟欢、李护工及案情相关人物。 |
-| 表情变体 | 18–28 个，现有 6 个 | 主要人物逐步增加常用表情。共用身体和服装，优先覆盖警觉、惊恐、质疑、放松等明显变化。 |
+| 表情变体 | 18–28 个，现有 7 个 | 主要人物逐步增加常用表情。共用身体和服装，优先覆盖警觉、惊恐、质疑、放松等明显变化。 |
 | 姿态变体 | 5–9 个 | 仅在叙事动作需要时新增整身或半身姿态，例如沈义蹲下问话、颜歆整理线索和苏禹使用连接器。 |
 | 背景 | 14–20 张，现有 27 张 | 实际超出初估；同地点的梦境和现实复用构图，再用灯光、色调或局部细节区别。 |
 | 关键剧情插画 | 8–12 张 | 用于梦境转场、追逐、记忆揭示等构图变化明显的场面。 |
 
-立绘预算合计约 35–53 个可调用版本，其中约 17–25 张需要独立身体或姿态。现有 22 个可调用人物版本（13 个常态、9 个变体或特殊形象）。人物图鉴用常态版本。余筱玲与余雨的表现要兼顾身份悬念，图鉴随剧情更新，表情优先表现当下反应。
+立绘预算合计约 35–53 个可调用版本，其中约 17–25 张需要独立身体或姿态。现有 23 个可调用人物版本（13 个常态、10 个变体或特殊形象）。人物图鉴用常态版本。余筱玲与余雨的表现要兼顾身份悬念，图鉴随剧情更新，表情优先表现当下反应。
 
 ## 文件与接入
 
 | 类别 | `dist/assets/` 中已跟踪的 WebP 文件（省略后缀） |
 | --- | --- |
 | 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu、psych |
-| 变体与特殊人物 | drowned、faceless、psychdespair、suworried、xueinterview、yanfocused、yansmile、yucold、yuyudream |
+| 变体与特殊人物 | drowned、faceless、psychdespair、shengentle、suworried、xueinterview、yanfocused、yansmile、yucold、yuyudream |
 | 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream、dreamclass、dreamclassfull、dreamlobby、dreamroom、dreamstairs、dreamstore、mentaloffice、mentalward、station、hospitalroom、facelesshall、mirrorhall、mirrorward |
 | 封面 | title-dream、title-case、title-coffee |
 
@@ -41,6 +41,6 @@
 3. 通过 `[bg]`、`[chara_new]`、`[chara_face]` 等引擎标签接入对应画面。复用人物时核对造型恢复时机。封面由外壳读取，命名和索引在 `dist/game.js`。
 4. 图鉴人物条目的第四项填写常态素材名，检查 `discoveries` 与图鉴键对应。图鉴加载完成前显示占位，解码失败显示提示。
 
-第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。第十章的 suworried 用于苏禹回忆心理医生后仍感不安的节拍；第十一章的 yanfocused 用于颜歆看清梦中无脸照片的节拍。
+第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。第一章的 shengentle 用于沈义安排余筱玲安全交接的节拍，通过 `chara_face` 临时显示，不替换常态图；第十章的 suworried 用于苏禹回忆心理医生后仍感不安的节拍；第十一章的 yanfocused 用于颜歆看清梦中无脸照片的节拍。
 
 第八章使用 policecar 表现警方车内调查，blooddream 用于梦境洪水演出。第十、十一章新增 mentaloffice（精神病院专家诊室）、mentalward（夜间病房）、station（扬城火车站）、hospitalroom（现实病房）、facelesshall、mirrorhall、mirrorward（梦中长廊与镜面病房）和 psych、psychdespair、faceless（心理医生及疲惫表情、匿名无脸人）。这些立绘与背景由 ImageGen 生成并转为透明 WebP 或 1280×720 WebP；医生的年龄、短发和服装属于改编设定，原稿未交代外貌。
