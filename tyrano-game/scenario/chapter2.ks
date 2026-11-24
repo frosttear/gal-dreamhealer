@@ -10,7 +10,7 @@ f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bg
 
 *beat1
 [cm]
-[bg storage=interview.webp time=0 wait=true]
+[bg storage=interview.webp time=140 wait=true position=center]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":1,"scene":"interview","discoveries":["chi"],"chapter":2};
@@ -92,7 +92,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat5
 [cm]
 [chara_hide name=xue time=0 wait=true pos_mode=false]
-[bg storage=hall.webp time=0 wait=true]
+[bg storage=hall.webp time=140 wait=true position=center]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":5,"scene":"hall","discoveries":["dreamstatement"],"chapter":2};
@@ -130,7 +130,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat8
 [cm]
 [chara_hide name=shen time=0 wait=true pos_mode=false]
-[bg storage=interview.webp time=0 wait=true]
+[bg storage=interview.webp time=140 wait=true position=center]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":8,"scene":"interview","discoveries":[],"chapter":2};
@@ -144,7 +144,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat9
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
-[bg storage=bistro.webp time=0 wait=true]
+[bg storage=bistro.webp time=140 wait=true position=center]
 [chara_show name=chen left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":9,"scene":"bistro","discoveries":["chen"],"chapter":2};

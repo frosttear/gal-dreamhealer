@@ -16,7 +16,7 @@ f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgi
 
 *beat1
 [cm]
-[bg storage=dream.webp time=0 wait=true]
+[bg storage=dream.webp time=140 wait=true position=center]
 [iscript]
 f.game_beat = {"n":1,"scene":"dream","discoveries":["clock"]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -87,7 +87,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat6
 [cm]
 [chara_hide name=yu time=0 wait=true pos_mode=false]
-[bg storage=case.webp time=0 wait=true]
+[bg storage=case.webp time=140 wait=true position=center]
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":6,"scene":"case","discoveries":["shen","black"]};
@@ -196,7 +196,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat13
 [cm]
 [chara_hide name=yu time=0 wait=true pos_mode=false]
-[bg storage=coffee.webp time=0 wait=true]
+[bg storage=coffee.webp time=140 wait=true position=center]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":13,"scene":"coffee","discoveries":["yan","post"]};

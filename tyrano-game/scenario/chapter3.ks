@@ -6,7 +6,7 @@ f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/
 
 *beat1
 [cm]
-[bg storage=office.webp time=0 wait=true]
+[bg storage=office.webp time=140 wait=true position=center]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":1,"scene":"office","discoveries":["rainfile"],"chapter":3};
@@ -20,7 +20,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat2
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
-[bg storage=rain.webp time=0 wait=true]
+[bg storage=rain.webp time=140 wait=true position=center]
 [iscript]
 f.game_beat = {"n":2,"scene":"rain","discoveries":["li"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -81,7 +81,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 
 *beat5
 [cm]
-[bg storage=office.webp time=0 wait=true]
+[bg storage=office.webp time=140 wait=true position=center]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":5,"scene":"office","discoveries":[],"chapter":3};
@@ -95,7 +95,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat6
 [cm]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
-[bg storage=bistro.webp time=0 wait=true]
+[bg storage=bistro.webp time=140 wait=true position=center]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":6,"scene":"bistro","discoveries":["threecases"],"chapter":3};
@@ -135,7 +135,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat9
 [cm]
 [chara_hide name=qin time=0 wait=true pos_mode=false]
-[bg storage=fastfood.webp time=0 wait=true]
+[bg storage=fastfood.webp time=140 wait=true position=center]
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":9,"scene":"fastfood","discoveries":[],"chapter":3};
@@ -162,7 +162,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat11
 [cm]
 [chara_hide name=yu time=0 wait=true pos_mode=false]
-[bg storage=coffee.webp time=0 wait=true]
+[bg storage=coffee.webp time=140 wait=true position=center]
 [chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":11,"scene":"coffee","discoveries":[],"chapter":3};

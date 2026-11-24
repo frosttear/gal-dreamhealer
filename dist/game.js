@@ -79,6 +79,7 @@ function launch(mode) {
   $('main-menu').hidden = true;
   $('game').hidden = false;
   $('stage').setAttribute('aria-busy', 'true');
+  $('stage').removeAttribute('data-restoring');
   $('progress').textContent = '';
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
   const runtimeFrame = document.createElement('iframe');
@@ -115,11 +116,16 @@ window.dreamhealer = {
       $('load').disabled = false;
       $('status').textContent = '已存档';
     });
-    if (launchMode === 'auto' && hasSave('auto')) engine.menu.loadAutoSave();
-    else if (launchMode !== 'new' && hasSave('quick')) engine.menu.loadQuickSave();
+    if (launchMode === 'auto' && hasSave('auto')) restoreSave('auto');
+    else if (launchMode !== 'new' && hasSave('quick')) restoreSave('quick');
     else engine.ftag.nextOrderWithLabel('', 'chapter1.ks');
-    if (launchMode !== 'new' && engine.stat.f.game_beat) this.reached(engine.stat.f.game_beat);
     frame.focus();
+  },
+
+  restored(beat) {
+    $('stage').removeAttribute('data-restoring');
+    if (beat) this.reached(beat);
+    $('status').textContent = '已读取存档';
   },
 
   reached({ n, scene, discoveries, chapter = 1, ended = false }) {
@@ -145,6 +151,17 @@ window.dreamhealer = {
 
   home: showMenu
 };
+
+function restoreSave(kind) {
+  const stage = $('stage');
+  if (stage.hasAttribute('data-restoring')) return;
+  stage.setAttribute('data-restoring', '');
+  stage.setAttribute('aria-busy', 'true');
+  for (const id of ['history', 'save', 'load']) $(id).disabled = true;
+  $('status').textContent = '正在读取存档…';
+  if (kind === 'auto') engine.menu.loadAutoSave();
+  else engine.menu.loadQuickSave();
+}
 
 function portraitUrl(art) {
   return 'assets/' + art + '.webp';
@@ -220,8 +237,6 @@ $('save').onclick = () => {
 };
 $('load').onclick = () => {
   if (!engine || !hasSave('quick')) return;
-  engine.menu.loadQuickSave();
-  if (engine.stat.f.game_beat) window.dreamhealer.reached(engine.stat.f.game_beat);
-  $('status').textContent = '已读取存档';
+  restoreSave('quick');
 };
 showMenu();
