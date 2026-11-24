@@ -32,11 +32,24 @@ function showPortrait(art) {
 }
 const saveKey = 'dreamhealer.chapter1.save';
 const unlockKey = 'dreamhealer.chapter1.unlocks';
+const resumeKey = 'dreamhealer.chapter1.resume';
+const coverKey = 'dreamhealer.chapter1.cover';
+const covers = [
+  ['dream', '血红之梦'],
+  ['case', '扬城疑案'],
+  ['coffee', '舒颜咖啡']
+];
 const overlay = $('overlay');
 let position = 0;
 let visited = [0];
 let ended = false;
 let unlocked = new Set(read(unlockKey, []));
+let resume = readProgress(resumeKey);
+let coverIndex = Math.max(
+  0,
+  covers.findIndex(([scene]) => scene === read(coverKey, null)),
+  unlocked.has('yan') ? 2 : unlocked.has('shen') ? 1 : 0
+);
 
 function read(key, fallback) {
   try {
@@ -53,6 +66,45 @@ function write(key, value) {
   } catch {
     return false;
   }
+}
+
+function readProgress(key) {
+  const save = read(key, null);
+  return Number.isInteger(save?.position) && story[save.position] ? save : null;
+}
+
+function showMenu() {
+  const [scene, label] = covers[coverIndex];
+  $('main-menu').dataset.cover = scene;
+  $('menu-scene').textContent = label;
+  const source = 'assets/title-' + scene + '.webp';
+  if ($('cover').getAttribute('src') !== source) $('cover').src = source;
+  const manualSave = readProgress(saveKey);
+  $('resume').hidden = !(resume || manualSave);
+  $('menu-load').hidden = !manualSave;
+  $('start').textContent = resume || manualSave ? '重新开始' : '开始游戏';
+  $('game').hidden = true;
+  $('main-menu').hidden = false;
+  $(resume || manualSave ? 'resume' : 'start').focus({ preventScroll: true });
+}
+
+function openGame(save = null) {
+  position = save?.position ?? 0;
+  visited = save?.visited ?? [0];
+  ended = save?.ended ?? false;
+  if (save?.unlocked) {
+    unlocked = new Set([...unlocked, ...save.unlocked]);
+    write(unlockKey, [...unlocked]);
+  }
+  $('main-menu').hidden = true;
+  $('game').hidden = false;
+  render();
+  if (story[position][6] && !ended) $('choices').firstElementChild.focus({ preventScroll: true });
+  else $('next').focus({ preventScroll: true });
+}
+
+function snapshot() {
+  return { position, visited: [...visited], ended, unlocked: [...unlocked] };
 }
 
 function render() {
@@ -83,14 +135,22 @@ function render() {
     }
   }
   $('next').hidden = Boolean(choices && !ended);
-  $('next').textContent = ended ? '重新开始' : position === story.length - 1 ? '结束本章' : '继续';
+  $('next').textContent = ended ? '返回主界面' : position === story.length - 1 ? '结束本章' : '继续';
+  const reached = covers.findIndex(([cover]) => cover === scene);
+  if (reached > coverIndex) {
+    coverIndex = reached;
+    write(coverKey, scene);
+    const upcomingCover = new Image();
+    upcomingCover.src = 'assets/title-' + scene + '.webp';
+  }
+  resume = snapshot();
+  write(resumeKey, resume);
 }
 
 function advance(fromChoice = false) {
   if (ended) {
-    position = 0;
-    visited = [0];
-    ended = false;
+    showMenu();
+    return;
   } else if (story[position][6] && !fromChoice) {
     $('choices').querySelector('button').focus();
     return;
@@ -151,6 +211,14 @@ function showCatalog() {
   select('人物');
 }
 
+$('start').onclick = () => openGame();
+$('resume').onclick = () => openGame(resume || readProgress(saveKey));
+$('menu-load').onclick = () => {
+  const save = readProgress(saveKey);
+  if (save) openGame(save);
+};
+$('home').onclick = showMenu;
+$('menu-catalog').onclick = showCatalog;
 $('catalog').onclick = showCatalog;
 $('history').onclick = () => {
   const content = openDialog('剧情回顾');
@@ -167,27 +235,24 @@ $('history').onclick = () => {
   }
 };
 $('save').onclick = () => {
-  $('status').textContent = write(saveKey, { position, visited, ended, unlocked: [...unlocked] })
+  $('status').textContent = write(saveKey, snapshot())
     ? '已保存到当前浏览器' : '浏览器存储不可用';
 };
 $('load').onclick = () => {
-  const save = read(saveKey, null);
-  if (!Number.isInteger(save?.position) || !story[save.position]) {
+  const save = readProgress(saveKey);
+  if (!save) {
     $('status').textContent = '暂无存档';
     return;
   }
-  ({ position, visited, ended } = save);
-  unlocked = new Set([...unlocked, ...save.unlocked]);
-  write(unlockKey, [...unlocked]);
-  render();
+  openGame(save);
   $('status').textContent = '已读取存档';
 };
 $('next').onclick = () => advance();
 document.addEventListener('keydown', event => {
-  if (event.repeat || overlay.open || event.target instanceof HTMLButtonElement) return;
+  if ($('game').hidden || event.repeat || overlay.open || event.target instanceof HTMLButtonElement) return;
   if (['Enter', ' ', 'ArrowRight'].includes(event.key)) {
     event.preventDefault();
     advance();
   }
 });
-render();
+showMenu();

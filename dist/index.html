@@ -7,9 +7,23 @@
 <script defer src="story.js"></script><script defer src="game.js"></script>
 </head>
 <body>
-<main id="game" data-scene="dream">
+<main id="main-menu" data-cover="dream" aria-labelledby="game-name">
+  <img id="cover" src="assets/title-dream.webp" alt="" fetchpriority="high">
+  <div class="menu-content">
+    <p class="menu-scene" id="menu-scene">血红之梦</p>
+    <h1 id="game-name">梦境诊疗师</h1>
+    <p class="menu-credit">第一章 · 改编自守拙原作</p>
+    <nav class="menu-actions" aria-label="主菜单">
+      <button id="resume" hidden>继续游戏</button>
+      <button id="start">开始游戏</button>
+      <button id="menu-load" hidden>读取存档</button>
+      <button id="menu-catalog">图鉴</button>
+    </nav>
+  </div>
+</main>
+<main id="game" data-scene="dream" hidden>
   <div id="backdrop"></div><div id="portrait" aria-hidden="true"></div>
-  <header><div><span class="chapter">第一章</span><strong>梦境诊疗师</strong></div><nav aria-label="游戏菜单"><button id="catalog">图鉴</button><button id="history">回顾</button><button id="save">存档</button><button id="load">读档</button></nav></header>
+  <header><div><span class="chapter">第一章</span><strong>梦境诊疗师</strong></div><nav aria-label="游戏菜单"><button id="catalog">图鉴</button><button id="history">回顾</button><button id="save">存档</button><button id="load">读档</button><button id="home">主界面</button></nav></header>
   <section id="reading">
     <div class="scene"><span id="title"></span><span id="progress"></span></div>
     <div class="panel" aria-live="polite">
