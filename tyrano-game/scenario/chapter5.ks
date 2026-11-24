@@ -1,9 +1,13 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
+f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocused.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shencrouch.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
+[chara_new name=shencrouch storage=shencrouch.webp jname="沈义"]
+[chara_new name=shensearch storage=shensearch.webp jname="沈义"]
+[chara_new name=su storage=su.webp jname="苏禹"]
+[chara_face name=su face=focused storage=sufocused.webp]
 
 *beat1
 [cm]
@@ -76,6 +80,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [cm]
 [chara_hide_all time=0 wait=true]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=shencrouch left=135 top=70 height=590 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":6,"scene":"yuapartment","discoveries":[],"chapter":5};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -101,7 +106,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat8
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=su face=focused left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":8,"scene":"yuapartment","discoveries":["familiar"],"chapter":5};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -206,7 +211,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat16
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=shensearch left=640 top=35 height=590 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":16,"scene":"orphanagehall","discoveries":["cleaver"],"chapter":5};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

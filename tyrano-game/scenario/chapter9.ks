@@ -1,10 +1,11 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp"];
+f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
 [chara_face name=yuyu face=tearful storage=yuyutearful.webp]
+[chara_face name=yuyu face=fearful storage=yuyufearful.webp]
 
 *beat1
 [cm]
@@ -103,7 +104,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [cm]
 [chara_hide_all time=0 wait=true]
 [bg storage=rain.webp time=140 wait=true position=center]
-[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yuyu face=fearful left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 8, "scene": "rain", "discoveries": [], "chapter": 9};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

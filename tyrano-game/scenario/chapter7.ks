@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/orphanage.webp", "data/bgimage/orphanagehall.webp", "data/bgimage/dreamstore.webp", "data/bgimage/dreamclass.webp", "data/bgimage/dreamclassfull.webp", "data/fgimage/bai.webp", "data/fgimage/chi.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yu.webp", "data/fgimage/yuyudream.webp"];
+f.chapter_assets = ["data/bgimage/orphanage.webp", "data/bgimage/orphanagehall.webp", "data/bgimage/dreamstore.webp", "data/bgimage/dreamclass.webp", "data/bgimage/dreamclassfull.webp", "data/fgimage/bai.webp", "data/fgimage/chi.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yu.webp", "data/fgimage/yudetermined.webp", "data/fgimage/yuyudream.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyudream storage=yuyudream.webp jname="梦中余雨"]
+[chara_face name=yu face=determined storage=yudetermined.webp]
 
 *beat1
 [cm]
@@ -209,7 +210,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat16
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yu face=determined left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 16, "scene": "dreamclass", "discoveries": [], "chapter": 7};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

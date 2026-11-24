@@ -1,13 +1,15 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp"];
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=yanorganizing storage=yanorganizing.webp jname="颜歆"]
+[chara_new name=chireviewing storage=chireviewing.webp jname="迟欢"]
 
 *beat1
 [cm]
 [bg storage=office.webp time=140 wait=true position=center]
-[chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=chireviewing left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":1,"scene":"office","discoveries":["rainfile"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -176,7 +178,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat12
 [cm]
 [chara_hide name=su time=0 wait=true pos_mode=false]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yanorganizing left=640 top=35 height=620 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":12,"scene":"coffee","discoveries":["dreamlock"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

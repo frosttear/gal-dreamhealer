@@ -1,8 +1,9 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/shen.webp"];
+f.chapter_assets = ["data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=yanexamining storage=yanexamining.webp jname="颜歆"]
 
 *beat1
 [cm]
@@ -177,7 +178,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat14
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=yanexamining left=640 top=40 height=590 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":14,"scene":"coffee","discoveries":["portable"],"chapter":4};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

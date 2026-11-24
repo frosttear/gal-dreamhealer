@@ -2,19 +2,25 @@ const $ = id => document.getElementById(id);
 const overlay = $('overlay');
 const unlockKey = 'dreamhealer.chapter1.unlocks';
 const coverKey = 'dreamhealer.chapter1.cover';
+const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const covers = [
-  ['dream', '血红之梦'],
-  ['case', '扬城疑案'],
-  ['coffee', '舒颜咖啡']
+  ['dream', '血红之梦', 0],
+  ['case', '扬城疑案', 4],
+  ['coffee', '舒颜咖啡', 8]
 ];
 const chapters = { 1: ['第一章', 16], 2: ['第二章', 13], 3: ['第三章', 15], 4: ['第四章', 20], 5: ['第五章', 22], 6: ['第六章', 24], 7: ['第七章', 21], 8: ['第八章', 26], 9: ['第九章', 28], 10: ['第十章', 27], 11: ['第十一章', 28], 12: ['第十二章', 31] };
 const unlocked = new Set(read(unlockKey) ?? []);
+const hasMigratedCover = read(coverMigrationKey) === '1';
+const legacyCoverIndex = !hasMigratedCover
+  ? unlocked.has('yan') ? 2 : unlocked.has('shen') ? 1 : 0
+  : 0;
 let coverIndex = Math.max(
   0,
   covers.findIndex(([scene]) => scene === read(coverKey)),
-  unlocked.has('yan') ? 2 : unlocked.has('shen') ? 1 : 0
+  legacyCoverIndex
 );
+if (!hasMigratedCover) store(coverMigrationKey, '1');
 let frame;
 let engine;
 let bootTimeout;
@@ -142,10 +148,10 @@ window.dreamhealer = {
       store(unlockKey, [...unlocked]);
       $('status').textContent ||= '图鉴已更新';
     }
-    const reachedCover = covers.findIndex(([key]) => key === scene);
+    const reachedCover = covers.findIndex(([, , milestone]) => milestone === chapter && ended);
     if (reachedCover > coverIndex) {
       coverIndex = reachedCover;
-      store(coverKey, scene);
+      store(coverKey, covers[reachedCover][0]);
     }
   },
 
