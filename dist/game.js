@@ -1,165 +1,129 @@
 const $ = id => document.getElementById(id);
-const portraitStage = $('portrait');
-const portraitAssets = new Map();
-let activePortrait = '';
-
-function portraitUrl(art) {
-  return 'assets/' + art + '.webp';
-}
-
-for (const art of new Set([...story.map(beat => beat[4]), ...Object.values(notes).map(note => note[3])])) {
-  if (!art) continue;
-  const img = new Image();
-  img.alt = '';
-  img.src = portraitUrl(art);
-  const asset = { img, decoded: false };
-  asset.ready = img.decode().then(() => { asset.decoded = true; return img; }, () => null);
-  portraitAssets.set(art, asset);
-}
-
-function showPortrait(art) {
-  if (activePortrait === art) return;
-  activePortrait = art;
-  const asset = portraitAssets.get(art);
-  if (asset?.decoded) {
-    portraitStage.replaceChildren(asset.img);
-    return;
-  }
-  portraitStage.replaceChildren();
-  asset?.ready.then(img => {
-    if (img && activePortrait === art) portraitStage.replaceChildren(img);
-  });
-}
-const saveKey = 'dreamhealer.chapter1.save';
+const overlay = $('overlay');
 const unlockKey = 'dreamhealer.chapter1.unlocks';
-const resumeKey = 'dreamhealer.chapter1.resume';
 const coverKey = 'dreamhealer.chapter1.cover';
+const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const covers = [
   ['dream', '血红之梦'],
   ['case', '扬城疑案'],
   ['coffee', '舒颜咖啡']
 ];
-const overlay = $('overlay');
-let position = 0;
-let visited = [0];
-let ended = false;
-let unlocked = new Set(read(unlockKey, []));
-let resume = readProgress(resumeKey);
+const unlocked = new Set(read(unlockKey) ?? []);
 let coverIndex = Math.max(
   0,
-  covers.findIndex(([scene]) => scene === read(coverKey, null)),
+  covers.findIndex(([scene]) => scene === read(coverKey)),
   unlocked.has('yan') ? 2 : unlocked.has('shen') ? 1 : 0
 );
+let frame;
+let engine;
+let bootTimeout;
+let launchMode;
+let saving = false;
 
-function read(key, fallback) {
+function read(key) {
   try {
-    return JSON.parse(localStorage.getItem(key)) ?? fallback;
+    return JSON.parse(localStorage.getItem(key));
   } catch {
-    return fallback;
+    return null;
   }
 }
 
-function write(key, value) {
+function store(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
-    return true;
+  } catch {
+    $('status').textContent = '浏览器存储不可用';
+  }
+}
+
+function hasSave(kind) {
+  try {
+    return Boolean(localStorage.getItem(savePrefix + kind + '_save'));
   } catch {
     return false;
   }
 }
 
-function readProgress(key) {
-  const save = read(key, null);
-  return Number.isInteger(save?.position) && story[save.position] ? save : null;
-}
-
-function showMenu() {
+function showMenu(message = '') {
+  clearTimeout(bootTimeout);
+  engine = undefined;
+  frame?.remove();
+  frame = undefined;
+  saving = false;
   const [scene, label] = covers[coverIndex];
   $('main-menu').dataset.cover = scene;
   $('menu-scene').textContent = label;
-  const source = 'assets/title-' + scene + '.webp';
-  if ($('cover').getAttribute('src') !== source) $('cover').src = source;
-  const manualSave = readProgress(saveKey);
-  $('resume').hidden = !(resume || manualSave);
+  $('cover').src = 'assets/title-' + scene + '.webp';
+  const manualSave = hasSave('quick');
+  const canResume = hasSave('auto') || manualSave;
+  $('resume').hidden = !canResume;
   $('menu-load').hidden = !manualSave;
-  $('start').textContent = resume || manualSave ? '重新开始' : '开始游戏';
+  $('start').textContent = canResume ? '重新开始' : '开始游戏';
+  $('menu-status').textContent = message;
   $('game').hidden = true;
   $('main-menu').hidden = false;
-  $(resume || manualSave ? 'resume' : 'start').focus({ preventScroll: true });
+  $(canResume ? 'resume' : 'start').focus({ preventScroll: true });
 }
 
-function openGame(save = null) {
-  position = save?.position ?? 0;
-  visited = save?.visited ?? [0];
-  ended = save?.ended ?? false;
-  if (save?.unlocked) {
-    unlocked = new Set([...unlocked, ...save.unlocked]);
-    write(unlockKey, [...unlocked]);
-  }
+function launch(mode) {
+  launchMode = mode;
+  $('status').textContent = '正在载入第一章…';
   $('main-menu').hidden = true;
   $('game').hidden = false;
-  render();
-  if (story[position][6] && !ended) $('choices').firstElementChild.focus({ preventScroll: true });
-  else $('next').focus({ preventScroll: true });
+  $('stage').setAttribute('aria-busy', 'true');
+  $('progress').textContent = '';
+  for (const id of ['history', 'save', 'load']) $(id).disabled = true;
+  frame = document.createElement('iframe');
+  frame.title = '第一章 · TyranoScript 剧情';
+  frame.src = 'engine/index.html';
+  $('stage').append(frame);
+  bootTimeout = setTimeout(() => {
+    showMenu('引擎启动超时。请运行构建脚本，并通过本地 HTTP 服务打开游戏。');
+  }, 12000);
 }
 
-function snapshot() {
-  return { position, visited: [...visited], ended, unlocked: [...unlocked] };
-}
+window.dreamhealer = {
+  ready(runtime) {
+    if (frame?.contentWindow !== runtime) return;
+    clearTimeout(bootTimeout);
+    engine = runtime.TYRANO.kag;
+    engine.on('storage-quicksave', () => {
+      saving = false;
+      $('save').disabled = false;
+      $('load').disabled = false;
+      $('status').textContent = '已存档';
+    });
+    if (launchMode === 'auto' && hasSave('auto')) engine.menu.loadAutoSave();
+    else if (launchMode !== 'new' && hasSave('quick')) engine.menu.loadQuickSave();
+    else engine.ftag.nextOrderWithLabel('', 'chapter1.ks');
+    if (launchMode !== 'new' && engine.stat.f.game_beat) this.reached(engine.stat.f.game_beat);
+    frame.focus();
+  },
 
-function render() {
-  const [scene, speaker, title, line, portrait, discoveries, choices] = story[position];
-  $('game').dataset.scene = scene;
-  $('speaker').textContent = ended ? '第一章完' : speaker;
-  $('title').textContent = title;
-  $('line').textContent = ended ? '这笔委托，将把两条调查引向同一座小区。' : line;
-  $('progress').textContent = (position + 1) + ' / ' + story.length;
-  showPortrait(ended ? '' : portrait);
-  $('choices').replaceChildren();
-  $('status').textContent = '';
-  if (!ended) {
+  reached({ n, scene, discoveries, ended = false }) {
+    $('stage').setAttribute('aria-busy', 'false');
+    $('progress').textContent = ended ? '已完成' : ' · ' + n + ' / 16';
+    for (const id of ['history', 'save']) $(id).disabled = false;
+    $('load').disabled = !hasSave('quick');
+    $('status').textContent = '';
     const fresh = discoveries.filter(key => !unlocked.has(key));
-    fresh.forEach(key => unlocked.add(key));
     if (fresh.length) {
-      write(unlockKey, [...unlocked]);
-      $('status').textContent = '图鉴已更新';
+      fresh.forEach(key => unlocked.add(key));
+      store(unlockKey, [...unlocked]);
+      $('status').textContent ||= '图鉴已更新';
     }
-    for (const choice of choices ?? []) {
-      const button = document.createElement('button');
-      button.textContent = choice;
-      button.onclick = () => {
-        advance(true);
-        $('status').textContent = '已选择「' + choice + '」';
-      };
-      $('choices').append(button);
+    const reachedCover = covers.findIndex(([key]) => key === scene);
+    if (reachedCover > coverIndex) {
+      coverIndex = reachedCover;
+      store(coverKey, scene);
     }
-  }
-  $('next').hidden = Boolean(choices && !ended);
-  $('next').textContent = ended ? '返回主界面' : position === story.length - 1 ? '结束本章' : '继续';
-  const reached = covers.findIndex(([cover]) => cover === scene);
-  if (reached > coverIndex) {
-    coverIndex = reached;
-    write(coverKey, scene);
-    const upcomingCover = new Image();
-    upcomingCover.src = 'assets/title-' + scene + '.webp';
-  }
-  resume = snapshot();
-  write(resumeKey, resume);
-}
+  },
 
-function advance(fromChoice = false) {
-  if (ended) {
-    showMenu();
-    return;
-  } else if (story[position][6] && !fromChoice) {
-    $('choices').querySelector('button').focus();
-    return;
-  } else if (position + 1 < story.length) {
-    visited.push(++position);
-  } else {
-    ended = true;
-  }
-  render();
+  home: showMenu
+};
+
+function portraitUrl(art) {
+  return 'assets/' + art + '.webp';
 }
 
 function openDialog(title) {
@@ -211,48 +175,24 @@ function showCatalog() {
   select('人物');
 }
 
-$('start').onclick = () => openGame();
-$('resume').onclick = () => openGame(resume || readProgress(saveKey));
-$('menu-load').onclick = () => {
-  const save = readProgress(saveKey);
-  if (save) openGame(save);
-};
-$('home').onclick = showMenu;
+$('start').onclick = () => launch('new');
+$('resume').onclick = () => launch('auto');
+$('menu-load').onclick = () => launch('quick');
 $('menu-catalog').onclick = showCatalog;
 $('catalog').onclick = showCatalog;
-$('history').onclick = () => {
-  const content = openDialog('剧情回顾');
-  for (const index of visited) {
-    const [, speaker, title, line] = story[index];
-    const entry = document.createElement('div');
-    entry.className = 'log';
-    const heading = document.createElement('strong');
-    const detail = document.createElement('p');
-    heading.textContent = speaker + ' · ' + title;
-    detail.textContent = line;
-    entry.append(heading, detail);
-    content.append(entry);
-  }
-};
+$('home').onclick = () => showMenu();
+$('history').onclick = () => engine?.menu.displayLog();
 $('save').onclick = () => {
-  $('status').textContent = write(saveKey, snapshot())
-    ? '已保存到当前浏览器' : '浏览器存储不可用';
+  if (!engine || saving) return;
+  saving = true;
+  $('save').disabled = true;
+  engine.stat.f.game_backlog = engine.variable.tf.system.backlog.slice();
+  engine.menu.setQuickSave();
 };
 $('load').onclick = () => {
-  const save = readProgress(saveKey);
-  if (!save) {
-    $('status').textContent = '暂无存档';
-    return;
-  }
-  openGame(save);
+  if (!engine || !hasSave('quick')) return;
+  engine.menu.loadQuickSave();
+  if (engine.stat.f.game_beat) window.dreamhealer.reached(engine.stat.f.game_beat);
   $('status').textContent = '已读取存档';
 };
-$('next').onclick = () => advance();
-document.addEventListener('keydown', event => {
-  if ($('game').hidden || event.repeat || overlay.open || event.target instanceof HTMLButtonElement) return;
-  if (['Enter', ' ', 'ArrowRight'].includes(event.key)) {
-    event.preventDefault();
-    advance();
-  }
-});
 showMenu();

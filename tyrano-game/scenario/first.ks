@@ -1,0 +1,9 @@
+[title name="梦境诊疗师 · 第一章"]
+[hidemenubutton]
+[layopt layer=message0 visible=false]
+[iscript]
+// The virtual cursor has not been hidden yet. Its initial zero would block early clicks.
+if (TYRANO.kag.key_mouse.vmouse.last_hide_time === 0) TYRANO.kag.key_mouse.vmouse.last_hide_time = -1000;
+queueMicrotask(() => window.parent.dreamhealer.ready(window));
+[endscript]
+[s]
