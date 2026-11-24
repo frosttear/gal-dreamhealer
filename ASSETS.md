@@ -30,7 +30,7 @@
 | 类别 | `dist/assets/` 中已跟踪的 WebP 文件（省略后缀） |
 | --- | --- |
 | 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu |
-| 变体 | xueinterview、yansmile、yucold |
+| 变体 | xueinterview、yansmile、yucold、yuyudream |
 | 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment |
 | 封面 | title-dream、title-case、title-coffee |
 
@@ -40,3 +40,5 @@
 2. 在章节的 `f.chapter_assets` 加入字面量路径 `data/bgimage/name.webp` 或 `data/fgimage/name.webp`。构建从 `chapter*.ks` 扫描这些路径，即使素材实际由公用子场景调用也要确保可被扫描。
 3. 通过 `[bg]`、`[chara_new]`、`[chara_face]` 等引擎标签接入对应画面。复用人物时核对造型恢复时机。封面由外壳读取，命名和索引在 `dist/game.js`。
 4. 图鉴人物条目的第四项填写常态素材名，检查 `discoveries` 与图鉴键对应。图鉴加载完成前显示占位，解码失败显示提示。
+
+第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。
