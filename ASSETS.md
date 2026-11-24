@@ -31,7 +31,7 @@
 | --- | --- |
 | 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu |
 | 变体 | xueinterview、yansmile、yucold、yuyudream |
-| 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment |
+| 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream |
 | 封面 | title-dream、title-case、title-coffee |
 
 素材目前来自 ImageGen，裁切后导出为独立 WebP。新增变体时以现有常态立绘为参考，保持脸型、发型、年龄、体态、光线和服装连续性，记录原稿依据和改编设定。立绘使用透明背景，检查边缘、头部高度和构图；背景检查透视、时代和地点标识。余筱玲与余雨的身份信息随剧情披露。
@@ -42,3 +42,5 @@
 4. 图鉴人物条目的第四项填写常态素材名，检查 `discoveries` 与图鉴键对应。图鉴加载完成前显示占位，解码失败显示提示。
 
 第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。
+
+第八章使用 policecar 表现警方车内调查，blooddream 用于梦境洪水演出。
