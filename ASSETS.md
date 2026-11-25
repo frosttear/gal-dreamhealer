@@ -8,7 +8,7 @@
 | 余雨 | 瘦弱、双马尾、刘海遮眼，初见时局促；yuyutearful 在她开门哭求时增加眼泪和颤抖表情，同时保持刘海遮住大半面容，让身份悬念继续保留。 |
 | 余筱玲 | 开场受到惊吓，警戒线外主动求助，随后有一瞬冷意。保留同一张脸、发夹和校服，用眼神区分这组情绪；yushaken 用于噩梦惊醒时，表现眼眶湿润和惊惧。 |
 | 颜歆 | 粉白卫衣和侧马尾来自原著。与熟人相处时活泼，在入梦与分析线索时更专注，微笑版和常态版沿用同一服装及轮廓。 |
-| 薛淼 | 案发现场有遮眼刘海和宽松蓝衣。到警局后梳开刘海、换成干练常服，两种造型保留同一脸型和偏瘦体态；案发现场新增 xuefieldcalm 平静表情，与受惊的常态图区分；xueanxious 在警局笔录第二幕补充紧张回避的神情。 |
+| 薛淼 | 案发现场有遮眼刘海和宽松蓝衣。到警局后梳开刘海、换成干练常服，两种造型保留同一脸型和偏瘦体态；xuecasual 是蓝衣造型的日常平静状态，供他与苏禹等人交谈时使用，xue 继续表现看到尸体后的惊慌，xueanxious 用于笔录里的紧张回避。 |
 | 苏禹、沈义 | 苏禹保留黑风衣及思索时的克制神情。沈义保留胡茬与便衣，后续可用更温和的表情表现他面对孩子时的耐心。 |
 
 ## 全稿制作估算
@@ -31,7 +31,7 @@
 | --- | --- |
 | 常态立绘 | bai、chen、chi、gao、li、qin、shen、su、xue、yan、yu、yuyu、psych |
 | 图鉴补充立绘 | huangying、lixiong、muyuji |
-| 变体与特殊人物 | baifocused、chenthoughtful、chireviewing、chisuspicious、drowned、faceless、liapprehensive、psychawake、psychdespair、psychwary、qinconcerned、shengentle、shencrouchshen、shensearch、sufocusedmatch、suworried、xueanxious、xuefieldcalm、xueinterview、yanexamining、yanfocused、yanorganizing、yansmile、yucold、yuresolute、yushaken、yuyudream、yuyufearful、yuyutearful |
+| 变体与特殊人物 | baifocused、chenthoughtful、chireviewing、chisuspicious、drowned、faceless、liapprehensive、psychawake、psychdespair、psychwary、qinconcerned、shengentle、shencrouchshen、shensearch、sufocusedmatch、suworried、xueanxious、xuecasual、xueinterview、yanexamining、yanfocused、yanorganizing、yansmile、yucold、yuresolute、yushaken、yuyudream、yuyufearful、yuyutearful |
 | 背景 | bistro、case、coffee、dream、fastfood、hall、interview、office、orphanage、orphanagehall、rain、yuapartment、policecar、blooddream、dreamclass、dreamclassfull、dreamlobby、dreamroom、dreamstairs、dreamstore、mentaloffice、mentalward、station、hospitalroom、facelesshall、mirrorhall、mirrorward |
 | 封面 | title-dream、title-case、title-coffee |
 
@@ -42,6 +42,6 @@
 3. 通过 `[bg]`、`[chara_new]`、`[chara_face]` 等引擎标签接入对应画面。复用人物时核对造型恢复时机。封面由外壳读取，命名和索引在 `dist/game.js`。
 4. 图鉴人物条目的第四项填写常态素材名，检查 `discoveries` 与图鉴键对应。图鉴加载完成前显示占位，解码失败显示提示。
 
-第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。第一章的 shengentle 用于沈义安排余筱玲安全交接的节拍，通过 `chara_face` 临时显示，不替换常态图；yushaken 用于余筱玲从扭颈噩梦中惊醒。第一章新增 xuefieldcalm，表现薛淼举手报案时平静、注意倾听的状态，与后续受惊时的常态形象区分。第二章的 xueanxious 补充薛淼在警局回答笔录时的回避神情。第九章的 yuyutearful 用于余雨开门哭求众人不要抓姐姐；使用 `chara_face` 保留后续讲述回忆时的常态形象。第十章的 suworried 用于苏禹回忆心理医生后仍感不安的节拍；第十一章的 yanfocused 用于颜歆看清梦中无脸照片的节拍。第八章的 chisuspicious 用于迟欢质疑梦境证词能否洗清嫌疑；第十一章的 psychwary 表现心理医生在医院初醒时的戒备；第十二章的 baifocused 用于白羽说明送检结果。
+第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。第一章的 shengentle 用于沈义安排余筱玲安全交接的节拍，通过 `chara_face` 临时显示，不替换常态图；yushaken 用于余筱玲从扭颈噩梦中惊醒。薛淼的 xuecasual 表现蓝衣造型的平静状态，既用于第一章举手报案，也用于第三、五、八至十章与苏禹等人的日常交谈；受惊的 xue 保留给描述发现尸体等情境。第二章的 xueanxious 补充薛淼在警局回答笔录时的回避神情。第九章的 yuyutearful 用于余雨开门哭求众人不要抓姐姐；使用 `chara_face` 保留后续讲述回忆时的常态形象。第十章的 suworried 用于苏禹回忆心理医生后仍感不安的节拍；第十一章的 yanfocused 用于颜歆看清梦中无脸照片的节拍。第八章的 chisuspicious 用于迟欢质疑梦境证词能否洗清嫌疑；第十一章的 psychwary 表现心理医生在医院初醒时的戒备；第十二章的 baifocused 用于白羽说明送检结果。
 
 第八章使用 policecar 表现警方车内调查，blooddream 用于梦境洪水演出。第十、十一章新增 mentaloffice（精神病院专家诊室）、mentalward（夜间病房）、station（扬城火车站）、hospitalroom（现实病房）、facelesshall、mirrorhall、mirrorward（梦中长廊与镜面病房）和 psych、psychdespair、faceless（心理医生及疲惫表情、匿名无脸人）。这些立绘与背景由 ImageGen 生成并转为透明 WebP 或 1280×720 WebP；医生的年龄、短发和服装属于改编设定，原稿未交代外貌。

@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 25;
-f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
+f.game_script_revision = 35;
+f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
 [chara_face name=yuyu face=tearful storage=yuyutearful.webp]
 [chara_face name=yuyu face=fearful storage=yuyufearful.webp]
@@ -23,7 +24,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【沈义】[r]
 余雨在里屋吗？[p]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 【薛淼】[r]
 我刚出来。她还在看书。刚才……我问过她几句案子的事。[p]
 薛淼打了个哈欠，没敢看沈义。女孩最后望向他的那个眼神，他有点忘不掉。[p]
@@ -44,7 +45,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【苏禹】[r]
 那两个小姑娘是住在一起的？[p]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 【薛淼】[r]
 对。余雨自己说的。[p]
 
@@ -280,7 +281,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat17
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 17, "scene": "yuapartment", "discoveries": [], "chapter": 9};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

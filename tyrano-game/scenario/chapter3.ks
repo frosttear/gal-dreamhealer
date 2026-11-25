@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 19;
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp"];
+f.game_script_revision = 32;
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp","data/fgimage/xuecasual.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yanorganizing storage=yanorganizing.webp jname="颜歆"]
 [chara_new name=chireviewing storage=chireviewing.webp jname="迟欢"]
 
@@ -135,7 +136,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【颜歆】[r]
 所以这个小姑娘已经出现了三次？三年前、去年，还有今年？[p]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 薛淼喝了口大麦茶。[p]
 【薛淼】[r]
 所以我说邪门。去年就咱仨查那件事，差点把老苏搭进去。[p]
@@ -152,7 +153,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="另一种死因"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 【薛淼】[r]
 这次连凶手都没影儿，人就这么给吓死了。[p]
 [chara_hide_all time=0 wait=true]
@@ -164,7 +165,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 要是喝得更多，甚至可能直接骤停。外人看着，就像是活活吓死的。[p]
 她晃了晃瓶子，瓶里沙沙地响。单凭现场的样子，还分不清是惊吓还是药物反应。[p]
 [chara_hide_all time=0 wait=true]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 【薛淼】[r]
 我没忘。可普通人哪有那么容易弄到深眠？[p]
 [chara_hide_all time=0 wait=true]

@@ -7,14 +7,14 @@ const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
   'chapter1.ks': 29,
   'chapter2.ks': 18,
-  'chapter3.ks': 19,
+  'chapter3.ks': 32,
   'chapter4.ks': 20,
-  'chapter5.ks': 30,
+  'chapter5.ks': 33,
   'chapter6.ks': 22,
   'chapter7.ks': 31,
-  'chapter8.ks': 24,
-  'chapter9.ks': 25,
-  'chapter10.ks': 26,
+  'chapter8.ks': 34,
+  'chapter9.ks': 35,
+  'chapter10.ks': 36,
   'chapter11.ks': 27,
   'chapter12.ks': 28
 };
@@ -240,7 +240,7 @@ const characterArt = {
   yu: [['yu', '常态', 'yu'], ['yucold', '冷意', 'finger'], ['yushaken', '惊醒', 'wrist'], ['yuresolute', '坚定', 'dreamyuyu']],
   shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shencrouchshen', '蹲下问话', 'yu'], ['shensearch', '持手电调查', 'cleaver']],
   bai: [['bai', '常态', 'bai'], ['baifocused', '专注', 'tissuecheck']],
-  xue: [['xuefieldcalm', '常态', 'xue'], ['xue', '惊慌', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
+  xue: [['xuecasual', '常态', 'xue'], ['xue', '惊慌', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
   gao: [['gao', '常态', 'gao']],
   yan: [['yan', '常态', 'yan'], ['yansmile', '微笑', 'post'], ['yanorganizing', '整理线索', 'threecases'], ['yanexamining', '检查连接器', 'portable'], ['yanfocused', '专注观察', 'dreamcorridor']],
   su: [['su', '常态', 'su'], ['sufocusedmatch', '专注分析', 'familiar'], ['suworried', '担忧', 'fivelives']],

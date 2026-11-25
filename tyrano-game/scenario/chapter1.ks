@@ -5,7 +5,7 @@
 [chara_config pos_mode=false]
 [iscript]
 f.game_script_revision = 29;
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouchshen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuefieldcalm.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
+f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouchshen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -14,7 +14,7 @@ f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgi
 [chara_face name=shen face=gentle storage=shengentle.webp]
 [chara_new name=bai storage="bai.webp" jname="白羽"]
 [chara_new name=xue storage="xue.webp" jname="薛淼"]
-[chara_face name=xue face=fieldcalm storage=xuefieldcalm.webp]
+[chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yan storage="yan.webp" jname="颜歆"]
 [chara_new name=su storage="su.webp" jname="苏禹"]
 
