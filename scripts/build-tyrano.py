@@ -36,6 +36,17 @@ def install_game(project):
     settings = settings.replace(";scWidth = 1280;", ";scWidth = 1024;")
     config.write_text(settings, encoding="utf-8")
 
+    key_config = project / "data/system/KeyConfig.js"
+    bindings = key_config.read_text(encoding="utf-8-sig")
+    # Touch gestures run before the ordinary click handler.
+    for gesture in ("mash_right_2", "mash_right_3"):
+        bindings, count = re.subn(
+            rf'(?m)^(\s*"{gesture}"\s*:\s*)"[^"]*"(,)', r'\1""\2', bindings
+        )
+        if count != 1:
+            raise ValueError(f"Expected one TyranoScript binding for {gesture}")
+    key_config.write_text(bindings, encoding="utf-8")
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
