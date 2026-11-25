@@ -9,7 +9,7 @@
 | `dist/catalog.js`、`dist/assets/` | 图鉴数据与 WebP 源资产；角色详情的立绘关系和剧情解锁条件维护在 `dist/game.js` |
 | `tyrano-game/scenario/` | TyranoScript 剧本。first.ks 启动，make.ks 读档钩子，chapter1–12 主线，rain-scene.ks 公用回忆演出 |
 | `tyrano-game/system/backlog.html` | 引擎回顾模板 |
-| `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与回顾模板，注入配置 |
+| `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与回顾模板，注入配置，并在 `dist/version.txt` 写入提交号和构建时间 |
 | `dist/engine/`、`.tyrano-preview/` | 忽略的生成引擎和本地预览目录 |
 | `.github/workflows/pages.yml` | main 推送或手动触发构建与 GitHub Pages 发布 |
 
@@ -37,6 +37,8 @@ python3 -m http.server 8000 --directory dist
 ```
 
 构建固定官方 V6.02c 和 SHA-256，可用 `--archive /path/to/sdk.zip` 提供本地包。每次构建重新生成 `dist/engine/`。浏览器打开 `http://localhost:8000/`。发布产物要带上外壳和完整引擎目录，可置于子路径。资源扫描约束见 [ASSETS.md](ASSETS.md)。
+
+部署后可访问 `version.txt` 查看该产物对应的 Git 短提交号及 UTC 构建时间。
 
 | 现象 | 优先检查 |
 | --- | --- |

@@ -5,9 +5,11 @@ import argparse
 import hashlib
 import shutil
 import re
+import subprocess
 import tempfile
 import urllib.request
 import zipfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +69,17 @@ def main():
         if OUTPUT.exists():
             shutil.rmtree(OUTPUT)
         project.rename(OUTPUT)
+    commit = subprocess.run(
+        ["git", "rev-parse", "--short=12", "HEAD"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    built_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    (ROOT / "dist/version.txt").write_text(
+        f"version={commit}\nbuilt_at={built_at}\n", encoding="utf-8"
+    )
     print(f"TyranoScript runtime built at {OUTPUT}")
 
 
