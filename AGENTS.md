@@ -8,6 +8,8 @@
 2. 按任务读对应文档和紧邻源码。剧本看 [GAME_DESIGN.md](GAME_DESIGN.md)，美术看 [ASSETS.md](ASSETS.md)，存档、构建和部署看 [ARCHITECTURE.md](ARCHITECTURE.md)，历史约束看 [DECISIONS.md](DECISIONS.md)。
 3. 把任务限定为一个可验收的改动。先复用最近的章节、演出或 UI 模式。原稿不在当前工作区时，记录缺失范围并请求对应章节。
 
+抽取或改编剧情前，按 [项目经验](GAME_DESIGN.md#项目经验从审校稿改编到视觉小说) 用审校稿做逐节拍对照，逐页核对对话、描写、立绘和分页。当前路线范围及验收要求见 [DECISIONS.md](DECISIONS.md)。
+
 | 工作 | 模型建议 |
 | --- | --- |
 | 台词、演出、图鉴、单个素材接入、局部 CSS、简单故障、文档更新 | Luna |
