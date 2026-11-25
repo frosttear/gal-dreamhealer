@@ -236,6 +236,25 @@ function catalogPortrait(art) {
   return slot;
 }
 
+const characterArt = {
+  yu: [['yu', '常态', 'yu'], ['yucold', '冷意', 'finger'], ['yushaken', '惊醒', 'wrist'], ['yudetermined', '决然', 'dreamyuyu']],
+  shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shencrouch', '蹲下问话', 'yu'], ['shensearch', '持手电调查', 'cleaver']],
+  bai: [['bai', '常态', 'bai'], ['baifocused', '专注', 'tissuecheck']],
+  xue: [['xue', '常态', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
+  gao: [['gao', '常态', 'gao']],
+  yan: [['yan', '常态', 'yan'], ['yansmile', '微笑', 'post'], ['yanorganizing', '整理线索', 'threecases'], ['yanexamining', '检查连接器', 'portable'], ['yanfocused', '专注观察', 'dreamcorridor']],
+  su: [['su', '常态', 'su'], ['sufocused', '专注分析', 'familiar'], ['suworried', '担忧', 'fivelives']],
+  chi: [['chi', '常态', 'chi'], ['chireviewing', '翻阅旧档', 'rainfile'], ['chisuspicious', '质疑', 'dreamgao']],
+  chen: [['chen', '常态', 'chen'], ['chenthoughtful', '严肃', 'deep35']],
+  qin: [['qin', '常态', 'qin'], ['qinconcerned', '担忧', 'deep35']],
+  li: [['li', '常态', 'li'], ['liapprehensive', '雨夜戒备', 'whiteumbrella']],
+  muyuji: [['muyuji', '档案背影', 'muyuji']],
+  huangying: [['huangying', '旧洋娃娃', 'huangying']],
+  yuyu: [['yuyu', '常态', 'yuyu'], ['yuyutearful', '哭求', 'aunttrace'], ['yuyufearful', '雨夜恐惧', 'newhome'], ['yuyudream', '梦中姿态', 'dreamyuyu']],
+  lixiong: [['lixiong', '遮脸背影', 'lixiong']],
+  psychwoman: [['psychdespair', '疲惫', 'psychid'], ['psychawake', '初醒', 'psychid'], ['psychwary', '戒备', 'psychid']]
+};
+
 function showCatalog() {
   const content = openDialog('图鉴');
   const tabs = document.createElement('div');
@@ -252,7 +271,7 @@ function showCatalog() {
     });
     for (const [key, [name, type, description, art]] of Object.entries(notes)) {
       if (type !== category) continue;
-      const known = unlocked.has(key);
+      const known = isCatalogUnlocked(key);
       const card = document.createElement('article');
       card.className = 'card';
       if (known && art) card.append(catalogPortrait(art));
@@ -261,6 +280,14 @@ function showCatalog() {
       heading.textContent = known ? name : '未解锁';
       detail.textContent = known ? description : '继续阅读以解锁。';
       card.append(heading, detail);
+      if (category === '人物') {
+        const open = document.createElement('button');
+        open.className = 'card-open';
+        open.textContent = '查看立绘';
+        open.setAttribute('aria-label', `查看${known ? name : '未解锁人物'}的相关立绘`);
+        open.onclick = () => showCharacter(key);
+        card.append(open);
+      }
       grid.append(card);
     }
   }
@@ -273,10 +300,70 @@ function showCatalog() {
   select('人物');
 }
 
+function showCharacter(key) {
+  const [name, , description] = notes[key];
+  const known = isCatalogUnlocked(key);
+  const content = $('dialog-content');
+  content.replaceChildren();
+  const back = document.createElement('button');
+  back.textContent = '返回人物列表';
+  back.onclick = showCatalog;
+  const heading = document.createElement('h3');
+  heading.textContent = known ? name : '未解锁人物';
+  const detail = document.createElement('p');
+  detail.textContent = known ? description : '继续阅读以解锁人物资料。';
+  const gallery = document.createElement('div');
+  gallery.className = 'cards portrait-gallery';
+  content.append(back, heading, detail, gallery);
+  for (const [art, label, requirement] of characterArt[key] ?? [[notes[key][3], '常态', key]]) {
+    if (!art) continue;
+    const available = known && unlocked.has(requirement);
+    const card = document.createElement('article');
+    card.className = 'card';
+    const title = document.createElement('strong');
+    title.textContent = available ? label : '未解锁立绘';
+    if (available) card.append(catalogPortrait(art));
+    else {
+      const locked = document.createElement('div');
+      locked.className = 'portrait-locked';
+      locked.textContent = '未解锁';
+      card.append(locked);
+    }
+    card.append(title);
+    gallery.append(card);
+  }
+}
+
+function isCatalogUnlocked(key) {
+  return unlocked.has(key) || (key === 'psychwoman' && unlocked.has('psychid'));
+}
+
+function showCredits() {
+  const content = openDialog('制作人员');
+  const intro = document.createElement('p');
+  intro.textContent = '《梦境诊疗师》第一卷';
+  const list = document.createElement('dl');
+  list.className = 'credits-list';
+  for (const [role, name] of [
+    ['原作', '守拙'],
+    ['视觉小说改编与剧本整理', '梦境诊疗师项目组'],
+    ['程序开发与网页制作', '梦境诊疗师项目组'],
+    ['视觉素材', 'AI 辅助生成，项目组整理接入']
+  ]) {
+    const term = document.createElement('dt');
+    const value = document.createElement('dd');
+    term.textContent = role;
+    value.textContent = name;
+    list.append(term, value);
+  }
+  content.append(intro, list);
+}
+
 $('start').onclick = () => launch('new');
 $('resume').onclick = () => launch('auto');
 $('menu-load').onclick = () => launch('quick');
 $('menu-catalog').onclick = showCatalog;
+$('menu-credits').onclick = showCredits;
 $('catalog').onclick = showCatalog;
 $('home').onclick = () => showMenu();
 $('retry').onclick = () => launch(launchMode);

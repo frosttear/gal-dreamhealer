@@ -43,6 +43,20 @@ dialog::backdrop { background: #08080bd0; }
     radial-gradient(ellipse at 50% 88%, #9b7580 0 12px, transparent 13px);
 }
 .card p { margin: .4em 0; line-height: 1.5; }
+.card-open { margin-top: .5rem; }
+.portrait-gallery { margin-top: 1rem; }
+.portrait-locked {
+  display: grid;
+  place-items: center;
+  height: 115px;
+  margin-bottom: .45rem;
+  color: #c6b8c0;
+  background: repeating-linear-gradient(135deg, #24232d, #24232d 10px, #1c1c24 10px, #1c1c24 20px);
+  border-radius: 3px;
+}
+.credits-list { display: grid; grid-template-columns: minmax(8rem, auto) 1fr; gap: .7rem 1rem; }
+.credits-list dt { color: #f1c2ae; }
+.credits-list dd { margin: 0; }
 @media (max-width: 600px) { nav button { padding: .48em .65em; } }
 
 #main-menu {

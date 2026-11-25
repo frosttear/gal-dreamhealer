@@ -6,7 +6,7 @@
 | --- | --- |
 | `dist/index.html`、`style.css` | 原生 HTML/CSS 外壳，主菜单、舞台、按钮和图鉴对话框 |
 | `dist/game.js` | 原生 JavaScript，iframe 生命周期、导航、运行状态、封面和浏览器记录 |
-| `dist/catalog.js`、`dist/assets/` | 图鉴数据与 WebP 源资产 |
+| `dist/catalog.js`、`dist/assets/` | 图鉴数据与 WebP 源资产；角色详情的立绘关系和剧情解锁条件维护在 `dist/game.js` |
 | `tyrano-game/scenario/` | TyranoScript 剧本。first.ks 启动，make.ks 读档钩子，chapter1–12 主线，rain-scene.ks 公用回忆演出 |
 | `tyrano-game/system/backlog.html` | 引擎回顾模板 |
 | `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与回顾模板，注入配置 |
@@ -24,6 +24,8 @@
 5. 回顾沿用引擎的回顾记录，模板用定高分栏按实际渲染行数分页。初次打开定位最新页，每次翻页移动一个完整栏宽。
 
 封面和图鉴键为 `dreamhealer.chapter1.cover`、`dreamhealer.chapter1.unlocks`，保留旧原生版记录。引擎项目 ID 为 `dreamhealer-tyrano`，宿主检测 `dreamhealer-tyrano_tyrano_auto_save` 和 `dreamhealer-tyrano_tyrano_quick_save`。原生版存档格式与引擎格式不同。同一浏览器同一 origin 的不同路径共享 localStorage，移动到新域名会使用另一个存储空间。
+
+图鉴从人物列表进入单个人物的立绘详情。代表立绘沿用 `catalog.js` 的人物条目，其他立绘和解锁条件在 `game.js` 的 `characterArt` 中配置，条件使用已有剧情图鉴键。制作人员名单由主菜单入口打开，不依赖存档状态。
 
 ## 构建与验证入口
 
