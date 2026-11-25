@@ -5,18 +5,18 @@ const coverKey = 'dreamhealer.chapter1.cover';
 const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
-  'chapter1.ks': 14,
-  'chapter2.ks': 15,
-  'chapter3.ks': 16,
-  'chapter4.ks': 5,
-  'chapter5.ks': 6,
-  'chapter6.ks': 7,
-  'chapter7.ks': 8,
-  'chapter8.ks': 9,
-  'chapter9.ks': 10,
-  'chapter10.ks': 11,
-  'chapter11.ks': 12,
-  'chapter12.ks': 13
+  'chapter1.ks': 17,
+  'chapter2.ks': 18,
+  'chapter3.ks': 19,
+  'chapter4.ks': 20,
+  'chapter5.ks': 21,
+  'chapter6.ks': 22,
+  'chapter7.ks': 23,
+  'chapter8.ks': 24,
+  'chapter9.ks': 25,
+  'chapter10.ks': 26,
+  'chapter11.ks': 27,
+  'chapter12.ks': 28
 };
 const covers = [
   ['dream', '血红之梦', 0],

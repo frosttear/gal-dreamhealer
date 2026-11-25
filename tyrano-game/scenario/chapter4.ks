@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 5;
+f.game_script_revision = 20;
 f.chapter_assets = ["data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -22,7 +22,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 秦桥拉过一把椅子，挨着两人坐下来。[p]
 【秦桥】[r]
 我看到帖子了。怎么说？[p]
-【颜歆（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
 这种事问老苏吧，他是我的外置大脑。[p]
 
 *beat2
@@ -77,7 +79,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 我怀疑是他杀。高杉杉是个老师。帖子里看不出她有什么病史，怎么就突然被吓死了？[p]
 【苏禹】[r]
 看着毫无头绪，倒很像去年的分尸案。[p]
-【秦桥（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
+【秦桥】[r]
 那次我没参与。讲讲？[p]
 
 *beat5
@@ -235,8 +239,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="娃娃里的设备"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 离开的时候，我带走了一样东西。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yanexamining left=640 top=40 height=590 time=0 wait=true]
 【颜歆】[r]
 黄英送的洋娃娃。我拆开摸过，里面藏着一个便携式入梦连接器。[p]
 【颜歆】[r]
@@ -273,8 +281,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 我们找到黄英，强行进了她的梦。醒来之后我又问过一遍，她亲口认了。[p]
 【苏禹】[r]
 梦里，她说的理由就是听说这个孩子会抱着娃娃睡觉。[p]
-【秦桥（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
+【秦桥】[r]
 就因为这个？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 苏禹没有马上回答。杯底轻轻碰了一下桌面。[p]
 
 *beat17
@@ -293,8 +305,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 我连那个娃娃是从哪儿来的都没找到。黄英的梦里也没有。[p]
-【秦桥（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
+【秦桥】[r]
 你怀疑有人删了她的记忆？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 不排除。可梦里少了什么，凭现在这些还证明不了。[p]
 

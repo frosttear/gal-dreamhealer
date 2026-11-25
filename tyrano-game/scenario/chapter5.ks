@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 6;
+f.game_script_revision = 21;
 f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocused.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -74,8 +74,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【门内的女孩】[r]
 谁啊？[p]
 苏禹一下就听出来，这不是余筱玲的声音。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 我们是警察，找余筱玲。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
 门开了条缝。女孩扎着双马尾，刘海挡住半边眼睛。她右手拉着门，左手横在胸前。[p]
 
 *beat5
@@ -122,10 +126,16 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余雨"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余筱玲（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+【余筱玲】[r]
 她是我表妹，叫余雨。她跟我的小姨一起住在这儿。[p]
-【颜歆（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
 你还有个这么可爱的表妹呢？嗨，你好。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
 【余雨】[r]
 你好……[p]
 余雨挪了几步，退进卧室。门在她身后合上了。[p]
@@ -146,8 +156,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 【余筱玲】[r]
 记错了吧，苏禹哥哥。福利院关了以后，我被收养，才认识余雨妹妹。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 那应该是我记错了。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 苏禹一直看着她。听到这句，她的肩膀好像松了一点。[p]
 
 *beat9
@@ -188,7 +202,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_hide_all time=0 wait=true]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 颜歆伸手扶住她。女孩眉头慢慢松开，没再睁眼。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 陈姐的药起效了。[p]
 
 *beat11
@@ -359,7 +375,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 【沈义】[r]
 没让你上来。二楼储物间有把劈骨刀，你去看看。[p]
-【迟欢（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
+【迟欢】[r]
 劈骨刀？[p]
 
 *beat22

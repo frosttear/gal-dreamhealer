@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 10;
+f.game_script_revision = 25;
 f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -43,7 +43,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 苏禹望着相邻的两扇门。梦里传出砸门声的那扇，真是余筱玲那间吗？[p]
 【苏禹】[r]
 那两个小姑娘是住在一起的？[p]
-【薛淼（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+【薛淼】[r]
 对。余雨自己说的。[p]
 
 *beat3
@@ -288,7 +290,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 薛淼食指点了点太阳穴。[p]
 【薛淼】[r]
 有个地方对不上。那些东西最后分别装在几只熊里，筱玲却只记到楼梯间。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 后面的事她没看见。凶手有没有帮手，现在也说不准。[p]
 
 *beat18
@@ -306,7 +310,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 这种东西能远程连进梦里。上回就是在穆雨霁的娃娃里找到的。[p]
 【苏禹】[r]
 如果当晚它开着，也许能解释筱玲怎么睡过去。可我们没看到它开。[p]
-【颜歆（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
 等等。那筱玲的房间在哪儿？[p]
 
 *beat19
@@ -321,8 +327,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【余雨】[r]
 筱玲姐姐在一楼大厅旁边，那个不挂牌子的侧房。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 一楼？那里没有卧室啊。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
 【余雨】[r]
 是没有。姐姐一直睡在沙发上。[p]
 
@@ -354,8 +364,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹】[r]
 沈警官，学校是你自己去查的吗？[p]
-【沈义（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
 底下人去的。怎么了？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 那些教过姐妹俩的老师，现在还在原来的学校吗？[p]
 
@@ -421,8 +435,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 沈义从衣兜里摸出那张纸，压平几道折痕。[p]
 【沈义】[r]
 小姨自己留的地址和号码。房产按这个查不到，电话早就注销了。[p]
-【苏禹（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 照片呢？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 【沈义】[r]
 照片、视频，都没有。[p]
 

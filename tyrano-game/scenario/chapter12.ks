@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 13;
+f.game_script_revision = 28;
 f.chapter_assets = ["data/bgimage/interview.webp", "data/bgimage/yuapartment.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/bai.webp", "data/fgimage/baifocused.webp", "data/fgimage/yu.webp", "data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -329,8 +329,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹】[r]
 我还是弄不懂，她怎么会在梦里知道这些人会去哪儿、会做什么。[p]
-【沈义（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
 这些，她就肯告诉你们？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su storage=su.webp left=640 top=55 height=510 time=0 wait=true]
 苏禹笑了一声，声音很轻。[p]
 【苏禹】[r]
 在她看来，我们也都是梦里的人。说给梦听，有什么关系？[p]
@@ -431,8 +435,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【颜歆】[r]
 我只知道，小姨右手缺了一根小指。是不是同一根，请你们接着验。[p]
 颜歆把刚签好的笔录推回去，正要站起来。[p]
-【沈义（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
 要不要以后跟我们一起办案？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 【颜歆】[r]
 这个……我得先问问老苏。[p]
 
@@ -455,7 +463,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 【余筱玲】[r]
 不会的。你先别怕。那女人已经死了。她以前怎么骂咱们、怎么对咱们，都过去了。[p]
-【余雨（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
+【余雨】[r]
 可我还是不明白。你是怎么做到的？[p]
 
 *beat28
@@ -504,8 +514,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="暂时离开"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 咚、咚、咚。外面响起敲门声。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 【余筱玲（门内）】[r]
 谁啊？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+听见熟悉的声音，余筱玲转动了门把手。[p]
 【苏禹】[r]
 是我。沈叔知道我们过来。先去个安全的地方住几天，之后再跟他说你们知道的事。[p]
 [chara_hide_all time=0 wait=true]
@@ -515,7 +530,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [chara_hide_all time=0 wait=true]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 两个女孩互相看了一眼，同时点了点头。[p]
-【苏禹（门外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
 行。先带换洗衣服。剩下的先放原处。[p]
 
 *beat31

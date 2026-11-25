@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 14;
+f.game_script_revision = 17;
 f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouch.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -250,8 +250,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【沈义（画外）】[r]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
 筱玲，在这里稍等……[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu storage=yucold.webp left=640 top=55 height=510 time=0 wait=true]
 沈义回过头。两人视线相撞，女孩眼底滑过一丝水蛇般的冷意。[p]
 
 *beat13
