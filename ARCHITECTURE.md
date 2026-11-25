@@ -23,6 +23,8 @@
 4. 引擎读档执行 `make.ks`，恢复打字速度、场景背景和回顾快照，再调用 `restored` 解除加载状态。混合缓存版本通过兼容 `reached` 回退。手动档在当前文字和等待指令结束后保存。Tyrano 的同版存档按指令位置恢复。剧本指令更新后，旧档按原节拍或章末位置重播。第一至三章旧选项和调查分支存档从对应节拍的新版第一页进入顺序流程。
 5. 回顾沿用引擎的回顾记录，模板用定高分栏按实际渲染行数分页。初次打开定位最新页，每次翻页移动一个完整栏宽。
 
+剧情画面点击之间至少间隔 350 毫秒，避免快速连点越过多页对话；此限制只作用于引擎画面的点击推进，不限制键盘操作或宿主菜单按钮。
+
 封面和图鉴键为 `dreamhealer.chapter1.cover`、`dreamhealer.chapter1.unlocks`，保留旧原生版记录。引擎项目 ID 为 `dreamhealer-tyrano`，宿主检测 `dreamhealer-tyrano_tyrano_auto_save` 和 `dreamhealer-tyrano_tyrano_quick_save`。原生版存档格式与引擎格式不同。同一浏览器同一 origin 的不同路径共享 localStorage，移动到新域名会使用另一个存储空间。
 
 图鉴从人物列表进入单个人物的立绘详情。代表立绘沿用 `catalog.js` 的人物条目，其他立绘和解锁条件在 `game.js` 的 `characterArt` 中配置，条件使用已有剧情图鉴键。制作人员名单由主菜单入口打开，不依赖存档状态。

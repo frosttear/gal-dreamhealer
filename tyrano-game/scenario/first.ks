@@ -6,6 +6,19 @@
 [iscript]
 // The virtual cursor has not been hidden yet. Its initial zero would block early clicks.
 if (TYRANO.kag.key_mouse.vmouse.last_hide_time === 0) TYRANO.kag.key_mouse.vmouse.last_hide_time = -1000;
+const eventLayer = document.querySelector(".layer_event_click");
+if (eventLayer) {
+    let lastAcceptedClick = -Infinity;
+    eventLayer.addEventListener("click", event => {
+        const now = performance.now();
+        if (now - lastAcceptedClick < 350) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return;
+        }
+        lastAcceptedClick = now;
+    }, true);
+}
 queueMicrotask(() => window.parent.dreamhealer.ready(window));
 [endscript]
 [s]
