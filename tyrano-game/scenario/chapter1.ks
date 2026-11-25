@@ -4,8 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 30;
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouchshen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
+f.game_script_revision = 31;
+f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/bgimage/cgshenxiaoling.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -191,7 +191,6 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat10
 [cm]
 [chara_hide name=shen time=0 wait=true pos_mode=false]
-[chara_new name=shencrouch storage=shencrouchshen.webp jname="沈义"]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":10,"scene":"case","discoveries":["yu"]};
@@ -205,19 +204,19 @@ window.parent.dreamhealer.reached(f.game_beat);
 【余筱玲】[r]
 叔叔，我想跟你们走。[p]
 [chara_hide name=yu time=0 wait=true]
-[chara_show name=shencrouch left=640 top=70 height=590 time=0 wait=true]
-沈义蹲了下来，和她的视线齐平。[p]
+[bg storage=cgshenxiaoling.webp time=140 wait=true position=center]
+[eval exp="f.game_beat.scene = 'cgshenxiaoling'"]
+[eval exp="window.parent.dreamhealer.unlock?.('cgshenxiaoling')"]
+沈义蹲了下来，和她的视线齐平，轻轻摸了摸她的头。[p]
 【沈义】[r]
 你叫什么名字啊？[p]
-[chara_hide name=shencrouch time=0 wait=true]
-[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 【余筱玲】[r]
 余筱玲。[p]
 她的下唇还留着一排浅浅的齿印。[p]
 
 *beat11
 [cm]
-[chara_hide name=yu time=0 wait=true pos_mode=false]
+[bg storage=case.webp time=140 wait=true position=center]
 [chara_show name=shen face=gentle left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":11,"scene":"case","discoveries":["finger"]};

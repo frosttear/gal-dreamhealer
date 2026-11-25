@@ -5,9 +5,9 @@ const coverKey = 'dreamhealer.chapter1.cover';
 const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
-  'chapter1.ks': 30,
+  'chapter1.ks': 31,
   'chapter2.ks': 42,
-  'chapter3.ks': 37,
+  'chapter3.ks': 38,
   'chapter4.ks': 20,
   'chapter5.ks': 38,
   'chapter6.ks': 22,
@@ -169,6 +169,13 @@ window.dreamhealer = {
     }
   },
 
+  unlock(key) {
+    if (unlocked.has(key)) return;
+    unlocked.add(key);
+    store(unlockKey, [...unlocked]);
+    $('status').textContent ||= '图鉴已更新';
+  },
+
   home: showMenu
 };
 
@@ -238,11 +245,11 @@ function catalogPortrait(art) {
 
 const characterArt = {
   yu: [['yu', '常态', 'yu'], ['yucold', '冷意', 'finger'], ['yushaken', '惊醒', 'wrist'], ['yuresolute', '坚定', 'dreamyuyu']],
-  shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shencrouchshen', '蹲下问话', 'yu'], ['shensearch', '持手电调查', 'cleaver']],
+  shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shensearch', '持手电调查', 'cleaver']],
   bai: [['bai', '常态', 'bai'], ['baifocused', '专注', 'tissuecheck']],
   xue: [['xuecasual', '常态', 'xue'], ['xue', '惊慌', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
   gao: [['gao', '常态', 'gao']],
-  yan: [['yan', '常态', 'yan'], ['yansmile', '微笑', 'post'], ['yanorganizing', '整理线索', 'threecases'], ['yanexamining', '检查连接器', 'portable'], ['yanfocused', '专注观察', 'dreamcorridor']],
+  yan: [['yan', '常态', 'yan'], ['yansmile', '微笑', 'post'], ['yanexamining', '检查连接器', 'portable'], ['yanfocused', '专注观察', 'dreamcorridor']],
   su: [['su', '常态', 'su'], ['sufocusedmatch', '专注分析', 'familiar'], ['suworried', '担忧', 'fivelives']],
   chi: [['chi', '常态', 'chi'], ['chireviewing', '翻阅旧档', 'rainfile'], ['chisuspicious', '质疑', 'dreamgao']],
   chen: [['chen', '常态', 'chen'], ['chenthoughtful', '严肃', 'deep35']],
@@ -255,6 +262,11 @@ const characterArt = {
   psychwoman: [['psychdespair', '疲惫', 'psychid'], ['psychawake', '初醒', 'psychid'], ['psychwary', '戒备', 'psychid']]
 };
 
+const sceneArt = [
+  ['cgshenxiaoling', '警戒线外'],
+  ['cgyanreviewing', '舒颜咖啡 · 研判']
+];
+
 function showCatalog() {
   const content = openDialog('图鉴');
   const tabs = document.createElement('div');
@@ -262,13 +274,30 @@ function showCatalog() {
   tabs.className = 'tabs';
   grid.className = 'cards';
   content.append(tabs, grid);
-  const categories = ['人物', '线索'];
+  const categories = ['人物', '线索', '场景'];
 
   function select(category) {
     grid.replaceChildren();
     [...tabs.children].forEach(button => {
       button.setAttribute('aria-pressed', String(button.textContent === category));
     });
+    grid.classList.toggle('scene-gallery', category === '场景');
+    if (category === '场景') {
+      for (const [key, title] of sceneArt) {
+        if (!unlocked.has(key)) continue;
+        const figure = document.createElement('figure');
+        figure.className = 'card';
+        const img = document.createElement('img');
+        img.src = portraitUrl(key);
+        img.alt = title;
+        const caption = document.createElement('figcaption');
+        caption.textContent = title;
+        figure.append(img, caption);
+        grid.append(figure);
+      }
+      if (!grid.childElementCount) grid.textContent = '继续阅读以解锁场景画。';
+      return;
+    }
     for (const [key, [name, type, description, art]] of Object.entries(notes)) {
       if (type !== category) continue;
       const known = isCatalogUnlocked(key);

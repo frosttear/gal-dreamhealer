@@ -1,12 +1,11 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 37;
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp","data/fgimage/xuecasual.webp"];
+f.game_script_revision = 38;
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/bgimage/cgyanreviewing.webp","data/fgimage/chireviewing.webp","data/fgimage/xuecasual.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=casual storage=xuecasual.webp]
-[chara_new name=yanorganizing storage=yanorganizing.webp jname="颜歆"]
 [chara_new name=chireviewing storage=chireviewing.webp jname="迟欢"]
 
 *beat1
@@ -261,35 +260,28 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 
 *beat12
 [cm]
-[chara_hide name=su time=0 wait=true pos_mode=false]
-[chara_show name=yanorganizing left=640 top=35 height=620 time=0 wait=true]
+[chara_hide_all time=0 wait=true]
+[bg storage=cgyanreviewing.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n":12,"scene":"coffee","discoveries":["dreamlock"],"chapter":3};
+f.game_beat = {"n":12,"scene":"cgyanreviewing","discoveries":["dreamlock","cgyanreviewing"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="她的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 颜歆捧着杯子，想起自己是怎么先连上目标、再把苏禹接进梦里去的。[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 你是连接者。仔细想想，余筱玲的梦和别人的有什么不同？[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=yanorganizing left=640 top=35 height=620 time=0 wait=true]
 【颜歆】[r]
 危险。[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 这我知道。还有呢？[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=yanorganizing left=640 top=35 height=620 time=0 wait=true]
 颜歆停了几秒，眼睛忽然一亮。[p]
 【颜歆】[r]
 特别容易进去。可等到要出来，就跟门从外边反锁了一样。[p]
 
 *beat13
 [cm]
+[bg storage=coffee.webp time=140 wait=true position=center]
 [chara_hide_all time=0 wait=true]
 [chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [iscript]

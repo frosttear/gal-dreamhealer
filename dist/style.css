@@ -140,3 +140,7 @@ dialog::backdrop { background: #08080bd0; }
     background: linear-gradient(0deg, #141e1e 43%, #141e1e00 71%);
   }
 }
+
+.scene-gallery { grid-template-columns: 1fr; }
+.scene-gallery figure { margin: 0; }
+.scene-gallery img { display: block; width: 100%; height: auto; margin-bottom: .5rem; }
