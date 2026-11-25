@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 29;
+f.game_script_revision = 30;
 f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouchshen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -143,7 +143,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat8
 [cm]
 [chara_hide name=bai time=0 wait=true pos_mode=false]
-[chara_show name=xue face=fieldcalm left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=casual left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":8,"scene":"case","discoveries":["xue","time"]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
