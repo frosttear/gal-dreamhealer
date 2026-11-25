@@ -15,6 +15,7 @@ if (Array.isArray(f.game_backlog)) {
 [bg storage=&f.restore_background time=140 wait=true position=center]
 [endif]
 [if exp="f.game_replay_beat"]
+[cm]
 [chara_hide_all time=0 wait=true]
 [eval exp="delete f.game_replay_beat"]
 [endif]

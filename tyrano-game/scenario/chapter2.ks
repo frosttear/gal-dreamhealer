@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 3;
+f.game_script_revision = 15;
 f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/chenthoughtful.webp","data/fgimage/qin.webp","data/fgimage/qinconcerned.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -55,18 +55,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 f.game_beat = {"n":3,"scene":"interview","discoveries":[],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
-[autosave title="决定追问方向"]
+[autosave title="迟欢的追问"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 迟欢的手停在键盘上。[p]
 【迟欢】[r]
-你确定是静得可怕？
-[glink x=352 y=260 width=320 size=28 text="追问异常声响" storage=chapter2.ks target="*noise" keyfocus="1"]
-[glink x=352 y=330 width=320 size=28 text="追问新住户" storage=chapter2.ks target="*building" keyfocus="2"]
-[s]
+你确定是静得可怕？[p]
 
 *noise
 [cm]
-[eval exp="f.interview_route='noise'"]
 [chara_hide name=chi time=0 wait=true pos_mode=false]
 [chara_show name=xue face=interview left=640 top=55 height=510 time=0 wait=true]
 [iscript]
@@ -83,12 +79,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【迟欢（画外）】[r]
 是我疏忽了。算上你，我们到现在也就问了三个人。[p]
 其实另两个人回忆了好一会儿，才想起有蝉声。「特别响」是迟欢故意加的。[p]
-[jump target=*beat4]
 
 *building
 [cm]
-[eval exp="f.interview_route='building'"]
-[chara_hide name=chi time=0 wait=true pos_mode=false]
 [chara_show name=xue face=interview left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":3,"scene":"interview","discoveries":["buildingfive"],"chapter":2};
@@ -101,8 +94,6 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 【薛淼】[r]
 有一户新搬来，前阵子装修声蛮大。好像在我前面那幢……五幢吧。[p]
 迟欢在楼号旁打了个问号。[p]
-[jump target=*beat4]
-
 *beat4
 [cm]
 [iscript]

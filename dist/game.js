@@ -5,9 +5,9 @@ const coverKey = 'dreamhealer.chapter1.cover';
 const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
-  'chapter1.ks': 2,
-  'chapter2.ks': 3,
-  'chapter3.ks': 4,
+  'chapter1.ks': 14,
+  'chapter2.ks': 15,
+  'chapter3.ks': 16,
   'chapter4.ks': 5,
   'chapter5.ks': 6,
   'chapter6.ks': 7,
@@ -17,10 +17,6 @@ const scenarioRevisions = {
   'chapter10.ks': 11,
   'chapter11.ks': 12,
   'chapter12.ks': 13
-};
-const branchLabels = {
-  'chapter2.ks': { cicadas: 'noise', buildingfive: 'building' },
-  'chapter3.ks': { whiteumbrella: 'umbrella', lakesound: 'lake' }
 };
 const covers = [
   ['dream', '血红之梦', 0],
@@ -192,8 +188,7 @@ function restoreSave(kind) {
   if (revision && beat && data.stat.f.game_script_revision !== revision) {
     // Tyrano saves command indices. Replay the same beat when its pages have changed.
     engine.loadScenario(scenario, tags => {
-      const branch = beat.discoveries.map(key => branchLabels[scenario]?.[key]).find(Boolean);
-      const label = beat.ended ? 'ending' : branch ?? 'beat' + beat.n;
+      const label = beat.ended ? 'ending' : 'beat' + beat.n;
       const index = tags.findIndex(tag => tag.name === 'label' && tag.pm.label_name === label);
       if (index === -1) {
         showMenu('找不到旧存档的剧情位置。');

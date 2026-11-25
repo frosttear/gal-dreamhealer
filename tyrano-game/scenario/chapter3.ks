@@ -1,6 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 4;
+f.game_script_revision = 16;
 f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -49,20 +49,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 f.game_beat = {"n":3,"scene":"rain","discoveries":[],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
-[autosave title="门口还是湖边"]
+[autosave title="门口的哭声"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 门缝里吹进凉风。顺着手电光望过去，门边靠着几把伞。[p]
-哭声从外头传来，像是在湖边。
-
-[glink x=352 y=260 width=320 size=28 text="清点门边雨伞" storage=chapter3.ks target="*umbrella" keyfocus="1"]
-[glink x=352 y=330 width=320 size=28 text="循哭声看湖面" storage=chapter3.ks target="*lake" keyfocus="2"]
-[s]
+哭声从外头传来，像是在湖边。[p]
 
 *umbrella
 [cm]
 [chara_hide_all time=0 wait=true]
 [chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
-[eval exp="f.rain_route='umbrella'"]
 [iscript]
 f.game_beat = {"n":3,"scene":"rain","discoveries":["whiteumbrella"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -75,13 +70,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 也许有人半夜来过……[p]
 他在门边站了片刻，才推门走进雨里。[p]
 
-[jump target=*beat4]
 
 *lake
 [cm]
 [chara_hide_all time=0 wait=true]
 [chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
-[eval exp="f.rain_route='lake'"]
 [iscript]
 f.game_beat = {"n":3,"scene":"rain","discoveries":["lakesound"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -92,7 +85,6 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 有个白影漂在近岸。光晃过去，他看清了浮肿的脸。那张脸仿佛正冲着他笑。[p]
 更近的那声哭，听起来像是从水里传出来的。[p]
 
-[jump target=*beat4]
 
 *beat4
 [cm]
@@ -104,10 +96,6 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="背后的声音"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-[if exp="f.rain_route === 'umbrella'"]
-雷声一响，湖边的哭声更近了。他把手电往水里一照，照出一张浮肿的脸。[p]
-那张脸仿佛在笑，哭声却也像从同一个地方传来。[p]
-[endif]
 李护工连滚带爬地逃回大堂。门刚合上，背后响起一个细小的声音。[p]
 【孩子（画外）】[r]
 李叔叔，你在干嘛？[p]
@@ -286,16 +274,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="把两条调查线接起来"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-[iscript]
-f.interview_follow_up = f.interview_route === "noise" ? "薛淼没听见蝉鸣，迟欢的说法是试探。" : "薛淼记得装修的可能是五幢，楼号还要核实。";
-f.rain_follow_up = f.rain_route === "umbrella" ? "雨夜多出的白伞，要弄清楚是谁带来的。" : "湖边和小区都有人听到哭声，会是同一种异常吗？";
-[endscript]
 【苏禹】[r]
 两份记录兜到最后，都是余筱玲。有没有人故意借她的梦做事？[p]
 【苏禹】[r]
-[emb exp="f.interview_follow_up"][p]
+蝉鸣的说法有出入。薛淼提到的装修倒有个地方可以核实，五幢。[p]
 【苏禹】[r]
-[emb exp="f.rain_follow_up"][p]
+雨夜多出的那把白伞，得查查是谁带来的。[p]
+【苏禹】[r]
+湖边和小区里也都有人听到哭声。两边是不是一回事，还不能下结论。[p]
 [chara_hide_all time=0 wait=true]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 【颜歆】[r]

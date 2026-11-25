@@ -4,7 +4,7 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 2;
+f.game_script_revision = 14;
 f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouch.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -58,10 +58,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
 我冲到门前，使劲往外推。门纹丝不动。[p]
 我抡起拳头。可手一碰到木板，力气就像被抽走了。[p]
-外面忽然响起脚步声。有人！
-[glink x=352 y=260 width=320 size=28 text="回到窗边" storage=chapter1.ks target="*beat4" keyfocus="1"]
-[glink x=352 y=330 width=320 size=28 text="再听一会儿" storage=chapter1.ks target="*beat4" keyfocus="2"]
-[s]
+外面忽然响起脚步声。有人！[p]
 
 *beat4
 [cm]
@@ -167,10 +164,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 薛……薛淼。我家就在一楼。我出来扔垃圾，就看到这……呕……[p]
 一旁的民警伸手抚了抚他的后背。[p]
 【薛淼】[r]
-我在屋里戴着耳机，没听见尖叫。出了楼门，也就几秒吧，我就打了电话。
-[glink x=352 y=260 width=320 size=28 text="追问周围的人" storage=chapter1.ks target="*beat9" keyfocus="1"]
-[glink x=352 y=330 width=320 size=28 text="记录报案时间" storage=chapter1.ks target="*beat9" keyfocus="2"]
-[s]
+我在屋里戴着耳机，没听见尖叫。出了楼门，也就几秒吧，我就打了电话。[p]
 
 *beat9
 [cm]
