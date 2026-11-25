@@ -4,8 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 17;
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouch.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
+f.game_script_revision = 29;
+f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouchshen.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuefieldcalm.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -14,6 +14,7 @@ f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgi
 [chara_face name=shen face=gentle storage=shengentle.webp]
 [chara_new name=bai storage="bai.webp" jname="白羽"]
 [chara_new name=xue storage="xue.webp" jname="薛淼"]
+[chara_face name=xue face=fieldcalm storage=xuefieldcalm.webp]
 [chara_new name=yan storage="yan.webp" jname="颜歆"]
 [chara_new name=su storage="su.webp" jname="苏禹"]
 
@@ -142,7 +143,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat8
 [cm]
 [chara_hide name=bai time=0 wait=true pos_mode=false]
-[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+[chara_show name=xue face=fieldcalm left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":8,"scene":"case","discoveries":["xue","time"]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -190,7 +191,7 @@ window.parent.dreamhealer.reached(f.game_beat);
 *beat10
 [cm]
 [chara_hide name=shen time=0 wait=true pos_mode=false]
-[chara_new name=shencrouch storage=shencrouch.webp jname="沈义"]
+[chara_new name=shencrouch storage=shencrouchshen.webp jname="沈义"]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":10,"scene":"case","discoveries":["yu"]};

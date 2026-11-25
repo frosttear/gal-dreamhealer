@@ -21,7 +21,7 @@ const notes = {
     "薛淼",
     "人物",
     "住在一楼的报案人。",
-    "xue"
+    "xuefieldcalm"
   ],
   "gao": [
     "高杉杉",

@@ -1,13 +1,13 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 21;
-f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocused.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
+f.game_script_revision = 30;
+f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocusedmatch.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
 [chara_new name=shensearch storage=shensearch.webp jname="沈义"]
 [chara_new name=su storage=su.webp jname="苏禹"]
-[chara_face name=su face=focused storage=sufocused.webp]
+[chara_face name=su face=focused storage=sufocusedmatch.webp]
 
 *beat1
 [cm]

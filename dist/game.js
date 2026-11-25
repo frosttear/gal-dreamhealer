@@ -5,13 +5,13 @@ const coverKey = 'dreamhealer.chapter1.cover';
 const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
-  'chapter1.ks': 17,
+  'chapter1.ks': 29,
   'chapter2.ks': 18,
   'chapter3.ks': 19,
   'chapter4.ks': 20,
-  'chapter5.ks': 21,
+  'chapter5.ks': 30,
   'chapter6.ks': 22,
-  'chapter7.ks': 23,
+  'chapter7.ks': 31,
   'chapter8.ks': 24,
   'chapter9.ks': 25,
   'chapter10.ks': 26,
@@ -237,13 +237,13 @@ function catalogPortrait(art) {
 }
 
 const characterArt = {
-  yu: [['yu', '常态', 'yu'], ['yucold', '冷意', 'finger'], ['yushaken', '惊醒', 'wrist'], ['yudetermined', '决然', 'dreamyuyu']],
-  shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shencrouch', '蹲下问话', 'yu'], ['shensearch', '持手电调查', 'cleaver']],
+  yu: [['yu', '常态', 'yu'], ['yucold', '冷意', 'finger'], ['yushaken', '惊醒', 'wrist'], ['yuresolute', '坚定', 'dreamyuyu']],
+  shen: [['shen', '常态', 'shen'], ['shengentle', '温和', 'finger'], ['shencrouchshen', '蹲下问话', 'yu'], ['shensearch', '持手电调查', 'cleaver']],
   bai: [['bai', '常态', 'bai'], ['baifocused', '专注', 'tissuecheck']],
-  xue: [['xue', '常态', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
+  xue: [['xuefieldcalm', '常态', 'xue'], ['xue', '惊慌', 'xue'], ['xueinterview', '警局常服', 'alias'], ['xueanxious', '紧张', 'alias']],
   gao: [['gao', '常态', 'gao']],
   yan: [['yan', '常态', 'yan'], ['yansmile', '微笑', 'post'], ['yanorganizing', '整理线索', 'threecases'], ['yanexamining', '检查连接器', 'portable'], ['yanfocused', '专注观察', 'dreamcorridor']],
-  su: [['su', '常态', 'su'], ['sufocused', '专注分析', 'familiar'], ['suworried', '担忧', 'fivelives']],
+  su: [['su', '常态', 'su'], ['sufocusedmatch', '专注分析', 'familiar'], ['suworried', '担忧', 'fivelives']],
   chi: [['chi', '常态', 'chi'], ['chireviewing', '翻阅旧档', 'rainfile'], ['chisuspicious', '质疑', 'dreamgao']],
   chen: [['chen', '常态', 'chen'], ['chenthoughtful', '严肃', 'deep35']],
   qin: [['qin', '常态', 'qin'], ['qinconcerned', '担忧', 'deep35']],
