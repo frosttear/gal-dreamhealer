@@ -1,10 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocused.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shencrouch.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
+f.game_script_revision = 6;
+f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/su.webp","data/fgimage/sufocused.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
-[chara_new name=shencrouch storage=shencrouch.webp jname="沈义"]
 [chara_new name=shensearch storage=shensearch.webp jname="沈义"]
 [chara_new name=su storage=su.webp jname="苏禹"]
 [chara_face name=su face=focused storage=sufocused.webp]
@@ -20,8 +20,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="下午 3:11 · 老小区"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【下午 3:11 · 老小区】[r]
-薛淼在门卫室看见余筱玲被迟欢送回小区。他拨通苏禹的电话：「入梦一型在我这儿。还有个警察，等他走就行。」[p]
+【老小区 · 下午 3:11】[r]
+薛淼坐在门卫室，透过玻璃看见迟欢和余筱玲一前一后进了大门。[p]
+【薛淼】[r]
+喂，苏禹，余筱玲被送回来了。[p]
+【苏禹（电话）】[r]
+还有人吗？入梦一型在你那边吗？[p]
+【薛淼】[r]
+设备在我这儿。还有个警察，等他走就行。[p]
 
 *beat2
 [cm]
@@ -33,8 +39,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="准备行动"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【准备行动】[r]
-「我马上带药过来。」约二十分钟后，苏禹和颜歆赶到；迟欢已经从后门离开。三人走向五幢。[p]
+【苏禹】[r]
+好，我拿了药就过去。[p]
+薛淼挂断电话。警戒线还拉着，线外已经看不到什么人了。[p]
+过了约二十分钟，苏禹和颜歆到了。迟欢已经从后门离开。[p]
+【苏禹】[r]
+走吧。去敲个门。[p]
 
 *beat3
 [cm]
@@ -46,8 +56,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="五幢 303"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【五幢 303】[r]
-楼下有淡淡霉味，背阴的楼梯间几乎没有光。三楼的门上贴着倒福，两侧残缺的对联让苏禹多看了几眼。[p]
+一楼的地砖上长了青苔。楼梯窗开得很小，下午了，里面还是一股阴凉的霉味。[p]
+三楼，303。门上贴着倒福，门边的对联只剩一半。苏禹走过去，又回头看了一眼。[p]
+咚、咚、咚。苏禹敲完门，礼貌地退了几步。[p]
 
 *beat4
 [cm]
@@ -60,8 +71,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="开门的女孩"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【开门的女孩】[r]
-敲门后，一个稚嫩的声音问是谁。苏禹自称警察，门开了一条缝：女孩身材瘦弱，扎着双马尾，刘海遮住半边眼睛。[p]
+【门内的女孩】[r]
+谁啊？[p]
+苏禹一下就听出来，这不是余筱玲的声音。[p]
+【苏禹（画外）】[r]
+我们是警察，找余筱玲。[p]
+门开了条缝。女孩扎着双马尾，刘海挡住半边眼睛。她右手拉着门，左手横在胸前。[p]
 
 *beat5
 [cm]
@@ -73,22 +88,29 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="进入屋内"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【进入屋内】[r]
-「我们可以进去吗？」颜歆问。女孩局促地答应。屋子不大，东边的卧室关着门，另一间房门随声音打开。[p]
+【颜歆】[r]
+请问，我们可以进去吗？[p]
+【女孩（画外）】[r]
+好……好的。[p]
+屋子只有两间卧室。东边的门关着，挨着的那一扇动了动，有人探出头来。[p]
 
 *beat6
 [cm]
 [chara_hide_all time=0 wait=true]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
-[chara_show name=shencrouch left=135 top=70 height=590 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":6,"scene":"yuapartment","discoveries":[],"chapter":5};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="熟人重逢"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【熟人重逢】[r]
-余筱玲探出头，认出了苏禹、颜歆和报警的薛淼。「打扰你了，我们还有些问题想问。」苏禹笑着摸了摸她的头。[p]
+【余筱玲】[r]
+苏禹哥哥？颜歆姐姐？还有那个报警的叔叔。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹笑了一下，伸手摸摸她的头。[p]
+【苏禹】[r]
+打扰你了。我们这次来，还有些问题想问你。[p]
 
 *beat7
 [cm]
@@ -100,8 +122,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余雨"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
+【余筱玲（画外）】[r]
+她是我表妹，叫余雨。她跟我的小姨一起住在这儿。[p]
+【颜歆（画外）】[r]
+你还有个这么可爱的表妹呢？嗨，你好。[p]
 【余雨】[r]
-余筱玲介绍开门的女孩叫余雨，是与小姨一起住在这里的表妹。余雨轻声问好，随后退进卧室关上门。[p]
+你好……[p]
+余雨挪了几步，退进卧室。门在她身后合上了。[p]
 
 *beat8
 [cm]
@@ -113,8 +140,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="似曾相识"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【似曾相识】[r]
-苏禹觉得余雨眼熟。余筱玲说，她是福利院关闭、自己被收养后才认识表妹的。苏禹留意到，她似乎松了一口气。[p]
+【苏禹】[r]
+你表妹我看着好眼熟。我好像在哪里见过她。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+【余筱玲】[r]
+记错了吧，苏禹哥哥。福利院关了以后，我被收养，才认识余雨妹妹。[p]
+【苏禹（画外）】[r]
+那应该是我记错了。[p]
+苏禹一直看着她。听到这句，她的肩膀好像松了一点。[p]
 
 *beat9
 [cm]
@@ -126,8 +160,19 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="几杯水"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【几杯水】[r]
-颜歆从厨房端来水。苏禹在余筱玲喝水前问起小姨，她说小姨每天早出晚归，迟欢也说警方有事要忙。[p]
+颜歆从厨房端来几杯水，放到茶几上。[p]
+【颜歆】[r]
+大家喝口水吧。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+小玲，你小姨呢？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+【余筱玲】[r]
+出去了。她早上出门，晚上很晚才回来。[p]
+【余筱玲】[r]
+迟欢哥哥说他们还有事要忙。反正现在应该不会回来打扰我啦。[p]
 
 *beat10
 [cm]
@@ -139,8 +184,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="深眠"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【深眠】[r]
-余筱玲喝完水，起身时忽然脚下一软，倒向颜歆。苏禹观察她放松的神情，确认深眠35开始起效。[p]
+余筱玲喝完水，把杯子一搁。刚站起来，脚下一软，朝颜歆倒过去。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆伸手扶住她。女孩眉头慢慢松开，没再睁眼。[p]
+【苏禹（画外）】[r]
+陈姐的药起效了。[p]
 
 *beat11
 [cm]
@@ -152,8 +201,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="入梦一型"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【入梦一型】[r]
-薛淼打开公文包里的设备，接好三根数据线和腕表。「三十分钟。每层梦境的时间流速大约是一比五。」[p]
+薛淼把公文包横放在桌上，取出一台像笔记本的设备。苏禹递过来三只带接口的腕表。[p]
+三根线接上去，屏幕亮了一下。[p]
+【薛淼】[r]
+三十分钟。每下一层，梦里的时间流速比大概都是一比五。你们加油。[p]
 
 *beat12
 [cm]
@@ -165,8 +216,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="左腕的浅痕"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【左腕的浅痕】[r]
-薛淼为余筱玲戴腕表时摸到左腕的小小凹陷，像是长期佩戴表状物留下的。他想问，却没有开口。[p]
+薛淼托起余筱玲的手。她手腕很细，左边还有道摸得出来的凹痕，像常年戴着什么。[p]
+他张了张口，最后只把腕表扣上。接头朝外，线从椅子边搭下来。[p]
 
 *beat13
 [cm]
@@ -178,8 +229,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="连接成功"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【连接成功】[r]
-薛淼将椅子拼成床，给女孩垫好外套。设备检测到三人，屏幕显示连接成功。他准备去里屋和余雨聊天。[p]
+薛淼把几张椅子并起来，脱下外套垫在女孩颈后。[p]
+【入梦一型】[r]
+正在检测入梦人员……已检测到三人。[p]
+【入梦一型】[r]
+正在连接……连接成功。[p]
+【薛淼】[r]
+我去里屋，跟余雨小姑娘聊会儿。[p]
 
 *beat14
 [cm]
@@ -192,8 +248,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="同一时间 · 福利院"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【同一时间 · 福利院】[r]
-沈义用门口的长柄白伞将沾血洋娃娃挑出楼外，独自在二楼搜索。寂静的走廊里，只有鞋底踏地的声音。[p]
+【阳光福利院 · 同一时间】[r]
+沈义没用手碰娃娃。他借门边那把白色长柄伞，把它挑到楼外。[p]
+二楼没有风声。手电扫过长长的走廊，鞋底踏在地上，嗒，嗒。[p]
 
 *beat15
 [cm]
@@ -205,8 +262,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="孩子们的名字"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【孩子们的名字】[r]
-走廊两侧是破旧房门。这里没有门牌号，门上写着孩子的名字；沈义逐一寻找，始终没找到目标。[p]
+右手是一排紧闭的门，油漆剥落处露出被蛀过的木头。门上没有编号，只有名字。[p]
+【沈义】[r]
+也对。这是开给孩子的福利院。[p]
+话音在走廊里回荡。他把门上的名字一个个念过去，始终没见到要找的那一个。[p]
 
 *beat16
 [cm]
@@ -218,8 +277,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="尽头的杂物间"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【尽头的杂物间】[r]
-二楼尽头的无名房间堆着纸箱。手电照到角落的一线寒光——一把被擦拭过、仍有血腥味的小型劈骨刀。[p]
+尽头那扇门没有名字。沈义推门进去，光束从几个落满灰的纸箱上扫过去。[p]
+角落里闪过一道寒光。他压低手电，照出一把小劈骨刀。[p]
+刀面像是擦过，凑近时仍能闻到一股血腥味。[p]
 
 *beat17
 [cm]
@@ -231,8 +291,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="通知取证"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【通知取证】[r]
-「为什么没有被处理掉？」沈义致电迟欢，让他尽快带人来取证。电话放下后，黑暗中传来一声滴答。[p]
+【沈义】[r]
+怎么还留在这儿？[p]
+他拨给迟欢，目光没离开那把刀。[p]
+【沈义】[r]
+我在二楼尽头的杂物间。尽快带人过来取证。[p]
+电话刚挂，黑暗里响起一声轻轻的滴答。[p]
 
 *beat18
 [cm]
@@ -244,8 +308,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="滴水声"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【滴水声】[r]
-沈义循声查看，手电照到浑浊的液体。刺鼻的恶臭随之涌来，他怀疑是尸水，立刻跑向三楼。[p]
+【沈义】[r]
+谁！[p]
+没有人应声。他往前挪了两步，手电照到地上一小片浑浊的液体。[p]
+又是一声滴答。刺鼻的臭气一下顶进鼻子。他捂住口鼻，抬头看向楼上。[p]
 
 *beat19
 [cm]
@@ -257,8 +323,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="三楼房间"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【三楼房间】[r]
-尸臭弥漫走廊。沈义拔出枪，推开气味最浓的房间，看见一具消瘦的男尸。桌上堆着发霉的食物残渣。[p]
+三楼只有中间一扇窗还能打开，正对那间味道最重的屋子。沈义咽了口唾沫，推开门。[p]
+门内躺着一个瘦得只剩骨架的男人。一只手抓着地缝，另一只伸向门口。[p]
+沈义后退半步，别过脸干呕了一声。[p]
 
 *beat20
 [cm]
@@ -270,8 +337,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="未明的死因"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【未明的死因】[r]
-屋里的痕迹显示，死者可能在此生活过一段时间。沈义倾向于认为他死于饥饿，但仍需要警方调查确认。[p]
+门内那张桌上堆着发霉的食物残渣。这人看来在屋里待了不止一天。[p]
+【沈义】[r]
+难道是饿死的？[p]
+他没再往里走。具体死了多久、怎么死的，还得白羽来查。[p]
 
 *beat21
 [cm]
@@ -283,8 +352,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="迟欢赶到"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【迟欢赶到】[r]
-迟欢和白羽赶到福利院。迟欢闻到三楼的气味后脸色发白，沈义让他先去二楼储物间查看劈骨刀。[p]
+迟欢和白羽刚赶到。上到三楼，迟欢吸了半口气，脸一下白了。[p]
+【迟欢】[r]
+我不上去了……我想吐。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
+没让你上来。二楼储物间有把劈骨刀，你去看看。[p]
+【迟欢（画外）】[r]
+劈骨刀？[p]
 
 *beat22
 [cm]
@@ -296,8 +372,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="发给 QQ 的消息"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【发给 QQ 的消息】[r]
-迟欢拍下刀的照片，把信息发给「QQ」，又请对方有进展时告知。收到一个 OK 表情，他才放下心。[p]
+迟欢快步下楼，掏出手机把刀拍下来，发给那个黑头像的账号。[p]
+【发给 QQ】[r]
+你们那边有了进展，记得说一声。[p]
+几秒钟后，屏幕上跳出一个「OK」。他这才把手机塞回兜里。[p]
+
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n":22,"scene":"orphanagehall","discoveries":[],"chapter":5,"ended":true};

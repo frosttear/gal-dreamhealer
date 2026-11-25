@@ -1,5 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
+f.game_script_revision = 4;
 f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -16,12 +17,16 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="上午 10:51 · 警局办公室"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【迟欢 · 上午 10:51 · 警局办公室】[r]
-迟欢端着泡面坐进办公室最里侧，翻出诊疗师三年前的委托档案。标题是一行发冷的字：福利院雨夜沉尸。[p]
+【扬城警察局 · 上午 10:51】[r]
+办公室空了大半。迟欢端着刚泡好的面，径直走到最里侧的电脑前。[p]
+他滑过一串已完成的委托，在三年前的记录里停住了滚轮。[p]
+【委托记录】[r]
+福利院雨夜沉尸。[p]
+委托人是福利院的一名护工。迟欢捏着叉子的手心里慢慢渗出了汗。[p]
 
 *beat2
 [cm]
-[chara_hide name=chi time=0 wait=true pos_mode=false]
+[chara_hide name=chireviewing time=0 wait=true pos_mode=false]
 [call storage=rain-scene.ks target=*enter]
 [iscript]
 f.game_beat = {"n":2,"scene":"rain","discoveries":["li"],"chapter":3};
@@ -29,24 +34,34 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="三年前 · 五月二十八日"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【档案 · 三年前 · 五月二十八日】[r]
-夜巡的李护工听见雨中有哭声。他确认过孩子都睡下了，一楼本应锁住的大门却留着条缝。[p]
+【三年前 · 5 月 28 日】[r]
+李护工打着手电，把房间挨个照了一遍。孩子们都睡了。[p]
+雨落在湖面，淅淅沥沥。他踏上回宿舍的台阶，雨声里却夹着一阵断续的哭声。[p]
+【李护工】[r]
+我刚才看漏了？还有孩子没睡？[p]
+他沿楼梯折回去，一路照到大堂。本该上锁的大门留着一条缝。[p]
 
 *beat3
 [cm]
+[chara_hide_all time=0 wait=true]
+[chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":3,"scene":"rain","discoveries":[],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="门口还是湖边"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【档案 · 门口还是湖边】[r]
-手电筒扫到门旁的雨伞，哭声则从湖边传来。先留意哪里？
+门缝里吹进凉风。顺着手电光望过去，门边靠着几把伞。[p]
+哭声从外头传来，像是在湖边。
+
 [glink x=352 y=260 width=320 size=28 text="清点门边雨伞" storage=chapter3.ks target="*umbrella" keyfocus="1"]
 [glink x=352 y=330 width=320 size=28 text="循哭声看湖面" storage=chapter3.ks target="*lake" keyfocus="2"]
 [s]
+
 *umbrella
 [cm]
+[chara_hide_all time=0 wait=true]
+[chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
 [eval exp="f.rain_route='umbrella'"]
 [iscript]
 f.game_beat = {"n":3,"scene":"rain","discoveries":["whiteumbrella"],"chapter":3};
@@ -54,11 +69,18 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="雨夜档案 · 白伞"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【档案 · 雨夜档案 · 白伞】[r]
-李护工数了一遍。白天清点过的伞，一把不少。角落里还多了一把白色折叠伞，他想不起是谁带来的。[p]
+李护工伸手拿伞，想起白天才清点过，就把角落里的伞重新数了一遍。[p]
+一把不少。还多了一把白色的折叠伞。[p]
+【李护工】[r]
+也许有人半夜来过……[p]
+他在门边站了片刻，才推门走进雨里。[p]
+
 [jump target=*beat4]
+
 *lake
 [cm]
+[chara_hide_all time=0 wait=true]
+[chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
 [eval exp="f.rain_route='lake'"]
 [iscript]
 f.game_beat = {"n":3,"scene":"rain","discoveries":["lakesound"],"chapter":3};
@@ -66,20 +88,32 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="雨夜档案 · 湖边"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【档案 · 雨夜档案 · 湖边】[r]
-手电照向湖边，水里漂着个白影。哭声像是从白影身上传来。李护工看清那是一具浮尸，慌忙退回去。[p]
+一声炸雷撞在耳边。李护工循着变响的哭声走到湖边，把手电往水里一照。[p]
+有个白影漂在近岸。光晃过去，他看清了浮肿的脸。那张脸仿佛正冲着他笑。[p]
+更近的那声哭，听起来像是从水里传出来的。[p]
+
 [jump target=*beat4]
 
 *beat4
 [cm]
+[chara_hide_all time=0 wait=true]
+[chara_show name=li face=apprehensive left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":4,"scene":"rain","discoveries":[],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="背后的声音"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【档案 · 背后的声音】[r]
-李护工从湖边跑回院里，合上门的一刻，背后有人问他在做什么。[r]说话的孩子叫余筱玲。[p]
+[if exp="f.rain_route === 'umbrella'"]
+雷声一响，湖边的哭声更近了。他把手电往水里一照，照出一张浮肿的脸。[p]
+那张脸仿佛在笑，哭声却也像从同一个地方传来。[p]
+[endif]
+李护工连滚带爬地逃回大堂。门刚合上，背后响起一个细小的声音。[p]
+【孩子（画外）】[r]
+李叔叔，你在干嘛？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+他这才听出说话的孩子是余筱玲。[p]
 
 *beat5
 [cm]
@@ -91,8 +125,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="档案到此为止"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【迟欢 · 档案到此为止】[r]
-委托记录没有公开后续。迟欢将文件发给账号「QQ」，重新看了一遍标题。[p]
+记录到这里断了。接受委托的诊疗师没有公开后续。[p]
+迟欢嗦了口面，伸手摸了摸下巴。[p]
+【迟欢】[r]
+怎么诊疗师接到的都是这么邪门的案子？[p]
+他把文件打包发给一个黑色头像的联系人，账号叫「QQ」。[p]
 
 *beat6
 [cm]
@@ -105,26 +142,45 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="上午 11:10 · 六号包间"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【颜歆 · 上午 11:10 · 六号包间】[r]
-三年前、去年、今年，三桩事里都有余筱玲？去年为了从她梦里找线索，苏禹差一点没醒过来。[p]
+【蒸汽时代 · 上午 11:10】[r]
+颜歆拿苏禹的刀叉切牛排。旁边，苏禹的食指一下下敲着桌面。[p]
+【颜歆】[r]
+所以这个小姑娘已经出现了三次？三年前、去年，还有今年？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+薛淼喝了口大麦茶。[p]
+【薛淼】[r]
+所以我说邪门。去年就咱仨查那件事，差点把老苏搭进去。[p]
+他们那次为了还原现场进了余筱玲的梦。苏禹险些没能醒过来。[p]
 
 *beat7
 [cm]
-[chara_hide name=yan time=0 wait=true pos_mode=false]
-[chara_show name=chen left=640 top=55 height=510 time=0 wait=true]
+[chara_hide_all time=0 wait=true]
+[chara_show name=chen face=serious left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":7,"scene":"bistro","discoveries":["reaction"],"chapter":3};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="另一种死因"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【陈清 · 另一种死因】[r]
-陈清说，服用深眠35后三小时内若又摄入150毫升以上提神饮品，可能心跳过速，[p]
-摄入更多甚至可能心跳骤停，表象像惊吓致死。这只是另一种可能。苏禹问，如果涉案人也是同行呢？[p]
+【薛淼（画外）】[r]
+这次连凶手都没影儿，人就这么给吓死了。[p]
+陈清拿纸巾擦掉唇边的沙拉酱，从另一张桌上拿来一只小药瓶。[p]
+【陈清】[r]
+你忘了深眠35？服下去三小时内，再喝一百五十毫升以上的提神饮品，心跳就可能过快。[p]
+【陈清】[r]
+要是喝得更多，甚至可能直接骤停。外人看着，就像是活活吓死的。[p]
+她晃了晃瓶子，瓶里沙沙地响。单凭现场的样子，还分不清是惊吓还是药物反应。[p]
+【薛淼（画外）】[r]
+我没忘。可普通人哪有那么容易弄到深眠？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+如果动手的也是同行呢？[p]
 
 *beat8
 [cm]
-[chara_hide name=chen time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":8,"scene":"bistro","discoveries":[],"chapter":3};
@@ -132,12 +188,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="饭桌上的沉默"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【秦桥 · 饭桌上的沉默】[r]
-秦桥低头切开牛排。他信任苏禹和颜歆，却还摸不清薛淼的底细。饭桌上的话渐渐少了。[p]
+【秦桥】[r]
+抓紧吃饭。[p]
+秦桥低下头，把牛排切成小块。苏禹和颜歆他认识多年，薛淼的底细却始终摸不清。[p]
+颜歆和陈清还偶尔说两句。其余人都埋头吃饭，桌上只剩刀叉碰到盘子的声音。[p]
 
 *beat9
 [cm]
-[chara_hide name=qin time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [bg storage=fastfood.webp time=140 wait=true position=center]
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 [iscript]
@@ -146,12 +204,20 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="同一时间 · 快餐店"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【沈义 · 同一时间 · 快餐店】[r]
-余筱玲说小姨去年收养了她。她的描述让沈义感觉，小姨对女孩更多是害怕。[p]
+【快餐店 · 同一时间】[r]
+沈义把纸巾往桌对面推了推。[p]
+【沈义】[r]
+吃完了？开心吗？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+【余筱玲】[r]
+开心！[p]
+她去年九岁，是那时才去小姨家住的。说是小姨，其实隔了很远的亲。[p]
+她说想要什么，小姨总赶着给她。给完就走，像在躲什么似的。沈义留了个心眼。[p]
 
 *beat10
 [cm]
-[chara_hide name=shen time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":10,"scene":"fastfood","discoveries":["wristmark"],"chapter":3};
@@ -159,8 +225,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="左腕上的印记"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余筱玲 · 左腕上的印记】[r]
-沈义看见女孩左腕有一道像表带留下的浅痕。问起手表，她摇摇头，说平时从不戴东西。[p]
+筱玲伸手去拿纸巾。左腕上有一道浅色的印子，像摘掉表带后留下的。[p]
+【沈义（画外）】[r]
+平时戴表吗？[p]
+【余筱玲】[r]
+不戴呀。我手上什么都不戴。[p]
+她低头去看，像是这才发现那道印子。沈义想起她把梦里的事说得和亲眼看见一样。[p]
 
 *beat11
 [cm]
@@ -173,8 +243,17 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="下午 2:14 · 舒颜咖啡"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【苏禹 · 下午 2:14 · 舒颜咖啡】[r]
-苏禹摊开电脑。前两桩旧案，警方手上没有档案；这一次，关键目击者却先到了警方那里。[p]
+【舒颜咖啡 · 下午 2:14】[r]
+颜歆往凉席上一躺。苏禹放下手里的袋子，脱下风衣挂到一边。[p]
+【苏禹】[r]
+那边给客人坐的。起来，我有点想法。[p]
+【颜歆（画外）】[r]
+你又没开门营业……什么想法？快讲。[p]
+苏禹端来红茶，打开笔记本。键盘一响，他把想法逐句敲在屏幕上。[p]
+【苏禹】[r]
+我们先假设这回跟同行还有关系。前两桩旧案，警方手里没有档案。[p]
+【苏禹】[r]
+可这次薛淼报了警。余筱玲先到了他们那儿，我们手里还有什么？[p]
 
 *beat12
 [cm]
@@ -186,12 +265,20 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="她的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【颜歆 · 她的梦】[r]
-我负责先连接，再把你接进去。她的梦跟别人不一样。进去几乎没有阻力，想离开时却像一扇从外反锁的门。[p]
+颜歆捧着杯子，想起自己是怎么先连上目标、再把苏禹接进梦里去的。[p]
+【苏禹（画外）】[r]
+你是连接者。仔细想想，余筱玲的梦和别人的有什么不同？[p]
+【颜歆】[r]
+危险。[p]
+【苏禹（画外）】[r]
+这我知道。还有呢？[p]
+颜歆停了几秒，眼睛忽然一亮。[p]
+【颜歆】[r]
+特别容易进去。可等到要出来，就跟门从外边反锁了一样。[p]
 
 *beat13
 [cm]
-[chara_hide name=yan time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":13,"scene":"coffee","discoveries":[],"chapter":3};
@@ -200,17 +287,28 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="把两条调查线接起来"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [iscript]
-const lead = f.interview_route === "noise" ? "薛淼没听见蝉鸣，迟欢的说法是试探。" : "薛淼记得装修的可能是五幢，楼号还要核实。";
-const rain = f.rain_route === "umbrella" ? "雨夜多出的白伞，要弄清楚是谁带来的。" : "湖边和小区都有人听到哭声，会是同一种异常吗？";
-f.follow_up = lead + rain;
+f.interview_follow_up = f.interview_route === "noise" ? "薛淼没听见蝉鸣，迟欢的说法是试探。" : "薛淼记得装修的可能是五幢，楼号还要核实。";
+f.rain_follow_up = f.rain_route === "umbrella" ? "雨夜多出的白伞，要弄清楚是谁带来的。" : "湖边和小区都有人听到哭声，会是同一种异常吗？";
 [endscript]
-【苏禹 · 研判】[r]
-两份记录都指向同一个人。余筱玲会不会是被人利用了？[r]
-[emb exp="f.follow_up"][p]
+【苏禹】[r]
+两份记录兜到最后，都是余筱玲。有没有人故意借她的梦做事？[p]
+【苏禹】[r]
+[emb exp="f.interview_follow_up"][p]
+【苏禹】[r]
+[emb exp="f.rain_follow_up"][p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
+你是说，有人在拿这孩子当枪使？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹握着杯子，盯住电脑里一行还没敲完的字。[p]
+【苏禹】[r]
+真要拿她当枪，就得给这把枪装个保险。警方未必能从她嘴里问到那段记忆。[p]
 
 *beat14
 [cm]
-[chara_hide name=su time=0 wait=true pos_mode=false]
+[chara_hide_all time=0 wait=true]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":14,"scene":"coffee","discoveries":["policepost"],"chapter":3};
@@ -218,8 +316,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一条新委托"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【颜歆 · 一条新委托】[r]
-暗网的页面跳出一个新账号发的公开委托。原帖的措辞还在，但多了苏禹几人此前接触不到的死者资料。[p]
+屏幕顶端弹出一条新委托。发帖的是个连名字都没起的新账号。[p]
+颜歆把茶杯放远了些，凑过去对着两份帖子逐行看。[p]
+【颜歆】[r]
+前面和三水哥发的一字不差。等等，后面怎么连死者的资料都有？[p]
 
 *beat15
 [cm]
@@ -231,8 +331,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="等谁先开口"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【苏禹 · 等谁先开口】[r]
-能拿到这些资料的人，很可能在警方内部。苏禹合上电脑，转身去沏一壶新茶。两条调查线终于碰上了。[p]
+苏禹把手从键盘上拿开，忽然笑了两声。[p]
+【苏禹】[r]
+有人来要这把枪的说明书了。你想，谁能拿到这些资料？[p]
+他从凉席上起身。颜歆还盯着那条委托，身后已经传来水倒进茶壶的声音。[p]
+
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n":15,"scene":"coffee","discoveries":[],"chapter":3,"ended":true};
@@ -243,6 +347,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 第三章完[r]未结的委托，仍在等人接手。
 [glink x=342 y=360 width=340 size=30 text="继续第四章" storage=chapter4.ks keyfocus=1]
 [s]
+
 *returnTitle
 [eval exp="window.parent.dreamhealer.home()"]
 [s]

@@ -1,5 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
+f.game_script_revision = 5;
 f.chapter_assets = ["data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -16,8 +17,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="下午 2:30 · 舒颜咖啡"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【下午 2:30 · 舒颜咖啡】[r]
-秦桥推门进来，在苏禹和颜歆身旁坐下。他看到了那条公开委托，想知道两人准备怎么办。[p]
+【舒颜咖啡 · 下午 2:30】[r]
+店门被推开。颜歆那句「已歇业」还没出口，就听见苏禹叫了一声老秦。[p]
+秦桥拉过一把椅子，挨着两人坐下来。[p]
+【秦桥】[r]
+我看到帖子了。怎么说？[p]
+【颜歆（画外）】[r]
+这种事问老苏吧，他是我的外置大脑。[p]
 
 *beat2
 [cm]
@@ -29,8 +35,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="等待下一条线索"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【等待下一条线索】[r]
-「先等。」苏禹端起红茶。眼下他们接触不到余筱玲；警方若找不到线索，很可能会在帖子里补充已掌握的信息。[p]
+苏禹端起杯子，抿了一口红茶。[p]
+【苏禹】[r]
+我的建议是先等。现在咱们接触不到余筱玲，也不知道还有谁知情。[p]
+【苏禹】[r]
+警方拿不到下一条线索，就可能把手里的东西再补进帖子里。[p]
 
 *beat3
 [cm]
@@ -42,8 +51,17 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="封锁帖子"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【封锁帖子】[r]
-秦桥担心别人抢先接下委托。苏禹提醒他可以封帖，秦桥拿起手机操作，又问起案件有没有头绪。[p]
+【秦桥】[r]
+那万一有人先接了呢？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+你不会封帖吗？修入梦修久了，忘了老本了？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
+秦桥啧了一声，摸出手机，拇指在屏幕上点了几下。[p]
+【秦桥】[r]
+行。案子到现在，有什么头绪吗？[p]
 
 *beat4
 [cm]
@@ -55,8 +73,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="相似的案件"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【相似的案件】[r]
-高杉杉是老师，没有心理缺陷或精神衰弱的历史。苏禹认为她突然被吓死很蹊跷，让他想起另一桩分尸案。[p]
+【苏禹】[r]
+我怀疑是他杀。高杉杉是个老师。帖子里看不出她有什么病史，怎么就突然被吓死了？[p]
+【苏禹】[r]
+看着毫无头绪，倒很像去年的分尸案。[p]
+【秦桥（画外）】[r]
+那次我没参与。讲讲？[p]
 
 *beat5
 [cm]
@@ -68,8 +90,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="两年前的福利院"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【两年前的福利院】[r]
-苏禹为三人磨了咖啡，讲起两年前九月一日。那天，一群义工教师带着书和礼物来到福利院看望孩子。[p]
+磨豆机响了几声便停了。苏禹把三杯咖啡依次摆上桌。[p]
+【苏禹】[r]
+两年前九月一日，开学了。附近几个学校的老师下了班，去福利院给孩子们送书。[p]
+【苏禹】[r]
+大厅闹哄哄的，孩子们围着义工问东问西。楼梯转角坐着个女孩，一个人发呆。[p]
 
 *beat6
 [cm]
@@ -81,8 +106,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="楼梯间的女孩"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【楼梯间的女孩】[r]
-穆雨霁独自坐在二楼楼梯转角，怀里抱着一只褪色的充气泰迪熊。她不愿和别人亲近，也不要护工送的新玩偶。[p]
+【苏禹】[r]
+她叫穆雨霁。抱着只充气的泰迪熊，棕漆都磨光了，只在胳膊和腿边剩一点。[p]
+【苏禹】[r]
+护工给她送过新玩偶，床边都快堆满了。她手上始终只有这只旧熊。[p]
 
 *beat7
 [cm]
@@ -94,8 +121,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="黄英的礼物"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【黄英的礼物】[r]
-义工黄英走上楼，将一个洋娃娃塞给女孩。此后穆雨霁常拿着娃娃，情绪渐渐好了一些。[p]
+【苏禹】[r]
+楼梯上来了个义工，叫黄英。她看到穆雨霁，眼睛一亮，塞了个洋娃娃给她。[p]
+【苏禹】[r]
+女孩低头看了很久。从那天起她就抱着那只娃娃，连睡觉也不放手。[p]
 
 *beat8
 [cm]
@@ -107,8 +136,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一年后的失踪"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一年后的失踪】[r]
-大约一年后，穆雨霁失踪。福利院找来诊疗师，苏禹与颜歆排查半天，最终找到了她被分割的遗体。[p]
+【苏禹】[r]
+大约过了一年。去年九月五日，穆雨霁失踪，院长请我们过去找人。[p]
+苏禹把咖啡杯转了半圈，指尖抵在杯沿上。[p]
+【苏禹】[r]
+那天下午，我们找到了几处藏东西的地方。当时我以为找到的就是她。[p]
 
 *beat9
 [cm]
@@ -120,8 +152,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="冰箱里的线索"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【冰箱里的线索】[r]
-秦桥听薛淼提过，遗体是在冰箱里找到的。苏禹摇头，说冰箱里只有一部分，他怀疑那些遗体是被故意放在那里。[p]
+【秦桥】[r]
+以前老薛跟我提过一嘴。是在冰箱里找到的？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+冰箱里只有一部分。我一直觉得，那些东西是被人故意摆在那儿的。[p]
 
 *beat10
 [cm]
@@ -133,8 +169,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="上锁的衣柜"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【上锁的衣柜】[r]
-苏禹在女孩房间闻到极淡的血腥味。打开衣柜后，他捏了捏玩偶，在填充物里摸到坚硬的东西。[p]
+【苏禹】[r]
+我进去就闻到一点血腥味。护工说房间已经找过了，可衣柜还锁着。[p]
+【苏禹】[r]
+柜里有衣服、几个玩偶，一打开还飘出一股香气。我拿起熊，捏了捏它的爪子。[p]
+【苏禹】[r]
+里头有一块硬的。摸起来不像填棉。[p]
 
 *beat11
 [cm]
@@ -146,8 +186,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="玩偶里的发现"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【玩偶里的发现】[r]
-护工拆开玩偶，发现了遗体。苏禹辨认出其中一块是指骨，大概是左手小指；颜歆则在楼下厨房找到了另一部分。[p]
+【苏禹】[r]
+拆开以后，旁边的护工转身就吐了。我只看清一样东西，像是左手小指的指骨。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆搁下杯子。她那时刚从厨房跑上楼，楼梯都还没喘匀。[p]
+【颜歆】[r]
+我本来要告诉他冰箱里的事。刚张嘴，就被屋里的味道呛得说不出话。[p]
 
 *beat12
 [cm]
@@ -159,8 +204,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余筱玲的指认"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余筱玲的指认】[r]
-指向冰箱的是余筱玲。女孩脸色惨白、浑身发抖，说不出话来。因为这条线索，苏禹决定先进入她的梦。[p]
+【颜歆】[r]
+是余筱玲把我带到冰箱前的。她一句话也说不出来，就一直用手指着冰箱。[p]
+【颜歆】[r]
+她抖得站都站不稳。我让她歇会儿，苏禹看着她，决定进去看看她做过的梦。[p]
 
 *beat13
 [cm]
@@ -172,8 +219,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦中的危险"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦中的危险】[r]
-那次入梦让苏禹险些丧命。之后院长追加委托，希望他们治疗余筱玲的心理创伤，并将事件压下。[p]
+【苏禹】[r]
+结果差点没出来。醒了以后，院长又加了一笔钱。[p]
+【苏禹】[r]
+他说，孩子受了惊，能不能把她治好。末了又加一句，这事就到这儿吧。[p]
+秦桥端起咖啡，杯子都凉了。他没喝。[p]
 
 *beat14
 [cm]
@@ -185,8 +235,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="娃娃里的设备"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【娃娃里的设备】[r]
-离开时，苏禹带走了黄英送的洋娃娃。颜歆发现里面藏着便携式入梦连接器。[p]
+【苏禹（画外）】[r]
+离开的时候，我带走了一样东西。[p]
+【颜歆】[r]
+黄英送的洋娃娃。我拆开摸过，里面藏着一个便携式入梦连接器。[p]
+【颜歆】[r]
+老秦，就是你前几年申请过专利的那个。[p]
 
 *beat15
 [cm]
@@ -198,8 +252,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="三十米"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【三十米】[r]
-那是秦桥申请过专利的设备：无需连接手环数据线，却造价高昂，有效距离只有三十米，因此并不普及。[p]
+秦桥伸出去拿杯子的手停了一下。[p]
+【秦桥】[r]
+普通的得拖根线，连在手环上。这个随身带着就能接上主机。[p]
+【秦桥】[r]
+但隔了三十米就用不了，造价还高，没多少人用。她手里怎么会有？[p]
 
 *beat16
 [cm]
@@ -211,8 +268,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="黄英的梦"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【黄英的梦】[r]
-诊疗师找到黄英并强行入梦，苏禹说事后在现实中也向她确认过，[p]她承认杀害穆雨霁。梦中呈现的动机却荒唐地指向女孩抱着娃娃睡觉的习惯。[p]
+苏禹说到这里，把手攥成了拳。[p]
+【苏禹】[r]
+我们找到黄英，强行进了她的梦。醒来之后我又问过一遍，她亲口认了。[p]
+【苏禹】[r]
+梦里，她说的理由就是听说这个孩子会抱着娃娃睡觉。[p]
+【秦桥（画外）】[r]
+就因为这个？[p]
+苏禹没有马上回答。杯底轻轻碰了一下桌面。[p]
 
 *beat17
 [cm]
@@ -224,8 +287,16 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="被抹去的部分"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【被抹去的部分】[r]
-秦桥觉得这像有人为了另一个目的制造凶案。黄英的梦里没有洋娃娃的来历；苏禹无法排除记忆被删除的可能。[p]
+【秦桥】[r]
+听着倒像是有人为了另外一件事，弄出这么一桩命案。可那件事到底是什么？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+我连那个娃娃是从哪儿来的都没找到。黄英的梦里也没有。[p]
+【秦桥（画外）】[r]
+你怀疑有人删了她的记忆？[p]
+【苏禹】[r]
+不排除。可梦里少了什么，凭现在这些还证明不了。[p]
 
 *beat18
 [cm]
@@ -237,8 +308,17 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="缺失的作案过程"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【缺失的作案过程】[r]
-据苏禹描述，梦里的黄英作案时像受到暗示；作案过程模糊，现场也留下疑点。他怀疑她受人胁迫，但没有找到能证实的线索。[p]
+【苏禹】[r]
+梦里的黄英不像平常的她。看见穆雨霁的一瞬间，情绪就像是被什么东西一下点着了。[p]
+【苏禹】[r]
+她到底怎么做的，我在梦里看不清。那间屋子里也没找到第二个人来过的痕迹。[p]
+【苏禹】[r]
+我总觉得她像是受了胁迫。后来又托老薛找，什么都没找出来。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
+秦桥放下凉咖啡，拍了拍苏禹的肩。[p]
+【秦桥】[r]
+慢慢来。两件事真要有关系，兴许还能给那个孩子一个交代。[p]
 
 *beat19
 [cm]
@@ -254,8 +334,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="下午 3:00 · 阳光福利院"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【下午 3:00 · 阳光福利院】[r]
-沈义来到杨柳湖畔的福利院。建筑已经关闭，门锁生锈，门上贴着拆迁封条。迟欢查到余筱玲曾在这里生活。[p]
+【杨柳湖畔 · 下午 3:00】[r]
+沈义一开车门，湿热的风裹着水腥味就扑过来。岸边的塑料瓶挂了一圈绿藻。[p]
+白楼的门锁已经生锈。两道拆迁封条交叉贴着，牌匾上还认得出「阳光福利院」。[p]
+迟欢查到余筱玲在这儿住过。沈义抬头看一眼掉漆的门匾。[p]
+【沈义】[r]
+关了还不到一年，怎么就成这样了？[p]
 
 *beat20
 [cm]
@@ -267,8 +351,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="楼梯间的洋娃娃"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【楼梯间的洋娃娃】[r]
-沈义划开封条，用手电在昏暗的楼里巡查。走上二楼时，他踩到一件柔软的东西：一只沾着暗沉血迹的洋娃娃。[p]
+门轴吱呀一声。大堂背阴，外头的日光照不到楼梯间。[p]
+沈义打开拇指大的手电。那一束光比他预想的还亮，划过一楼的墙根。[p]
+一楼什么也没有。他转上楼梯，脚尖碰到一个软绵绵的东西。沈义立刻停住。[p]
+光柱慢慢压低，照出一张洋娃娃的脸。裙子上沾着暗沉的血。[p]
+
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n":20,"scene":"orphanage","discoveries":[],"chapter":4,"ended":true};

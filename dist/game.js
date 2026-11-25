@@ -4,6 +4,24 @@ const unlockKey = 'dreamhealer.chapter1.unlocks';
 const coverKey = 'dreamhealer.chapter1.cover';
 const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
+const scenarioRevisions = {
+  'chapter1.ks': 2,
+  'chapter2.ks': 3,
+  'chapter3.ks': 4,
+  'chapter4.ks': 5,
+  'chapter5.ks': 6,
+  'chapter6.ks': 7,
+  'chapter7.ks': 8,
+  'chapter8.ks': 9,
+  'chapter9.ks': 10,
+  'chapter10.ks': 11,
+  'chapter11.ks': 12,
+  'chapter12.ks': 13
+};
+const branchLabels = {
+  'chapter2.ks': { cicadas: 'noise', buildingfive: 'building' },
+  'chapter3.ks': { whiteumbrella: 'umbrella', lakesound: 'lake' }
+};
 const covers = [
   ['dream', '血红之梦', 0],
   ['case', '扬城疑案', 4],
@@ -165,7 +183,29 @@ function restoreSave(kind) {
   stage.setAttribute('aria-busy', 'true');
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
   $('status').textContent = '正在读取存档…';
-  if (kind === 'auto') engine.menu.loadAutoSave();
+  const runtime = frame.contentWindow;
+  const saved = runtime.$.getStorage(savePrefix + kind + '_save', engine.config.configSave);
+  const data = saved && JSON.parse(saved);
+  const scenario = data?.stat.current_scenario;
+  const revision = scenarioRevisions[scenario];
+  const beat = data?.stat.f.game_beat;
+  if (revision && beat && data.stat.f.game_script_revision !== revision) {
+    // Tyrano saves command indices. Replay the same beat when its pages have changed.
+    engine.loadScenario(scenario, tags => {
+      const branch = beat.discoveries.map(key => branchLabels[scenario]?.[key]).find(Boolean);
+      const label = beat.ended ? 'ending' : branch ?? 'beat' + beat.n;
+      const index = tags.findIndex(tag => tag.name === 'label' && tag.pm.label_name === label);
+      if (index === -1) {
+        showMenu('找不到旧存档的剧情位置。');
+        return;
+      }
+      data.current_order_index = index;
+      data.stat.is_strong_stop = false;
+      data.stat.f.game_script_revision = revision;
+      data.stat.f.game_replay_beat = true;
+      engine.menu.loadGameData(data, { auto_next: 'yes' });
+    });
+  } else if (kind === 'auto') engine.menu.loadAutoSave();
   else engine.menu.loadQuickSave();
 }
 

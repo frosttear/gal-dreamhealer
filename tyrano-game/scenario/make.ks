@@ -14,6 +14,10 @@ if (Array.isArray(f.game_backlog)) {
 [if exp="f.restore_background"]
 [bg storage=&f.restore_background time=140 wait=true position=center]
 [endif]
+[if exp="f.game_replay_beat"]
+[chara_hide_all time=0 wait=true]
+[eval exp="delete f.game_replay_beat"]
+[endif]
 [iscript]
 const bridge = window.parent.dreamhealer;
 // A browser can retain the previous title-page script between deploys.

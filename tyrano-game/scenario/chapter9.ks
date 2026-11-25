@@ -1,5 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
+f.game_script_revision = 10;
 f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -18,8 +19,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余家 · 等待询问"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余家 · 等待询问】[r]
-沈义低声吩咐迟欢，准备询问里屋的女孩。薛淼承认，自己此前旁敲侧击地问过她案件的事。[p]
+沈义朝迟欢低声交代了几句。说到一半，他抬眼看向那扇紧闭的门。[p]
+【沈义】[r]
+余雨在里屋吗？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+【薛淼】[r]
+我刚出来。她还在看书。刚才……我问过她几句案子的事。[p]
+薛淼打了个哈欠，没敢看沈义。女孩最后望向他的那个眼神，他有点忘不掉。[p]
 
 *beat2
 [cm]
@@ -31,8 +38,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="两间卧室"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【两间卧室】[r]
-苏禹看向相邻的两扇卧室门。两位女孩住在一起，他忽然怀疑自己是否先入为主，认错了梦中传出巨响的房门。[p]
+【苏禹】[r]
+客厅、厨房都看过了。那两间卧室，我和颜歆都没进去过。[p]
+苏禹望着相邻的两扇门。梦里传出砸门声的那扇，真是余筱玲那间吗？[p]
+【苏禹】[r]
+那两个小姑娘是住在一起的？[p]
+【薛淼（画外）】[r]
+对。余雨自己说的。[p]
 
 *beat3
 [cm]
@@ -44,8 +56,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="女孩开口"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【女孩开口】[r]
-门开了一条缝。余雨满脸泪水，央求大家不要抓余筱玲，说姐姐并不是故意的。薛淼意识到自己先前施压过了头。[p]
+咔哒。卧室门开了一条缝，一张挂着泪水的小脸探出来。[p]
+【余雨】[r]
+哥哥……姐姐……我把我知道的说出来。[p]
+【余雨】[r]
+你们不要抓筱玲姐姐。她……她不是故意的。[p]
+薛淼这才确认，刚才的话说重了。[p]
 
 *beat4
 [cm]
@@ -58,8 +74,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余雨的回忆 · 穆雨霁"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余雨的回忆 · 穆雨霁】[r]
-余雨断断续续地讲起往事。此前，失去过去记忆的穆雨霁来到福利院，甚至是听院长反复喊她，才知道自己的名字。[p]
+【余雨 · 回忆福利院】[r]
+我刚来的时候，什么都记不得。叫什么、从哪儿来，也全忘了。[p]
+【余雨】[r]
+院长对着我叫了好几遍「穆雨霁」，我才知道是在叫我。[p]
 
 *beat5
 [cm]
@@ -71,8 +89,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="第一份友情"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【第一份友情】[r]
-两年前，余筱玲在手工时间送给她一只粗制的小熊，主动与她交朋友。穆雨霁从此总把那只熊抱在怀里。[p]
+【余雨】[r]
+有天下午做手工，有人把一只小熊推到我桌上。针脚歪歪的，她还直盯着我看。[p]
+【余雨】[r]
+是筱玲姐姐。她说送给我，以后我就是她朋友了。[p]
+从那以后，女孩去哪里都抱着那只熊，像是一松手，朋友也会没了。[p]
 
 *beat6
 [cm]
@@ -84,8 +105,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="课堂的恐惧"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【课堂的恐惧】[r]
-穆雨霁害怕课堂和老师，见到老师时会不由自主地出冷汗。她自己也说不清缘由。[p]
+【余雨】[r]
+我最怕进教室。一看见老师，背上立刻一层汗。[p]
+【余雨】[r]
+筱玲姐姐问我怎么了。我也说不上来，反正一到门口就不想进去。[p]
 
 *beat7
 [cm]
@@ -97,8 +120,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="黄英的礼物"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【黄英的礼物】[r]
-受人所托来送洋娃娃的黄英遭到拒绝。她说，抱着娃娃也许能够想起以前的事，穆雨霁因此愣住。[p]
+【余雨】[r]
+黄义工受人托付，给我一个洋娃娃。我有小熊了，就说不用。[p]
+【黄英（回忆）】[r]
+你抱着它，没准就能想起以前的事情呢？[p]
+她伸出去要还娃娃的手停住了。那是头一回，有人说她还能想起来。[p]
 
 *beat8
 [cm]
@@ -111,8 +137,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一年后的雨夜"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一年后的雨夜】[r]
-约一年后，一个雷雨夜里，女孩被一声尖叫惊醒。她将收到的玩偶堆在床上，蜷缩着又睡了过去。[p]
+【余雨 · 回忆雨夜】[r]
+那天雷声特别响。湖边哗啦哗啦的，我怎么都睡不着。[p]
+我刚想爬起来，外面就有人尖叫了一声。[p]
+我把玩偶全抱到床上，把自己埋在里面。后来迷迷糊糊，又睡着了。[p]
 
 *beat9
 [cm]
@@ -124,8 +152,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="陌生的卧室"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【陌生的卧室】[r]
-第二天醒来，她发现自己身处陌生卧室。一位妇女告诉她，她有家了，可以换个名字。[p]
+【余雨 · 回忆】[r]
+再睁眼的时候，床和窗户都不对。我以为自己让人绑走了。[p]
+门被推开。一个女人挤进来，朝床边堆出一个笑。[p]
+【女人（回忆）】[r]
+以后改个名字吧。你有家了。[p]
+【余雨】[r]
+我听见「家」那个字，鼻子一下酸了。怎么都忍不住哭。[p]
 
 *beat10
 [cm]
@@ -138,8 +171,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="余家的名字"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【余家的名字】[r]
-颜歆轻轻安慰女孩。余雨说，小姨建议她改名叫余雨；她也不清楚自己为什么被带到这里。[p]
+颜歆轻轻拍着她的背，等她把气喘匀。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yuyu left=640 top=55 height=510 time=0 wait=true]
+【余雨】[r]
+后来小姨让我叫余雨。为什么把我带去那里，我也不知道。[p]
 
 *beat11
 [cm]
@@ -151,8 +187,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="互相矛盾的记忆"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【互相矛盾的记忆】[r]
-苏禹难以将这段讲述与旧案对上：穆雨霁失踪后被分尸的究竟是谁？梦里短刘海的余雨，又与眼前女孩有何关系？[p]
+苏禹捏着眉心，听得越来越慢。[p]
+【苏禹】[r]
+穆雨霁失踪是真的。可如果她还活着，当年找到的东西属于谁？[p]
+【苏禹】[r]
+还有教室里那个短刘海的余雨。她和眼前这个孩子，究竟是什么关系？[p]
 
 *beat12
 [cm]
@@ -164,8 +203,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="两位余雨"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【两位余雨】[r]
-颜歆提出，现在的余雨或许就是穆雨霁，正在以余雨的名字生活。众人仍无法确定余筱玲是否知道这件事。[p]
+【颜歆】[r]
+会不会就像三水哥说的？这个孩子原本叫穆雨霁，现在用余雨的名字过日子。[p]
+颜歆把手收了回来，往筱玲那边看了一眼。[p]
+【颜歆】[r]
+她还睡着。她到底知不知道，我们现在也问不出来。[p]
 
 *beat13
 [cm]
@@ -177,8 +219,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="学校的调查"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【学校的调查】[r]
-学校调查称，余雨原本与余筱玲同班，一年前性格发生变化。这与苏禹听到的相识时间并不容易吻合。[p]
+沈义抬了抬手，示意他听完。[p]
+【沈义】[r]
+学校那边核实过。余雨和筱玲从前是同班，性格变了也是一年前的事。[p]
+苏禹想起筱玲刚才还说，搬过来以后才认识表妹。两句话怎么也对不上。[p]
 
 *beat14
 [cm]
@@ -190,8 +234,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="水中的线索"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【水中的线索】[r]
-原来的余雨去了哪里？苏禹想起梦里女孩坠入如水的地板，认为这或许与雨夜沉尸有关，但尚不能确定。[p]
+【苏禹】[r]
+如果眼前的余雨是后来换过来的，原先那个去了哪儿？[p]
+他想起教室地板溅出的白浪，朝熟睡的筱玲看了一眼。[p]
+【苏禹】[r]
+她在梦里像是掉进了水里。那是眼下唯一和雨夜沉尸沾边的地方。[p]
 
 *beat15
 [cm]
@@ -203,8 +250,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="储藏室的照片"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【储藏室的照片】[r]
-沈义出示迟欢拍下的劈骨刀。苏禹和颜歆认出，照片里的刀与梦中白裙女尸所持的刀一样。[p]
+【沈义】[r]
+我给你们看个东西。[p]
+他翻出迟欢发来的照片。手电照过储物间的地板，一把劈骨刀斜放在角落。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆盯着照片，声音微微发抖。[p]
+【颜歆】[r]
+楼梯间追我们的那具浮尸，手里就是这种刀。一模一样。[p]
 
 *beat16
 [cm]
@@ -216,8 +269,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="重新审视黄英"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【重新审视黄英】[r]
-苏禹重新考虑黄英的作用。她可能在雨夜处理尸体时被余筱玲撞见，随后追到了楼梯间；这仍是一种推测。[p]
+【苏禹】[r]
+我原本觉得黄英是被推出来顶罪的。可也有另一种解释。[p]
+【苏禹】[r]
+也许她在雨里处理东西，被筱玲撞见。她追到了楼梯间，不知道为什么又停了。[p]
+他说到这里，瞥了一眼照片。梦里见过同一把刀，仍说不清是谁拿的。[p]
 
 *beat17
 [cm]
@@ -229,8 +285,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="失去的后续"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【失去的后续】[r]
-薛淼指出，尸块后来被装进不止一只玩偶，余筱玲的记忆却在楼梯间中断。众人也无法排除多人参与。[p]
+薛淼食指点了点太阳穴。[p]
+【薛淼】[r]
+有个地方对不上。那些东西最后分别装在几只熊里，筱玲却只记到楼梯间。[p]
+【苏禹（画外）】[r]
+后面的事她没看见。凶手有没有帮手，现在也说不准。[p]
 
 *beat18
 [cm]
@@ -242,9 +301,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="洋娃娃里的连接器"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【洋娃娃里的连接器】[r]
-苏禹展示便携式连接器的购买页面。旧案中，设备藏在穆雨霁的洋娃娃里，可以远程连接入梦。[p]
-他推测，这或许能解释余筱玲目击凶案后为何入睡，但设备当晚是否被使用仍未证实。[p]
+苏禹滑开手机，调出便携式连接器的购买页面。[p]
+【苏禹】[r]
+这种东西能远程连进梦里。上回就是在穆雨霁的娃娃里找到的。[p]
+【苏禹】[r]
+如果当晚它开着，也许能解释筱玲怎么睡过去。可我们没看到它开。[p]
+【颜歆（画外）】[r]
+等等。那筱玲的房间在哪儿？[p]
 
 *beat19
 [cm]
@@ -256,8 +319,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="她睡在哪里"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【她睡在哪里】[r]
-余雨想起，筱玲姐姐睡在福利院一楼大厅旁的无名侧房。那里没有卧室，她一直睡在沙发上。[p]
+【余雨】[r]
+筱玲姐姐在一楼大厅旁边，那个不挂牌子的侧房。[p]
+【苏禹（画外）】[r]
+一楼？那里没有卧室啊。[p]
+【余雨】[r]
+是没有。姐姐一直睡在沙发上。[p]
 
 *beat20
 [cm]
@@ -269,8 +336,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="两人的关系"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【两人的关系】[r]
-众人讨论两名女孩为何分开，又在后来重新住到一起。颜歆提醒，余筱玲并未明确说过自己完全不认识妹妹。[p]
+【颜歆】[r]
+她只说搬过来以后一起住。以前到底见没见过，她没说死。[p]
+颜歆拍了拍余雨的背，女孩趁这会儿回了卧室，轻轻把门关上。[p]
+【颜歆】[r]
+她们中间为什么分开，后来又怎么住到一起，还得查。[p]
 
 *beat21
 [cm]
@@ -282,8 +352,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="老师们去了哪里"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【老师们去了哪里】[r]
-苏禹追问学校调查，想知道那些曾教过姐妹的老师如今是否仍在原校。沈义低头向同事核实。[p]
+【苏禹】[r]
+沈警官，学校是你自己去查的吗？[p]
+【沈义（画外）】[r]
+底下人去的。怎么了？[p]
+【苏禹】[r]
+那些教过姐妹俩的老师，现在还在原来的学校吗？[p]
 
 *beat22
 [cm]
@@ -295,8 +369,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="全部调离"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【全部调离】[r]
-答复显示老师们都已调离。高杉杉也在其中，她刚复职，还没有得知调动便遇害。[p]
+沈义摸了摸胡茬，低头发了几条消息。手机一振，他念了起来。[p]
+【沈义】[r]
+都不在。除了高杉杉……不对，她也调走了。[p]
+【沈义】[r]
+她刚复工，还没收到调动的消息，一到周末人就没了。[p]
 
 *beat23
 [cm]
@@ -308,10 +385,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一条可能的时间线"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一条可能的时间线】[r]
-苏禹试着串起一条可能的时间线：三年前出现旧帖，失忆的穆雨霁同年进入福利院；[p]
-两年前，黄英送来藏有连接器的娃娃；一年前，穆雨霁失踪，另有人遇害并被分尸。[p]
-这些事是否相关、凶手有多少人，仍未确定。[p]
+苏禹把手按在桌边，把几个时间点从头理了一遍。[p]
+【苏禹】[r]
+三年前有了旧帖。同一年，失忆的穆雨霁进了福利院。[p]
+【苏禹】[r]
+两年前，黄英送去有连接器的娃娃。一年前，穆雨霁失踪，我们找到了遗体。[p]
+【苏禹】[r]
+这几件事怎么连起来、有几个人参与，都还没定。[p]
 
 *beat24
 [cm]
@@ -323,8 +403,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="高杉杉的疑问"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【高杉杉的疑问】[r]
-沈义补充，高杉杉复职后察觉余雨的变化，或许因此提出过怀疑。她的死因与这些事是否相连仍待查证。[p]
+【沈义】[r]
+我只加一点。高杉杉复职第一天，就见到了性情已经变了的余雨。[p]
+【沈义】[r]
+她可能当面问过什么。她的死和这个有没有关系，还得再查。[p]
 
 *beat25
 [cm]
@@ -336,8 +418,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="小姨的身份"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【小姨的身份】[r]
-小姨留下的电话号码已经注销，房产信息也查不到；警方手里没有她的照片或视频。[p]
+沈义从衣兜里摸出那张纸，压平几道折痕。[p]
+【沈义】[r]
+小姨自己留的地址和号码。房产按这个查不到，电话早就注销了。[p]
+【苏禹（画外）】[r]
+照片呢？[p]
+【沈义】[r]
+照片、视频，都没有。[p]
 
 *beat26
 [cm]
@@ -349,10 +436,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="另一种猜测"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【另一种猜测】[r]
-颜歆猜测，也许余筱玲把妹妹推入河中。苏禹翻出三年前留存的旧帖截图，[p]
-指出这一猜测仍难以解释帖子与后来发生的事。截图只能证明他当时读过那些文字，[p]
-无法证明发帖者是如何知情的。[p]
+【颜歆】[r]
+会不会是筱玲推妹妹下水，后来人被冲到福利院？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹翻出自己三年前保存的旧帖截图，把那几行字放大给她看。[p]
+【苏禹】[r]
+那这些字呢？三年前我就见过。写帖子的人怎么会知道之后的事？[p]
+截图能确认的只有一件事。苏禹当时已经读到了这些字。[p]
 
 *beat27
 [cm]
@@ -364,8 +455,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="像梦一样操控"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【像梦一样操控】[r]
-颜歆无法解释预知梦，便伸手比出提线木偶的动作：如果像操纵梦境一样，让人沿着特定轨迹行动呢？[p]
+【颜歆】[r]
+那我还想问你，预知梦怎么解释呢？[p]
+她两手虚虚抓住几根不存在的线，冲苏禹扮了个鬼脸。[p]
+【颜歆】[r]
+要像操纵梦里的人一样，照着事先想好的路走，倒还说得过去。[p]
 
 *beat28
 [cm]
@@ -377,9 +471,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="三年前"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【三年前】[r]
-这句话让苏禹心中一动。一个令人不安的念头浮现，他想起三年前在精神病院的一段往事。[p]
+苏禹正要接话，忽然盯住了她的手。他好一会儿没开口。[p]
+三年前，在精神病院里，也有人问过一个让他答不出来的问题。[p]
 
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n": 28, "scene": "yuapartment", "discoveries": [], "chapter": 9, "ended": true};

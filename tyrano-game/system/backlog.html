@@ -41,7 +41,7 @@
     letter-spacing: .12em;
   }
 
-  #dreamhealer-backlog .menu_close {
+  #dreamhealer-backlog button {
     padding: 8px 21px;
     background: #25232d;
     color: #faf4eb;
@@ -52,34 +52,48 @@
     cursor: pointer;
   }
 
-  #dreamhealer-backlog .menu_close:hover,
+  #dreamhealer-backlog button:not(:disabled):hover,
   #dreamhealer-backlog :focus-visible {
     outline: 2px solid #f0a393;
     outline-offset: -2px;
   }
 
+  #dreamhealer-backlog .backlog-reading {
+    flex: 1;
+    min-height: 0;
+    padding: 22px 30px;
+  }
+
   #dreamhealer-backlog .log_body {
     box-sizing: border-box;
     width: 100%;
-    height: auto;
-    flex: 1;
-    min-height: 0;
+    height: 100%;
     margin: 0;
-    padding: 22px 30px 36px;
+    padding: 0;
     border: 0;
     background: transparent;
     color: #f1e4dc;
     font-size: 36px;
     line-height: 1.7;
-    overflow-y: auto;
+    columns: 1;
+    column-gap: 0;
+    column-fill: auto;
+    overflow: hidden;
     overflow-wrap: anywhere;
-    touch-action: pan-y;
-    scrollbar-color: #9a6c70 #1d1c25;
   }
 
-  #dreamhealer-backlog .log_body::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: #9a6c70;
+  #dreamhealer-backlog .backlog-pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 30px;
+    border-top: 1px solid #49414b;
+    font-size: 26px;
+  }
+
+  #dreamhealer-backlog button:disabled {
+    opacity: .45;
+    cursor: default;
   }
 </style>
 
@@ -89,6 +103,57 @@
       <h2 id="dreamhealer-backlog-title">剧情回顾</h2>
       <button class="menu_close" type="button">关闭</button>
     </header>
-    <div class="log_body" tabindex="0" aria-label="剧情记录"></div>
+    <div class="backlog-reading">
+      <div class="log_body" tabindex="0" aria-label="剧情记录"></div>
+    </div>
+    <nav class="backlog-pages" aria-label="回顾翻页">
+      <button type="button" data-page-step="-1">上一页</button>
+      <span role="status" aria-live="polite"></span>
+      <button type="button" data-page-step="1">下一页</button>
+    </nav>
   </div>
 </section>
+
+<script>
+  (() => {
+    const panel = document.getElementById('dreamhealer-backlog');
+    const log = panel.querySelector('.log_body');
+    const previous = panel.querySelector('[data-page-step="-1"]');
+    const next = panel.querySelector('[data-page-step="1"]');
+    const status = panel.querySelector('[role="status"]');
+    let page;
+    let total = 1;
+
+    function show(requested) {
+      const width = log.clientWidth;
+      if (!width) return;
+      total = Math.max(1, Math.round(log.scrollWidth / width));
+      page = Math.min(total - 1, Math.max(0, requested ?? total - 1));
+      log.scrollLeft = width * page;
+      previous.disabled = page === 0;
+      next.disabled = page === total - 1;
+      status.textContent = `第 ${page + 1} / ${total} 页`;
+    }
+
+    previous.onclick = () => show(page - 1);
+    next.onclick = () => show(page + 1);
+    panel.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.key === 'Home') show(0);
+      else if (event.key === 'End') show(total - 1);
+      else show(page + (['ArrowLeft', 'PageUp'].includes(event.key) ? -1 : 1));
+    });
+
+    // Tyrano inserts the log after mounting the template and then opens the menu.
+    const layout = new ResizeObserver(() => {
+      if (panel.isConnected) show(page);
+      else layout.disconnect();
+    });
+    layout.observe(log);
+    requestAnimationFrame(() => {
+      log.focus({ preventScroll: true });
+    });
+  })();
+</script>

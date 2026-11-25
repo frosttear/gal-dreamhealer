@@ -4,7 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
+f.game_script_revision = 2;
+f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/fgimage/shencrouch.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -27,8 +28,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【女孩 · 失焦的时钟】[r]
-作业终于写完了。我揉揉眼睛，桌上的电子钟却连一个数字也看不清。[p]
+【卧室】[r]
+作业总算写完了。我揉揉眼睛，满纸字母还在眼前打转。[p]
+桌边的电子钟只剩几笔淡淡的亮光。没电了吗？[p]
 
 *beat2
 [cm]
@@ -40,8 +42,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【女孩 · 窗外】[r]
-我拉开厚重的窗帘。太阳不见了，血红色的云铺满整片天空。[p]
+我拉开厚重的窗帘，尖叫了一声。[p]
+太阳不见了。风把血红色的云卷成细丝，撒满整片天空。[p]
+膝盖碰上冰凉的地面。疼痛还没传来，我脑子里只剩下两个字：逃跑。[p]
 
 *beat3
 [cm]
@@ -53,8 +56,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【女孩 · 打不开的门】[r]
-门推不动。我一拳砸过去，手上的力气在碰到木板时散得一干二净。外面却传来了脚步声。
+我冲到门前，使劲往外推。门纹丝不动。[p]
+我抡起拳头。可手一碰到木板，力气就像被抽走了。[p]
+外面忽然响起脚步声。有人！
 [glink x=352 y=260 width=320 size=28 text="回到窗边" storage=chapter1.ks target="*beat4" keyfocus="1"]
 [glink x=352 y=330 width=320 size=28 text="再听一会儿" storage=chapter1.ks target="*beat4" keyfocus="2"]
 [s]
@@ -69,12 +73,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【女孩 · 红裙】[r]
-楼下有个穿红裙的女人。我把电子钟扔下去求救，她却像没听见。接着她扭头直直望向我，又看向身后，露出惊恐的表情。[p]
+我攥住防盗窗的铁栏。一个穿红裙的女人正从楼下经过。[p]
+我用力招手。她背对着我，头也没回。[p]
+电子钟从铁栏间掉下去，哐的一声碎了。她还在往前走。[p]
+她的头猛地扭了过来。泛白的眼睛直勾勾盯着我，嘴角慢慢往上扯。[p]
+我捂住嘴。她僵硬地回过头，笑容一下变成了惊恐。[p]
 
 *beat5
 [cm]
-[chara_show name=yu face=shaken left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":5,"scene":"dream","discoveries":["wrist"]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -83,9 +89,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【女孩 · 醒来】[r]
-女人像喘不过气，手按住咽喉，倒了下去。身后传来一声脆响：她不知何时到了我身后，[p]
-扭断了我的脖子。[r]我猛地坐起来，摸到脖子，还好好的。只是手腕有点酸。[p]
+她按住咽喉，直挺挺倒下去。我没敢动，眼泪顺着脸颊往下淌。[p]
+咔。刚刚倒下的女人已经到了我身后。我的脖子被猛地一拧。[p]
+[chara_show name=yu face=shaken left=640 top=55 height=510 time=0 wait=true]
+【女孩】[r]
+啊！[p]
+眼前是漆黑的天花板。我摸了摸脖子，好好的。胸口还在怦怦直跳。[p]
+【女孩】[r]
+……是梦。[p]
+我甩了甩手腕。不知为什么，那里有些酸涩。[p]
 
 *beat6
 [cm]
@@ -100,9 +112,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【沈义 · 扬城 · 7 月 26 日】[r]
-我出示证件，跨过警戒线。民警说九点二十四分接警后，急救人员确认女子已无生命体征，[p]
-现场才封控。黑裙女子躺在路中央，周围的人刻意避开她的脸。[p]
+【扬城 · 7 月 26 日】[r]
+沈义关上车门。汗把衬衫黏在背上，他出示证件，弯腰跨过警戒线。[p]
+【现场民警（画外）】[r]
+九点二十四分接警。急救确认没有生命体征，我们才把路面封起来。[p]
+水珠挂在发霉的水管上，迟迟没落。黑裙女人就躺在路中央，没人愿意多看一眼。[p]
 
 *beat7
 [cm]
@@ -116,8 +130,17 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【白羽 · 初步勘验】[r]
-沈叔，初步没发现明显刀伤或击打伤。她拽着领口，倒下前可能喘不上气。吓死是报案人的猜测，死因还得检验。[p]
+戴眼镜的青年朝沈义敬了个礼。沈义认出了白羽。[p]
+【白羽】[r]
+沈叔，初步没发现明显刀伤或击打伤。她拽着领口，倒下前可能喘不上气。[p]
+[chara_hide name=bai time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
+有人说她是吓死的？[p]
+[chara_hide name=shen time=0 wait=true]
+[chara_show name=bai left=640 top=55 height=510 time=0 wait=true]
+【白羽】[r]
+报案人这么猜。死因我得回去检验。[p]
 
 *beat8
 [cm]
@@ -131,8 +154,20 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【薛淼 · 报案人】[r]
-我叫薛淼。九点二十四分报的警，下楼扔垃圾看见她后只隔了几秒。之前我戴着耳机，没听见尖叫。
+薛淼举起手。蓝色体恤松松垮垮，脚上还蹬着一双拖鞋。[p]
+【薛淼】[r]
+我……我报的警，上午九点二十四分。[p]
+[chara_hide name=xue time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
+叫什么名字？当时什么情况？[p]
+[chara_hide name=shen time=0 wait=true]
+[chara_show name=xue left=640 top=55 height=510 time=0 wait=true]
+【薛淼】[r]
+薛……薛淼。我家就在一楼。我出来扔垃圾，就看到这……呕……[p]
+一旁的民警伸手抚了抚他的后背。[p]
+【薛淼】[r]
+我在屋里戴着耳机，没听见尖叫。出了楼门，也就几秒吧，我就打了电话。
 [glink x=352 y=260 width=320 size=28 text="追问周围的人" storage=chapter1.ks target="*beat9" keyfocus="1"]
 [glink x=352 y=330 width=320 size=28 text="记录报案时间" storage=chapter1.ks target="*beat9" keyfocus="2"]
 [s]
@@ -149,12 +184,19 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【沈义 · 死者身份】[r]
-邻居指认，照片和住户登记也初步对上：高杉杉，二十六岁，实验小学音乐老师。让人去学校确认身份，我留在现场。[p]
+沈义拍了几张照片，顺手把手机收回口袋。[p]
+【沈义】[r]
+查到死者信息了吗？[p]
+【同事（画外）】[r]
+邻居认出是高杉杉，二十六岁，实验小学的音乐老师。照片也对得上。[p]
+【沈义】[r]
+让学校再确认一下。她母亲住养老院，请院方先找个人陪着老人。[p]
+他低下头。余光里，地上多了一个小小的影子。[p]
 
 *beat10
 [cm]
 [chara_hide name=shen time=0 wait=true pos_mode=false]
+[chara_new name=shencrouch storage=shencrouch.webp jname="沈义"]
 [chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":10,"scene":"case","discoveries":["yu"]};
@@ -164,8 +206,19 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【余筱玲 · 警戒线外】[r]
-叔叔，我想跟你们走。[r]我叫余筱玲。我……知道一点事情。[p]
+女孩捂着嘴，肩膀不住发抖。见沈义走近，她慢慢松开手，咬住下唇。[p]
+【余筱玲】[r]
+叔叔，我想跟你们走。[p]
+[chara_hide name=yu time=0 wait=true]
+[chara_show name=shencrouch left=640 top=70 height=590 time=0 wait=true]
+沈义蹲了下来，和她的视线齐平。[p]
+【沈义】[r]
+你叫什么名字啊？[p]
+[chara_hide name=shencrouch time=0 wait=true]
+[chara_show name=yu left=640 top=55 height=510 time=0 wait=true]
+【余筱玲】[r]
+余筱玲。[p]
+她的下唇还留着一排浅浅的齿印。[p]
 
 *beat11
 [cm]
@@ -179,9 +232,17 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【沈义 · 小姨】[r]
-自称小姨的女人要把筱玲拖回去，却避开监护人的问题。我让同事先陪孩子去警车旁，[p]
-安排合适的人到场，再核实她的身份。她留下地址和电话，右手没有小指。[p]
+沈义放低声音，问她是不是知道什么。筱玲点了点头。[p]
+【女人（画外）】[r]
+余筱玲！[p]
+一个浓妆的女人挤进人群，伸手就拽住筱玲的胳膊。[p]
+【沈义】[r]
+警察。你是她的监护人吗？[p]
+【女人（画外）】[r]
+我是她小姨。她住我家。那个，警官，她真的要和你们走吗？[p]
+【沈义】[r]
+她先跟我同事待一会儿。你把姓名、门牌和电话写下来，我们会核对。[p]
+她接过笔，连声应好。沈义瞥见那只握笔的右手少了一根小指。[p]
 
 *beat12
 [cm]
@@ -195,8 +256,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【沈义 · 一瞬间】[r]
-我回头要叫住筱玲。就在我们视线碰上的一刻，她眼里掠过一丝冷意。[p]
+【沈义（画外）】[r]
+筱玲，在这里稍等……[p]
+沈义回过头。两人视线相撞，女孩眼底滑过一丝水蛇般的冷意。[p]
 
 *beat13
 [cm]
@@ -211,11 +273,24 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【颜歆 · 舒颜咖啡 · 同一时间】[r]
-老苏，你看三水哥发的求助帖。前天半夜，对面楼传来哭声。昨天，门外隔几个小时就有脚步声和笑声。[p]
+【舒颜咖啡 · 上午 9:47】[r]
+门口挂着歇业牌。颜歆半趴在柜台上，斜扎的马尾垂到一边。[p]
+【颜歆】[r]
+诶，老苏，这帖子真的假的？这次三水哥靠谱吗？[p]
+[chara_hide name=yan time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹盯着桌上摊开的几张草稿纸，揉了揉头发。[p]
+【苏禹】[r]
+颜，你大可以闭嘴。没人当你是哑巴。[p]
+[chara_hide name=su time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆啧了一声，拿铅笔在纸背画了条时间轴。[p]
+【颜歆】[r]
+前天半夜，对面楼有女生在哭。昨天门外隔几个小时就有脚步声，还夹着笑声。[p]
 
 *beat14
 [cm]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":14,"scene":"coffee","discoveries":[]};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -224,8 +299,19 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【颜歆 · 刷新】[r]
-昨晚十一点半发的帖……等等，我刷新一下。[r]今天九点二十四分前后，他发现一具女尸并报了警。[p]他觉得她像被吓死的，那只是他的猜测。[p]
+【颜歆】[r]
+帖子昨晚十一点半发的。今天……啊，等等，我没刷新。[p]
+她划了一下屏幕，脸色渐渐发白。[p]
+【颜歆】[r]
+他说今早九点二十四分前后看到一具女尸。已经报警了。他猜那人像是被活活吓死的。[p]
+[chara_hide name=yan time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+看看这条时间轴。你不觉得像有人在恶意整蛊吗？[p]
+[chara_hide name=su time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
+那女尸呢？[p]
 
 *beat15
 [cm]
@@ -239,8 +325,21 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【苏禹 · 要不要下去】[r]
-对梦境诊疗师而言，去现场才叫“下去”。入梦一型能把意识接到患者的梦境，[p]警方也因此盯得紧。[p]梦里看到的未必是亲历，线索还得在现实核实。[p]
+【苏禹】[r]
+……这不清楚。[p]
+[chara_hide name=su time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
+怎么办，你要下去吗？[p]
+她说的「下去」是去现场。入梦一型能把意识连进患者的梦，现实里的线索仍得靠脚去找。[p]
+[chara_hide name=yan time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+先登出账号。案子的细节别往群里发。[p]
+【苏禹】[r]
+就我个人来说，我不想下去。对我们诊疗师有风险，何况已经报警了。[p]
+【苏禹】[r]
+不过我答应先核实线索。真要入梦，得见了人再谈。[p]
 
 *beat16
 [cm]
@@ -252,8 +351,27 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
-【苏禹 · 七十万】[r]
-五万定金已经到账，办完一共七十万。等他做完笔录，先听清委托，[p]再去小区问人认地方，警戒线里别碰。[r]三水哥开出这个价，这单恐怕有点危险。[p]
+[chara_hide name=su time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆翻了个白眼，把手机扣在桌上。[p]
+【颜歆】[r]
+人家是不是私聊你了？给你多少钱？[p]
+[chara_hide name=yan time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+五万。已经打过来的定金。办完拢共七十万。[p]
+[chara_hide name=su time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+颜歆竖起大拇指。[p]
+【颜歆】[r]
+我低估你了……那我们现在怎么办？[p]
+[chara_hide name=yan time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+等他做完笔录，听他亲口说想查什么。到了小区先问住户、认地方。警戒线里别碰。[p]
+苏禹呼出一口气，目光还落在那条时间轴上。[p]
+【苏禹】[r]
+能让他这个老狐狸开这么高的价，这单有点危险。[p]
 
 *ending
 [cm]

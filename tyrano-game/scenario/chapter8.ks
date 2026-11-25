@@ -1,5 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
+f.game_script_revision = 9;
 f.chapter_assets = ["data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/chisuspicious.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -17,8 +18,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="现实 · 驶向老小区"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【现实 · 驶向老小区】[r]
-沈义一行乘车返回老小区。公开委托发出许久，仍没有诊疗师接下；迟欢也没有再收到「QQ」的消息。[p]
+【现实 · 警车】[r]
+白羽握着方向盘。沈义又刷新了一遍页面，通知栏还是空的。[p]
+【沈义】[r]
+帖子都发出去这么久了，怎么还没有诊疗师来接？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
+【迟欢】[r]
+我这边也一样，连 QQ 都没消息。咱们这是钓鱼失败了？[p]
 
 *beat2
 [cm]
@@ -30,8 +37,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="无声的监控"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【无声的监控】[r]
-学校传来昨天办公室的监控。画面没有声音，但高杉杉说了什么之后，余筱玲显得十分惊恐。[p]
+迟欢用指节敲了两下车窗，问学校那边有没有回信。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+【沈义】[r]
+昨天办公室的监控传过来了。你看看，她俩说话的时候。[p]
+他把手机递到后座。画面没声音。高杉杉嘴唇动了几下，余筱玲的脸一下绷紧了。[p]
 
 *beat3
 [cm]
@@ -43,14 +54,18 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦与嫌疑"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦与嫌疑】[r]
-沈义说，余筱玲曾梦见高杉杉死去。[p]
+沈义从盒里抽出支烟，想起还在车里，又塞了回去。[p]
+【沈义】[r]
+有件事我还没说。筱玲说她梦见过高杉杉死去。按她的话，她就在旁边看着。[p]
 [chara_hide_all time=0 wait=true]
 [chara_show name=chi face=suspicious left=640 top=55 height=510 time=0 wait=true]
-迟欢质疑：一个梦就能洗清嫌疑吗？[p]
+迟欢终于转头，不再看窗外。[p]
+【迟欢】[r]
+你要因为一个梦，撤掉她的嫌疑？[p]
 [chara_hide_all time=0 wait=true]
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
-沈义摇头：他并没有排除她。[p]
+【沈义】[r]
+没这回事。学校那边倒真查出了一点东西。[p]
 
 *beat4
 [cm]
@@ -62,8 +77,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="姐妹"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【姐妹】[r]
-学校资料显示，余雨是余筱玲的亲妹妹，两人在同一个班。迟欢愣住了：余筱玲此前称她是表妹。[p]
+【沈义】[r]
+你送她回去的时候，看见她的小姨和表妹了吗？[p]
+【迟欢（后座）】[r]
+表妹？她还有表妹？[p]
+【沈义】[r]
+学校登记的不是表妹。余雨是她的亲妹妹，两个人还在一个班。[p]
 
 *beat5
 [cm]
@@ -75,8 +94,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一年前的变化"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一年前的变化】[r]
-余雨曾开朗、有音乐天赋，一年前却变得孤僻，还出现类似失忆的现象。经常指导她的高杉杉发现了变化。[p]
+沈义拧开水瓶，喝了一口，又把瓶盖拧紧。[p]
+【沈义】[r]
+老师说，余雨原来很开朗，音乐也学得好。这一年才突然不爱说话。[p]
+【沈义】[r]
+有些从前的事，她像是根本不记得了。最先看出来的就是教过她的高杉杉。[p]
 
 *beat6
 [cm]
@@ -88,8 +110,16 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="高杉杉的母亲"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【高杉杉的母亲】[r]
-高杉杉因母亲出事，一年没有上班，最近才复工。她的母亲叫黄英，一年前被送进精神病院，近期出院后住进养老院。[p]
+【迟欢】[r]
+那高老师这一年去哪儿了？[p]
+【沈义（前座）】[r]
+她母亲出了事。她请了一年假，最近才回来。她母亲叫黄英。[p]
+【沈义（前座）】[r]
+五十一岁，档案上的现住址是养老院。[p]
+【迟欢】[r]
+才五十一岁，就住养老院？[p]
+【沈义（前座）】[r]
+一年前送进精神病院的。刚出院，家里就把她接去了养老院。[p]
 
 *beat7
 [cm]
@@ -101,8 +131,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一年之前"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一年之前】[r]
-为安置母亲，高杉杉卖了房，搬进老小区五幢。沈义猜测，福利院一年前发生的事可能被压了下来。[p]
+【沈义】[r]
+高杉杉为了安置母亲卖了房，现在就住老小区五幢。[p]
+【迟欢（后座）】[r]
+一年前……筱玲被领养，也是一年前吧？[p]
+【沈义】[r]
+我猜福利院那时候出过事，有人压了下来。先顺着这个方向查。[p]
 
 *beat8
 [cm]
@@ -115,8 +149,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦境 · 白色浪花"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦境 · 白色浪花】[r]
-余雨消失在地板中。颜歆怔怔地说：「就像掉进水里一样。」苏禹听到这句话，猛地回头。[p]
+【梦境 · 教室】[r]
+白浪落平，地板上已经看不见余雨了。[p]
+【颜歆】[r]
+老苏，这怎么跟掉进水里一样？[p]
+【苏禹（画外）】[r]
+等等，你刚刚说什么？[p]
+【颜歆】[r]
+不……不像吗？[p]
 
 *beat9
 [cm]
@@ -128,8 +168,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="背后的剧痛"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【背后的剧痛】[r]
-苏禹还未说出自己的想法，背后突然传来剧痛。余筱玲握着刀，再次向他挥来。[p]
+【苏禹】[r]
+像。问题就是太像了。[p]
+后背突然一阵剧痛。苏禹转头，对上一双毫无生气的眼睛。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yu face=determined left=640 top=55 height=510 time=0 wait=true]
+余筱玲握着刀。她还没站稳，手腕已经抬起，又朝他挥了过来。[p]
 
 *beat10
 [cm]
@@ -141,8 +185,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="穿过刀刃"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【穿过刀刃】[r]
-颜歆急着拉他离开，伸手抓刀时，手却穿过了刀刃。第二刀掠过苏禹的脖颈，竟没有留下伤口。[p]
+【颜歆】[r]
+老苏你想死啊！跑！你吃了药，不能在这儿死！[p]
+苏禹纹丝不动。颜歆拽不动他，一咬牙，伸手去抓刀。[p]
+她的手穿了过去，像抓了一把空。刀随后掠过苏禹的脖子，一滴血也没见。[p]
 
 *beat11
 [cm]
@@ -154,8 +200,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="另一个背影"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【另一个背影】[r]
-苏禹刚意识到眼前的攻击似乎只是投影，一旁便传来异响。一个身材臃肿、穿裙子的女人背影挡住了视线。[p]
+【苏禹】[r]
+我明白了。对我们来说，这刀像个投影。[p]
+旁边却传来一声闷响，温热的血溅了过来。[p]
+他们一回头，只看见一个穿裙子的女人，臃肿的背影堵住了视线。[p]
 
 *beat12
 [cm]
@@ -167,8 +215,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦境 · 血色漫入"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦境 · 血色漫入】[r]
-闪电照亮猩红的窗外。玻璃破裂，暗红的液体涌进房间，迅速上涨，将苏禹淹没。[p]
+轰。闪电把窗外照得一片猩红。[p]
+玻璃猛地向内裂开。暗红的液体涌过窗框，刺鼻的甜腥气迎面扑来。[p]
+苏禹仰起头想吸一口气，液体已经漫过了他的头顶。[p]
 
 *beat13
 [cm]
@@ -181,8 +230,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="现实 · 强制唤醒"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【现实 · 强制唤醒】[r]
-倒计时归零，入梦一型开始强制唤醒。苏禹呛咳着睁开眼，薛淼身旁还站着几位陌生人。[p]
+【入梦一型】[r]
+00:00　正在强制唤醒……[p]
+苏禹呛着睁开眼。喉咙里像还灌着刚才那股腥气，咳了好几声才缓过来。[p]
+他认出了薛淼。薛淼身边还站着几个人，都是生面孔。[p]
 
 *beat14
 [cm]
@@ -194,8 +245,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="第一次见面"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【第一次见面】[r]
-迟欢介绍了自己、沈义与白羽。苏禹勉强握手，问他们是不是要把诊疗师带走；颜歆醒后跑进卫生间干呕。[p]
+迟欢伸出手，俯下身来。[p]
+【迟欢】[r]
+初次见面，苏先生。我叫迟欢。这位是沈义，那边是白羽。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹勉强伸手。眼里全是血丝。[p]
+【苏禹】[r]
+警察……怎么说，要把我们几个拷走吗？[p]
+一旁的颜歆也睁了眼。她摆摆手，冲进卫生间，门里传来干呕声。[p]
 
 *beat15
 [cm]
@@ -207,8 +265,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="公开委托"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【公开委托】[r]
-沈义说帖子是自己发的。案情蹊跷，如果诊疗师愿意分享发现，就算警方欠他们一个人情。[p]
+【沈义】[r]
+拷走就不必了。那个求助帖是我发的。[p]
+他用下巴指了指入梦一型。机器已经静下来了。[p]
+【沈义】[r]
+案子有点蹊跷。你们要是有发现，愿意跟我说，就算我欠你们一个人情。[p]
 
 *beat16
 [cm]
@@ -220,8 +281,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="沉睡的女孩"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【沉睡的女孩】[r]
-设备已经停止，余筱玲却仍在熟睡。苏禹确认她呼吸平稳，推测是催眠药的作用尚未过去。[p]
+苏禹往椅背上一靠，发现旁边的筱玲还躺着，马上又坐直了。[p]
+【苏禹】[r]
+等等。机子都停了，她怎么还没醒？[p]
+他俯身探了探鼻息。呼吸还算平稳，可能是药力还没过去。[p]
 
 *beat17
 [cm]
@@ -233,8 +296,14 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="黄英是谁"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【黄英是谁】[r]
-沈义问他们是否认识黄英。苏禹承认认识，并追问她与案件的关系。[p]
+沈义的视线从设备上收回来，落到苏禹脸上。[p]
+【沈义】[r]
+你们认识……黄英这个人吗？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+苏禹听到这个名字，心里一紧。他把手抵在椅子边，稳住了声音。[p]
+【苏禹】[r]
+认识。她跟案子有什么关系？[p]
 
 *beat18
 [cm]
@@ -246,8 +315,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="母女"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【母女】[r]
-沈义说，黄英是高杉杉的母亲。刚从卫生间回来的颜歆听到这个消息，震惊地愣在原地。[p]
+【沈义（画外）】[r]
+她是高杉杉的母亲。我想看看你们有没有什么线索。[p]
+颜歆刚从卫生间出来，脸还是白的。她一下站住了。[p]
+【颜歆】[r]
+高杉杉的……母亲？[p]
+沈义看了看两人的脸色，挥手让迟欢和白羽先出去。[p]
 
 *beat19
 [cm]
@@ -259,8 +332,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="三年前的委托"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【三年前的委托】[r]
-沈义以为他们曾经处理并压下雨夜沉尸案。苏禹否认：他们也是中午才知道那起案子。[p]
+【沈义】[r]
+她进了精神病院，我猜这事和诊疗师有关。三年前那起沉尸案，是你们压下来的？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+【苏禹】[r]
+等等。雨夜沉尸？我们也是今天中午才知道。[p]
 
 *beat20
 [cm]
@@ -272,8 +349,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="对不上的时间"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【对不上的时间】[r]
-颜歆解释，三年前那个时候苏禹还在精神病院。沈义意识到手里的信息可能有误。[p]
+【颜歆（画外）】[r]
+老苏那会儿还没从精神病院出来呢。他怎么可能去办案？[p]
+苏禹捏着眉心，半晌才把手放下。[p]
+【苏禹】[r]
+给人做治疗时出了点问题，住过一两个月。出院以后，我才接查案的活。[p]
+【沈义（画外）】[r]
+不对。是我们手里的信息有问题。[p]
 
 *beat21
 [cm]
@@ -285,8 +367,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="李护工"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【李护工】[r]
-沈义说李护工死在福利院，他推测对方可能被困后饿死。苏禹表示，自己对这件事没有头绪。[p]
+【沈义】[r]
+沉尸案里那个李护工，你们知道吧？他死在福利院里了。[p]
+【沈义】[r]
+光看那屋子的样子，可能有人把他关在里头，最后饿死了。还得等查验。[p]
+【苏禹（画外）】[r]
+我们这次入梦，也没找到他的线索。[p]
 
 *beat22
 [cm]
@@ -298,8 +384,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="一年前的案子"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【一年前的案子】[r]
-颜歆讲述穆雨霁分尸案：当时余筱玲也提供过关键线索，这也是他们再次参与调查的原因。[p]
+颜歆拉来一张椅子，把去年的情况从头说了一遍。[p]
+【沈义（画外）】[r]
+所以一年前，也是余筱玲握着一部分关键线索？[p]
+【颜歆】[r]
+是。她亲手指给我看了冰箱。这次我们回来，还是因为她。[p]
 
 *beat23
 [cm]
@@ -311,8 +400,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="上一次的海"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【上一次的海】[r]
-上次进入余筱玲的梦后，两人落入空无一人的海，几乎溺死。预定十分钟的入梦不到三分钟，薛淼便停机救了他们。[p]
+【苏禹】[r]
+上次一进去就是一片海。上不去，下不来，差点淹死在里头。[p]
+【沈义（画外）】[r]
+就一直是那片海？[p]
+【苏禹】[r]
+对。连筱玲都不在。原定十分钟，三分钟还没到，薛淼就把机子停了。[p]
 
 *beat24
 [cm]
@@ -324,8 +417,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="中止调查"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【中止调查】[r]
-上次委托由院长支付报酬，院长要求停止后，他们没有继续追查。警方手里也没有雨夜沉尸案的资料。[p]
+【沈义（画外）】[r]
+后来也没接着查？警方这边没有雨夜那桩案子的资料。[p]
+【颜歆】[r]
+院长出的报酬，也是院长叫我们停。委托到那儿就结了。[p]
 
 *beat25
 [cm]
@@ -337,8 +432,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="没有照片的女孩"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【没有照片的女孩】[r]
-穆雨霁的资料除出生年月外几乎一片空白，连照片都查不到。苏禹猜测，有人可能刻意隐藏了信息。[p]
+苏禹单手撑着下巴，朝桌上的空杯看去。[p]
+【苏禹】[r]
+穆雨霁那份资料，除了出生年月，什么都没有。找遍了，也没找到照片。[p]
+【沈义（画外）】[r]
+一张也没有？[p]
+【苏禹】[r]
+一张也没有。有人不想让别人看到那张脸，也说不定。[p]
 
 *beat26
 [cm]
@@ -350,9 +450,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="狸猫换太子"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【狸猫换太子】[r]
-沈义想到了某种可能，却没有说出口。沉默许久的薛淼接上话：「狸猫换太子。」这还只是一个猜想。[p]
+【沈义（画外）】[r]
+苏禹，你说，不让人看见那张脸，会不会是……[p]
+桌边静了一会儿。一直没说话的薛淼接过了后半句。[p]
+【薛淼】[r]
+狸猫换太子。[p]
 
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n": 26, "scene": "yuapartment", "discoveries": [], "chapter": 8, "ended": true};

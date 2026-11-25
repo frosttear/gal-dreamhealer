@@ -1,5 +1,6 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
+f.game_script_revision = 7;
 f.chapter_assets = ["data/bgimage/yuapartment.webp","data/bgimage/dreamroom.webp","data/bgimage/dreamlobby.webp","data/bgimage/dreamstairs.webp","data/bgimage/orphanagehall.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/drowned.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
@@ -15,8 +16,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦中的余家"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦中的余家】[r]
-苏禹睁开意识，发现自己身处余筱玲家。他发不出声音，只能借连接与颜歆交流。她说，这里的场景并非自己构建。[p]
+【苏禹（意识连接）】[r]
+这里是余筱玲家？颜，是你构建的？[p]
+他想开口，却连自己的声音也听不见。颜歆的回答直接从意识里传了过来。[p]
+【颜歆（意识连接）】[r]
+不是我。我还没来得及。[p]
 
 *beat2
 [cm]
@@ -27,8 +31,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="没有身体"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【没有身体】[r]
-苏禹低头看见白色地砖，却看不见自己的身体。他一动念，视角便滑向桌底；颜歆也在客厅，却看不见他。[p]
+白色地砖就在眼前。苏禹往下看，地砖上没有自己的脚。[p]
+他试着迈步，视角一下滑到了桌底，连木纹都看得清清楚楚。[p]
+【苏禹（意识连接）】[r]
+颜，你在哪儿？[p]
+【颜歆（意识连接）】[r]
+在客厅。我看不见你。[p]
 
 *beat3
 [cm]
@@ -39,8 +47,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="关着的卧室"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【关着的卧室】[r]
-余筱玲卧室的门无法穿过。铅笔摩擦纸张的声音从无法辨别的方向传来，两人猜测女孩正在房内写字。[p]
+念头一动，卧室的门已经到了眼前。苏禹试了几次，怎么也穿不过去。[p]
+沙，沙，沙。铅笔蹭过纸页。那声音像是贴着耳朵响，听不出从哪儿来的。[p]
+【苏禹（意识连接）】[r]
+写字声？余筱玲应该在里头。[p]
 
 *beat4
 [cm]
@@ -51,8 +61,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="缺失的天空"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【缺失的天空】[r]
-窗外是一片漆黑，并非夜色，而像记忆中缺失的景象。颜歆试着改变场景，却发现自己也做不到。[p]
+窗外黑得连一点层次都没有，像是原来该有天空的地方被挖空了。[p]
+【苏禹（意识连接）】[r]
+颜，怎么不说话？[p]
+【颜歆（意识连接）】[r]
+老苏，我没办法改变这里的东西。[p]
 
 *beat5
 [cm]
@@ -63,8 +76,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦眼"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦眼】[r]
-苏禹推测，这可能是一段旧梦的重现，也可能有人围绕余筱玲编织了梦。梦眼可以是一句话、一个人或一种颜色，也是醒来的关键。[p]
+【苏禹（意识连接）】[r]
+可能是她以前做过的梦，也可能是有人专门给她编了一个梦。[p]
+【颜歆（意识连接）】[r]
+那咱们先找梦眼？[p]
+【苏禹（意识连接）】[r]
+对。一句话、一个人，甚至一种颜色，都可能让她醒过来。先得找到她。[p]
 
 *beat6
 [cm]
@@ -75,8 +92,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="跳动的钟"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【跳动的钟】[r]
-梦境不到三分钟便可能坍塌。苏禹望着挂钟，分针从三跳到九，又跃到十一；秒针不见了，颜歆也看不清时间。[p]
+苏禹直觉这地方撑不过三分钟。墙上那只钟却怎么也看不清。[p]
+分针从三跳到九，又从九跳到十一。盘面上已经没有秒针了。[p]
+【颜歆（意识连接）】[r]
+我也看不清。跟吃了蘑菇一样，分针在跳舞。[p]
 
 *beat7
 [cm]
@@ -88,8 +107,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="血红的天空"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【血红的天空】[r]
-窗帘被拉开，屋内瞬间染成血红。窗外漆黑的天空变了颜色，苏禹的心跳不受控制地加快。[p]
+唰。窗帘被扯开了。刚才还漆黑的窗外，瞬间变成一整片血红。[p]
+【颜歆（意识连接）】[r]
+老苏，你看天上。[p]
+【苏禹（意识连接）】[r]
+看见了。[p]
+他想移开视线，心跳却先一点点快了起来。[p]
 
 *beat8
 [cm]
@@ -100,8 +123,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="被带走的颜歆"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【被带走的颜歆】[r]
-猛烈的砸门声响起。颜歆惊呼自己被移到屋外，她看不见自己；苏禹从窗口看见一个红衣女人正缓缓走过楼下。[p]
+哐哐哐。粗暴的砸门声把两个人都打断了。[p]
+【颜歆（意识连接）】[r]
+老苏！我被弄到外面去了！我看不见自己！[p]
+苏禹的视角一下滑到窗边。楼下有个穿红衣的女人，正沿着大路慢慢往小区门口走。[p]
+【苏禹（意识连接）】[r]
+你是不是在往前走？从我这儿看，你穿着红衣服，还没回头。[p]
 
 *beat9
 [cm]
@@ -112,8 +139,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="扭转的头"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【扭转的头】[r]
-一声碎裂巨响后，红衣女人的头转过不可思议的角度，直盯着楼上。颜歆说她看见了惊恐的余筱玲，却无法控制自己的动作。[p]
+地上传来一声碎响。红衣女人的头一下扭了过去，死死盯着楼上。[p]
+【颜歆（意识连接）】[r]
+我看见余筱玲了。她好害怕……等等，我把头转不回来。[p]
+那颗头仍朝着背后，一点、一点转动，像生了锈的机器。[p]
+【颜歆（意识连接）】[r]
+老苏！救……[p]
 
 *beat10
 [cm]
@@ -124,8 +155,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="倒下的女人"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【倒下的女人】[r]
-颜歆的声音突然断了。红衣女人缓缓倒下，身影与薛淼发来的照片重合。苏禹认出那是高杉杉，分不清这究竟是预示还是有人依梦行凶。[p]
+【苏禹（意识连接）】[r]
+颜？颜！还在吗？[p]
+没有回答。路上的女人缓缓倒下，那姿势和薛淼发来的照片重叠在了一起。[p]
+【苏禹（意识连接）】[r]
+……是高杉杉。[p]
+到底是先梦见她死，还是有人看过这个梦，才让她死在同一个地方？[p]
 
 *beat11
 [cm]
@@ -136,8 +171,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="被迫的动作"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【被迫的动作】[r]
-视角骤然来到余筱玲卧室。苏禹看见女孩绝望的脸，又看见自己伸出惨白的双臂；他无法控制地折断了她的脖颈。[p]
+视角被猛地拉进卧室。余筱玲就在面前，脸上的眼泪还没干。[p]
+苏禹想喊她往后退，依旧没有声音。余光里，一双惨白的胳膊自行伸了出去。[p]
+咔嚓一声。他听见自己折断了她的脖子。[p]
 
 *beat12
 [cm]
@@ -150,8 +186,16 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="雨夜中的重逢"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【雨夜中的重逢】[r]
-苏禹惊醒在黑暗中，身体重新显现。颜歆说这里才是她构建的福利院，但雨夜并非她设定；她握住苏禹的手，让他慢慢平静下来。[p]
+【苏禹（画外）】[r]
+啊！[p]
+闪电照亮屋里。他抬起手，摸到了自己的胸口。身体回来了。[p]
+【颜歆】[r]
+这里才是我构建的福利院。可我没有设定雨天。老苏，你怎么了？[p]
+她握住苏禹的手。那点暖意顺着指尖传上来。[p]
+【苏禹（画外）】[r]
+我扭断了余筱玲的脖子。[p]
+【颜歆】[r]
+放轻松。假的，假的。你先慢慢呼吸。[p]
 
 *beat13
 [cm]
@@ -163,8 +207,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="唯一的白伞"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【唯一的白伞】[r]
-两人在昏暗的大堂寻找余筱玲。门口本有许多伞，如今只剩一把白色长柄伞；苏禹认为女孩对它印象最深。[p]
+两人摸黑绕过大堂。门边明明该有一排伞，现在只剩一把长柄白伞。[p]
+【颜歆（画外）】[r]
+我记得门口的伞挺多的啊。[p]
+【苏禹】[r]
+可能她对这一把印象最深。先找这里的余筱玲。[p]
 
 *beat14
 [cm]
@@ -177,8 +224,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="楼上的脚步"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【楼上的脚步】[r]
-二楼传来沉闷脚步声，两人循声上楼。颜歆怕黑，抓住苏禹的风衣，一级一级跟在他身后。[p]
+咚、咚、咚。这次声音听得出方向，来自二楼。[p]
+【苏禹（画外）】[r]
+上去看看。[p]
+扶手积着灰，楼梯没有灯。颜歆攥住苏禹的风衣，踩着他踩过的地方往上走。[p]
 
 *beat15
 [cm]
@@ -190,8 +239,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="没有出口的楼梯"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【没有出口的楼梯】[r]
-他们走了约五层楼，却既没有到二楼，也看不到出口。脚步声始终远近不变，苏禹怀疑楼梯在循环。[p]
+【颜歆（画外）】[r]
+我们……走多久了？[p]
+【苏禹】[r]
+走了有五层楼的样子。你听，脚步声一点都没变远。[p]
+他在拐角停下。前后都是台阶，找不到窗户，也看不到出口。[p]
+【苏禹】[r]
+我们可能一直在同一段楼梯上打转。[p]
 
 *beat16
 [cm]
@@ -203,8 +257,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="风衣留下的痕迹"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【风衣留下的痕迹】[r]
-苏禹将风衣系在扶手上作标记。再走一层，风衣不见了，扶手上的灰却被擦掉；他在几步之外捡起本应系紧的风衣。[p]
+苏禹把风衣脱下来，在扶手上系了个紧结。[p]
+【颜歆（画外）】[r]
+老苏，你居然舍得脱你的风衣。[p]
+【苏禹】[r]
+这是梦。[p]
+再走一层，衣服没了。苏禹摸了摸扶手，那一段的灰已经被擦干净了。[p]
+他又往前走了几步。脚尖勾住一团布，捡起来正是打过结的风衣。[p]
 
 *beat17
 [cm]
@@ -216,8 +275,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="黑暗里的刀光"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【黑暗里的刀光】[r]
-脚步突然加快，水腥味逼近。颜歆看到寒光，急忙拉开苏禹；刀刃削断了风衣半截袖子，两人向楼上逃去。[p]
+脚步忽然变急，水腥味迎面扑来。黑暗里有一道冷光擦过去。[p]
+【颜歆】[r]
+小心！[p]
+她把苏禹猛地往前一拽。半截袖子轻飘飘落在一级台阶上。[p]
+【颜歆】[r]
+别愣着了，跑啊！[p]
 
 *beat18
 [cm]
@@ -229,8 +292,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="她没有追过"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【她没有追过】[r]
-苏禹扔下风衣，身后传来摔倒声。片刻后他意识到，危险始终在循环中等待，他们并没有甩开它。[p]
+苏禹把风衣扔在身后。哗啦一下，什么东西重重摔倒了。[p]
+脚步声停了。楼道里一下只剩两人的呼吸声。[p]
+【颜歆（画外）】[r]
+不追了？[p]
+【苏禹】[r]
+不对。她根本没有追过。[p]
+他抓住颜歆，掉头往下跑。[p]
 
 *beat19
 [cm]
@@ -242,8 +310,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="白裙女尸"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【白裙女尸】[r]
-刀砍在扶手上。颜歆回头，看见一具苍白浮肿的女尸，湿透的白裙沾着泥渍；两人被困在循环的楼梯里。[p]
+铛！刀砍在扶手上。颜歆回头，只瞥了一眼，手臂上的汗毛全竖了起来。[p]
+那女人通体惨白，脸有些浮肿。褐泥贴在湿透的白裙上，一步一滴水。[p]
+上面是那把刀，下面还是同一截楼梯。[p]
 
 *beat20
 [cm]
@@ -255,8 +324,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="梦境的代价"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【梦境的代价】[r]
-颜歆不敢贸然改变楼梯的格局。梦境崩溃或在深眠35中死亡，都可能让他们坠入迷失域，再也无法醒来。[p]
+【颜歆】[r]
+怎么办？我不敢把楼梯整个换掉。[p]
+梦撑不住，两个人就可能坠进迷失域。服了深眠35再死在梦里，也可能醒不来。[p]
+她伸向扶手的手停在半空，又慢慢收了回来。[p]
 
 *beat21
 [cm]
@@ -268,8 +339,12 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="雨夜的线索"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【雨夜的线索】[r]
-雨夜与浮尸让苏禹想到三年前的沉尸案。他让颜歆尝试用水包住女尸，自己拖着疲惫的身体避开刀刃。[p]
+雨夜。白裙。苏禹一瞬间想到三年前那份沉尸档案。[p]
+【苏禹】[r]
+颜，能不能弄点水出来？最好能把她包住。[p]
+【颜歆（画外）】[r]
+好，我试试。[p]
+他扶着她继续往前。她闭上眼睛，楼梯深处慢慢浮起一层水汽。[p]
 
 *beat22
 [cm]
@@ -281,8 +356,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="水中的威胁"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【水中的威胁】[r]
-苏禹失足跪倒，护住颜歆。水声响起，女尸和刀一同悬停。颜歆以最小的改变使它重新置身水中，威胁暂时停止。[p]
+最后一级台阶踩空了。苏禹转身把颜歆挡在身后，膝盖重重砸在地上。[p]
+哗啦。水声从半空涌下来，刀和持刀的手一同停住了。[p]
+颜歆睁开眼。两个人坐在地上，喘得一时都说不出话。[p]
+【颜歆】[r]
+老苏……你怎么知道这样能让她停下来？[p]
 
 *beat23
 [cm]
@@ -294,8 +372,11 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="循环的出口"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【循环的出口】[r]
-苏禹猜测，水让余筱玲的潜意识认为浮尸不再危险；循环也许是她困住威胁的方式。两人摸索着下楼，终于看见出口。[p]
+【苏禹】[r]
+我在赌。那可能就是三年前冲上岸的浮尸。对筱玲来说，在水里的时候，她还不构成威胁。[p]
+【苏禹】[r]
+我再想，筱玲遇到危险，可能总是先把它困住。这楼梯就是她拿来困东西的。[p]
+他伸手拉起颜歆，摸着扶手往下走。转角的前面，这回出现了出口。[p]
 
 *beat24
 [cm]
@@ -308,8 +389,21 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="始终跟随的威胁"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
-【始终跟随的威胁】[r]
-出口通向二楼。颜歆问为何威胁出现在楼梯间，苏禹提出两种可能：女孩想借黑暗困住它，或者那威胁一直跟着她到了这里。[p]
+【苏禹】[r]
+过来吧。这里是二楼。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
+【颜歆】[r]
+那份档案写的是湖边，她怎么会在楼梯间再碰到它？[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+窗玻璃里映出苏禹的影子。他没有回头。[p]
+【苏禹】[r]
+也许楼梯间够黑，她想把它关在这里。[p]
+【苏禹】[r]
+也可能……那东西一直跟着她，跟到了楼梯间。[p]
+
+*ending
 [cm]
 [iscript]
 f.game_beat = {"n":24,"scene":"orphanagehall","discoveries":[],"chapter":6,"ended":true};

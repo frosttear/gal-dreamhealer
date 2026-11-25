@@ -20,7 +20,8 @@
 1. `game.js` 创建指向 `engine/index.html` 的 iframe。引擎 `first.ks` 设置历史模板及快进显示选项，经 `window.parent.dreamhealer.ready(window)` 握手。宿主根据模式开始第一章或加载自动/手动档。
 2. 剧本负责打字、画面、立绘、背景、分支及自动存档。章节开头异步预加载，实际转场使用等待背景完成的标签。一个节拍更新 `f.game_beat`（`n`、`scene`、`discoveries`、`chapter`，完成时可带 `ended`），记录回顾，自动存档并通知宿主 `reached`。
 3. 宿主用章节表显示节拍总数，用 `discoveries` 解锁图鉴，用 `scene` 提升封面档位。早期记录和重玩保持已解锁封面。第一章旧节拍未带 `chapter` 时默认 1。
-4. 引擎读档执行 `make.ks`，恢复打字速度、场景背景和回顾快照，再调用 `restored` 解除加载状态。混合缓存版本通过兼容 `reached` 回退。手动档在当前文字和等待指令结束后保存。
+4. 引擎读档执行 `make.ks`，恢复打字速度、场景背景和回顾快照，再调用 `restored` 解除加载状态。混合缓存版本通过兼容 `reached` 回退。手动档在当前文字和等待指令结束后保存。Tyrano 的同版存档按指令位置恢复。第一卷扩写前的存档按原节拍从新版第一页重播，分支与章末位置按原记录恢复。
+5. 回顾沿用引擎的回顾记录，模板用定高分栏按实际渲染行数分页。初次打开定位最新页，每次翻页移动一个完整栏宽。
 
 封面和图鉴键为 `dreamhealer.chapter1.cover`、`dreamhealer.chapter1.unlocks`，保留旧原生版记录。引擎项目 ID 为 `dreamhealer-tyrano`，宿主检测 `dreamhealer-tyrano_tyrano_auto_save` 和 `dreamhealer-tyrano_tyrano_quick_save`。原生版存档格式与引擎格式不同。同一浏览器同一 origin 的不同路径共享 localStorage，移动到新域名会使用另一个存储空间。
 
