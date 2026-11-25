@@ -1,13 +1,12 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 38;
-f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/su.webp","data/fgimage/sufocusedmatch.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/fgimage/shensearch.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
+f.game_script_revision = 39;
+f.chapter_assets = ["data/bgimage/case.webp","data/bgimage/yuapartment.webp","data/bgimage/orphanagehall.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/su.webp","data/fgimage/sufocusedmatch.webp","data/fgimage/yan.webp","data/fgimage/yu.webp","data/fgimage/shen.webp","data/bgimage/cgcleaver.webp","data/fgimage/chi.webp","data/fgimage/yuyu.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
-[chara_new name=shensearch storage=shensearch.webp jname="沈义"]
 [chara_new name=su storage=su.webp jname="苏禹"]
 [chara_face name=su face=focused storage=sufocusedmatch.webp]
 
@@ -288,9 +287,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat16
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=shensearch left=640 top=35 height=590 time=0 wait=true]
+[bg storage=cgcleaver.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n":16,"scene":"orphanagehall","discoveries":["cleaver"],"chapter":5};
+f.game_beat = {"n":16,"scene":"cgcleaver","discoveries":["cleaver","cgcleaver"],"chapter":5};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="尽头的杂物间"]
@@ -302,6 +301,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat17
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=orphanagehall.webp time=140 wait=true position=center]
 [chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":17,"scene":"orphanagehall","discoveries":[],"chapter":5};

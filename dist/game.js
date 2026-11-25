@@ -9,8 +9,8 @@ const scenarioRevisions = {
   'chapter2.ks': 42,
   'chapter3.ks': 38,
   'chapter4.ks': 20,
-  'chapter5.ks': 38,
-  'chapter6.ks': 22,
+  'chapter5.ks': 39,
+  'chapter6.ks': 23,
   'chapter7.ks': 43,
   'chapter8.ks': 39,
   'chapter9.ks': 40,
@@ -264,7 +264,9 @@ const characterArt = {
 
 const sceneArt = [
   ['cgshenxiaoling', '警戒线外'],
-  ['cgyanreviewing', '舒颜咖啡 · 研判']
+  ['cgyanreviewing', '舒颜咖啡 · 研判'],
+  ['cgcleaver', '尽头的杂物间'],
+  ['cgloopstairs', '循环楼梯']
 ];
 
 function showCatalog() {

@@ -1,10 +1,9 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 22;
-f.chapter_assets = ["data/bgimage/yuapartment.webp","data/bgimage/dreamroom.webp","data/bgimage/dreamlobby.webp","data/bgimage/dreamstairs.webp","data/bgimage/orphanagehall.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/drowned.webp"];
+f.game_script_revision = 23;
+f.chapter_assets = ["data/bgimage/yuapartment.webp","data/bgimage/dreamroom.webp","data/bgimage/dreamlobby.webp","data/bgimage/dreamstairs.webp","data/bgimage/orphanagehall.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/bgimage/cgloopstairs.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
-[chara_new name=drowned storage=drowned.webp jname="白裙女尸"]
 
 *beat1
 [cm]
@@ -327,9 +326,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat19
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=drowned left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgloopstairs.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n":19,"scene":"dreamstairs","discoveries":["dreamcorpse"],"chapter":6};
+f.game_beat = {"n":19,"scene":"cgloopstairs","discoveries":["dreamcorpse","cgloopstairs"],"chapter":6};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="白裙女尸"]
@@ -341,6 +340,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat20
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=dreamstairs.webp time=140 wait=true position=center]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":20,"scene":"dreamstairs","discoveries":[],"chapter":6};
