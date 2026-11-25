@@ -1,12 +1,13 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 18;
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/chenthoughtful.webp","data/fgimage/qin.webp","data/fgimage/qinconcerned.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
+f.game_script_revision = 42;
+f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/chenthoughtful.webp","data/fgimage/qin.webp","data/fgimage/qinconcerned.webp","data/fgimage/xue.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=chi storage=chi.webp jname="迟欢"]
 [chara_new name=chen storage=chen.webp jname="陈清"]
 [chara_new name=qin storage=qin.webp jname="秦桥"]
+[chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=interview storage=xueinterview.webp]
 [chara_face name=xue face=anxious storage=xueanxious.webp]
 [chara_face name=chen face=serious storage=chenthoughtful.webp]

@@ -39,7 +39,7 @@
 
 1. 将 WebP 放进 `dist/assets/`。引擎内素材名使用纯 ASCII 小写字母，当前构建正则只识别 `[a-z]+\.webp`。
 2. 在章节的 `f.chapter_assets` 加入字面量路径 `data/bgimage/name.webp` 或 `data/fgimage/name.webp`。构建从 `chapter*.ks` 扫描这些路径，即使素材实际由公用子场景调用也要确保可被扫描。
-3. 通过 `[bg]`、`[chara_new]`、`[chara_face]` 等引擎标签接入对应画面。复用人物时核对造型恢复时机。封面由外壳读取，命名和索引在 `dist/game.js`。
+3. 通过 `[bg]`、`[chara_new]`、`[chara_face]` 等引擎标签接入对应画面。每个场景先声明角色基础图，再为该角色注册 `chara_face` 表情；不要依赖上一章节遗留的角色或表情定义。复用人物时核对造型恢复时机。封面由外壳读取，命名和索引在 `dist/game.js`。
 4. 图鉴人物条目的第四项填写常态素材名，检查 `discoveries` 与图鉴键对应。图鉴加载完成前显示占位，解码失败显示提示。
 
 第七章的 dreamstore 与 dreamclass 分别表现梦中储藏室和无影教室；yuyudream 以余雨常态立绘为参考，改用短刘海与自信姿态。第一章的 shengentle 用于沈义安排余筱玲安全交接的节拍，通过 `chara_face` 临时显示，不替换常态图；yushaken 用于余筱玲从扭颈噩梦中惊醒。薛淼的 xuecasual 表现蓝衣造型的平静状态，既用于第一章举手报案，也用于第三、五、八至十章与苏禹等人的日常交谈；受惊的 xue 保留给描述发现尸体等情境。第二章的 xueanxious 补充薛淼在警局回答笔录时的回避神情。第九章的 yuyutearful 用于余雨开门哭求众人不要抓姐姐；使用 `chara_face` 保留后续讲述回忆时的常态形象。第十章的 suworried 用于苏禹回忆心理医生后仍感不安的节拍；第十一章的 yanfocused 用于颜歆看清梦中无脸照片的节拍。第八章的 chisuspicious 用于迟欢质疑梦境证词能否洗清嫌疑；第十一章的 psychwary 表现心理医生在医院初醒时的戒备；第十二章的 baifocused 用于白羽说明送检结果。

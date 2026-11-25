@@ -4,15 +4,15 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 36;
+f.game_script_revision = 41;
 f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.webp", "data/bgimage/mentalward.webp", "data/bgimage/station.webp", "data/fgimage/su.webp", "data/fgimage/suworried.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yu.webp", "data/fgimage/psych.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
-[chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=su storage=su.webp jname="苏禹"]
 [chara_new name=yan storage=yan.webp jname="颜歆"]
 [chara_new name=shen storage=shen.webp jname="沈义"]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
+[chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yu storage=yu.webp jname="余筱玲"]
 [chara_new name=psych storage=psych.webp jname="心理医生"]
 

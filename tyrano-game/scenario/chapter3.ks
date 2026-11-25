@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 32;
+f.game_script_revision = 37;
 f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/coffee.webp","data/bgimage/fastfood.webp","data/bgimage/office.webp","data/bgimage/rain.webp","data/fgimage/li.webp","data/fgimage/liapprehensive.webp","data/fgimage/yanorganizing.webp","data/fgimage/chireviewing.webp","data/fgimage/xuecasual.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yanorganizing storage=yanorganizing.webp jname="颜歆"]
 [chara_new name=chireviewing storage=chireviewing.webp jname="迟欢"]

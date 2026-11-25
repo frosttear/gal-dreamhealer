@@ -1,10 +1,11 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 31;
+f.game_script_revision = 43;
 f.chapter_assets = ["data/bgimage/orphanage.webp", "data/bgimage/orphanagehall.webp", "data/bgimage/dreamstore.webp", "data/bgimage/dreamclass.webp", "data/bgimage/dreamclassfull.webp", "data/fgimage/bai.webp", "data/fgimage/chi.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yu.webp", "data/fgimage/yuresolute.webp", "data/fgimage/yuyudream.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyudream storage=yuyudream.webp jname="梦中余雨"]
+[chara_new name=yu storage=yu.webp jname="余筱玲"]
 [chara_face name=yu face=determined storage=yuresolute.webp]
 
 *beat1

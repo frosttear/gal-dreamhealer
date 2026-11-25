@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 35;
+f.game_script_revision = 40;
 f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=yuyu storage=yuyu.webp jname="余雨"]
 [chara_face name=yuyu face=tearful storage=yuyutearful.webp]

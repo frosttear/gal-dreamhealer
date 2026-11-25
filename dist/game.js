@@ -6,15 +6,15 @@ const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
   'chapter1.ks': 29,
-  'chapter2.ks': 18,
-  'chapter3.ks': 32,
+  'chapter2.ks': 42,
+  'chapter3.ks': 37,
   'chapter4.ks': 20,
-  'chapter5.ks': 33,
+  'chapter5.ks': 38,
   'chapter6.ks': 22,
-  'chapter7.ks': 31,
-  'chapter8.ks': 34,
-  'chapter9.ks': 35,
-  'chapter10.ks': 36,
+  'chapter7.ks': 43,
+  'chapter8.ks': 39,
+  'chapter9.ks': 40,
+  'chapter10.ks': 41,
   'chapter11.ks': 27,
   'chapter12.ks': 28
 };

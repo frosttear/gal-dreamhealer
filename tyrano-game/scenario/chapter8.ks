@@ -1,9 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 34;
+f.game_script_revision = 39;
 f.chapter_assets = ["data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/chisuspicious.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
+[chara_new name=xue storage=xue.webp jname="薛淼"]
 [chara_face name=xue face=casual storage=xuecasual.webp]
 [chara_new name=chi storage=chi.webp jname="迟欢"]
 [chara_face name=chi face=suspicious storage=chisuspicious.webp]
