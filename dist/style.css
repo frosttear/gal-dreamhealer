@@ -45,7 +45,7 @@ dialog::backdrop { background: #08080bd0; }
 .card p { margin: .4em 0; line-height: 1.5; }
 .card-open { margin-top: .5rem; }
 .portrait-gallery { margin-top: 1rem; }
-.portrait-locked {
+.portrait-locked, .scene-locked {
   display: grid;
   place-items: center;
   height: 115px;
@@ -143,4 +143,5 @@ dialog::backdrop { background: #08080bd0; }
 
 .scene-gallery { grid-template-columns: 1fr; }
 .scene-gallery figure { margin: 0; }
+.scene-locked { margin-bottom: 0; }
 .scene-gallery img { display: block; width: 100%; height: auto; margin-bottom: .5rem; }

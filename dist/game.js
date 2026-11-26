@@ -294,18 +294,22 @@ function showCatalog() {
     grid.classList.toggle('scene-gallery', category === '场景');
     if (category === '场景') {
       for (const [key, title] of sceneArt) {
-        if (!unlocked.has(key)) continue;
         const figure = document.createElement('figure');
         figure.className = 'card';
-        const img = document.createElement('img');
-        img.src = portraitUrl(key);
-        img.alt = title;
         const caption = document.createElement('figcaption');
-        caption.textContent = title;
-        figure.append(img, caption);
+        if (unlocked.has(key)) {
+          const img = document.createElement('img');
+          img.src = portraitUrl(key);
+          img.alt = title;
+          caption.textContent = title;
+          figure.append(img);
+        } else {
+          caption.className = 'scene-locked';
+          caption.textContent = '未解锁场景';
+        }
+        figure.append(caption);
         grid.append(figure);
       }
-      if (!grid.childElementCount) grid.textContent = '继续阅读以解锁场景画。';
       return;
     }
     for (const [key, [name, type, description, art]] of Object.entries(notes)) {
