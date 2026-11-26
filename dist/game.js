@@ -16,7 +16,7 @@ const scenarioRevisions = {
   'chapter9.ks': 41,
   'chapter10.ks': 42,
   'chapter11.ks': 28,
-  'chapter12.ks': 28
+  'chapter12.ks': 29
 };
 const covers = [
   ['dream', '血红之梦', 0],
@@ -65,11 +65,35 @@ function hasSave(kind) {
   }
 }
 
+const playbackButtons = { 'auto-play': 'auto', 'skip-play': 'skip' };
+const speedKey = 'dreamhealer.textSpeed';
+const savedSpeed = read(speedKey);
+if ([0, 12, 26, 42].includes(savedSpeed)) $('text-speed').value = String(savedSpeed);
+
+function applyTextSpeed() {
+  if (engine) engine.stat.ch_speed = Number($('text-speed').value);
+}
+
+function syncPlayback(available) {
+  const ready = Boolean(engine) && $('stage').getAttribute('aria-busy') === 'false';
+  $('text-speed').disabled = !ready;
+  for (const [id, mode] of Object.entries(playbackButtons)) {
+    $(id).disabled = !ready || !available;
+    $(id).setAttribute('aria-pressed', String(Boolean(engine?.stat['is_' + mode])));
+  }
+}
+
+function stopPlayback() {
+  engine?.setAuto(false);
+  engine?.setSkip(false);
+}
+
 function clearRuntime() {
   clearTimeout(bootTimeout);
   engine = undefined;
   frame?.remove();
   frame = undefined;
+  syncPlayback(false);
 }
 
 function showMenu(message = '') {
@@ -130,6 +154,14 @@ window.dreamhealer = {
     $('retry').hidden = true;
     $('status').textContent = '正在载入剧情…';
     engine = runtime.TYRANO.kag;
+    const playbackEngine = engine;
+    for (const mode of Object.values(playbackButtons)) {
+      for (const state of ['start', 'stop']) {
+        engine.on(mode + '-' + state, () => queueMicrotask(() => {
+          if (engine === playbackEngine) syncPlayback(!engine.stat.f.game_beat?.ended);
+        }));
+      }
+    }
     engine.on('storage-quicksave', () => {
       saving = false;
       $('save').disabled = false;
@@ -144,12 +176,16 @@ window.dreamhealer = {
 
   restored(beat) {
     $('stage').removeAttribute('data-restoring');
+    stopPlayback();
     if (beat) this.reached(beat);
     $('status').textContent = '已读取存档';
   },
 
   reached({ n, scene, discoveries, chapter = 1, ended = false }) {
     $('stage').setAttribute('aria-busy', 'false');
+    if (ended) stopPlayback();
+    applyTextSpeed();
+    syncPlayback(!ended);
     const [title, total] = chapters[chapter];
     $('chapter-name').textContent = title;
     $('progress').textContent = ended ? ' · 已完成' : ' · ' + n + ' / ' + total;
@@ -182,8 +218,10 @@ window.dreamhealer = {
 function restoreSave(kind) {
   const stage = $('stage');
   if (stage.hasAttribute('data-restoring')) return;
+  stopPlayback();
   stage.setAttribute('data-restoring', '');
   stage.setAttribute('aria-busy', 'true');
+  syncPlayback(false);
   for (const id of ['history', 'save', 'load']) $(id).disabled = true;
   $('status').textContent = '正在读取存档…';
   const runtime = frame.contentWindow;
@@ -407,12 +445,34 @@ $('resume').onclick = () => launch('auto');
 $('menu-load').onclick = () => launch('quick');
 $('menu-catalog').onclick = showCatalog;
 $('menu-credits').onclick = showCredits;
-$('catalog').onclick = showCatalog;
+$('catalog').onclick = () => {
+  stopPlayback();
+  showCatalog();
+};
 $('home').onclick = () => showMenu();
 $('retry').onclick = () => launch(launchMode);
-$('history').onclick = () => engine?.menu.displayLog();
+$('history').onclick = () => {
+  stopPlayback();
+  engine?.menu.displayLog();
+};
+$('text-speed').onchange = () => {
+  store(speedKey, Number($('text-speed').value));
+  applyTextSpeed();
+};
+for (const [id, mode] of Object.entries(playbackButtons)) {
+  $(id).onclick = () => {
+    if (!engine) return;
+    if (engine.stat['is_' + mode]) {
+      stopPlayback();
+    } else if (engine.key_mouse.util.canClick()) {
+      engine.key_mouse[mode]();
+    }
+    frame?.focus();
+  };
+}
 $('save').onclick = () => {
   if (!engine || saving) return;
+  stopPlayback();
   if (engine.stat.is_adding_text || engine.stat.is_wait) {
     $('status').textContent = '等当前台词显示完再存档。';
     return;

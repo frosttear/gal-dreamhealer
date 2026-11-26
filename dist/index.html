@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>梦境诊疗师</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=9">
-<script defer src="catalog.js?v=7"></script><script defer src="game.js?v=11"></script>
+<link rel="stylesheet" href="style.css?v=10">
+<script defer src="catalog.js?v=7"></script><script defer src="game.js?v=12"></script>
 </head>
 <body>
 <main id="main-menu" data-cover="dream" aria-labelledby="game-name">
@@ -30,7 +30,19 @@
     <nav aria-label="游戏菜单"><button id="catalog">图鉴</button><button id="history">回顾</button><button id="save">存档</button><button id="load">读档</button><button id="home">主界面</button></nav>
   </header>
   <div id="stage" aria-busy="true"></div>
-  <footer class="game-status"><span id="status" role="status"></span><button id="retry" type="button" hidden>重新加载</button></footer>
+  <footer class="game-status">
+    <nav class="playback" aria-label="播放控制">
+      <label for="text-speed">文字速度</label>
+      <select id="text-speed" disabled>
+        <option value="42">慢速</option>
+        <option value="26" selected>普通</option>
+        <option value="12">快速</option>
+        <option value="0">立即显示</option>
+      </select>
+      <button type="button" id="auto-play" aria-pressed="false" disabled>自动</button>
+      <button type="button" id="skip-play" aria-pressed="false" disabled>快进</button>
+    </nav>
+    <span id="status" role="status"></span><button id="retry" type="button" hidden>重新加载</button></footer>
 </main>
 <dialog id="overlay"><div class="dialog-head"><h2 id="dialog-title"></h2><form method="dialog"><button>关闭</button></form></div><div id="dialog-content"></div></dialog>
 </body>

@@ -145,3 +145,8 @@ dialog::backdrop { background: #08080bd0; }
 .scene-gallery figure { margin: 0; }
 .scene-locked { margin-bottom: 0; }
 .scene-gallery img { display: block; width: 100%; height: auto; margin-bottom: .5rem; }
+
+.playback { align-items: center; }
+.playback label { font-size: .9rem; }
+.playback select { font: inherit; color: inherit; background: #202128; border: 1px solid #55505a; border-radius: 4px; padding: .4em; }
+.playback button[aria-pressed="true"] { border-color: #f0a393; background: #3a2830; }
