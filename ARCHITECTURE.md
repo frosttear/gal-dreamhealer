@@ -8,8 +8,8 @@
 | `dist/game.js` | 原生 JavaScript，iframe 生命周期、导航、运行状态、封面和浏览器记录 |
 | `dist/catalog.js`、`dist/assets/` | 图鉴数据与 WebP 源资产；角色详情的立绘关系和剧情解锁条件维护在 `dist/game.js` |
 | `tyrano-game/scenario/` | TyranoScript 剧本。first.ks 启动，make.ks 读档钩子，chapter1–12 主线，rain-scene.ks 公用回忆演出 |
-| `tyrano-game/system/backlog.html` | 引擎回顾模板 |
-| `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与回顾模板，注入配置，并在 `dist/version.txt` 写入提交号和构建时间 |
+| `tyrano-game/system/backlog.html`、`load.html` | 引擎回顾和读档模板 |
+| `scripts/build-tyrano.py` | Python 3 标准库构建。校验 SDK，复制剧本、素材与界面模板，注入配置，并在 `dist/version.txt` 写入提交号和构建时间 |
 | `dist/engine/`、`.tyrano-preview/` | 忽略的生成引擎和本地预览目录 |
 | `.github/workflows/pages.yml` | main 推送或手动触发构建与 GitHub Pages 发布 |
 

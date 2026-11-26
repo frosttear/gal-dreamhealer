@@ -1,5 +1,6 @@
 ; TyranoScript runs this hook when restoring a save.
 [sysview type=backlog storage="./data/system/backlog.html"]
+[sysview type=load storage="./data/system/load.html"]
 [message_config ch_speed_in_click=0 effect_speed_in_click=0ms]
 [delay speed=26]
 [iscript]

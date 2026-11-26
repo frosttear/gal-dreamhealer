@@ -24,7 +24,8 @@ def install_game(project):
     for scenario in source.glob("*.ks"):
         shutil.copyfile(scenario, project / "data/scenario" / scenario.name)
 
-    shutil.copyfile(ROOT / "tyrano-game/system/backlog.html", project / "data/system/backlog.html")
+    for name in ("backlog.html", "load.html"):
+        shutil.copyfile(ROOT / "tyrano-game/system" / name, project / "data/system" / name)
 
     scenarios = "\n".join(path.read_text(encoding="utf-8") for path in source.glob("chapter*.ks"))
     for folder, name in sorted(set(re.findall(r"data/(bgimage|fgimage)/([a-z]+\.webp)", scenarios))):

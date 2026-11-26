@@ -1,0 +1,90 @@
+<style>
+  #dreamhealer-load {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    box-sizing: border-box;
+    padding: 34px 56px;
+    background: linear-gradient(140deg, #261820ef, #0b0d14f5 65%);
+    color: #faf4eb;
+    font-family: system-ui, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  }
+  #dreamhealer-load .load-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    background: #15161f;
+    border: 1px solid #66515a;
+    border-top: 3px solid #ce786f;
+    border-radius: 6px;
+  }
+  #dreamhealer-load header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 30px;
+    border-bottom: 1px solid #49414b;
+  }
+  #dreamhealer-load h2 {
+    margin: 0;
+    font: 700 38px "Noto Serif CJK SC", "Songti SC", serif;
+  }
+  #dreamhealer-load .area_save_list {
+    position: static;
+    flex: 1;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 16px 30px 24px;
+    overflow-y: auto;
+    touch-action: pan-y;
+  }
+  #dreamhealer-load button {
+    background: #25232d;
+    color: inherit;
+    border: 1px solid #66515a;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font: inherit;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #dreamhealer-load button:not(:disabled):hover,
+  #dreamhealer-load button:focus-visible {
+    border-color: #f0a393;
+    background: #3a2830;
+  }
+  #dreamhealer-load .load-slot {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+  #dreamhealer-load .load-slot:disabled { opacity: .6; cursor: default; }
+  #dreamhealer-load .load-date { color: #f1c2ae; font-size: 20px; }
+</style>
+<div id="dreamhealer-load">
+  <section class="load-panel" aria-labelledby="dreamhealer-load-title">
+    <header>
+      <h2 id="dreamhealer-load-title">读取存档</h2>
+      <button type="button" class="menu_close">关闭</button>
+    </header>
+    <div class="area_save_list">
+      {{for array_save}}
+        <button type="button" class="load-slot save_display_area" data-num="{{>num}}" {{if !save_date}}disabled{{/if}}>
+          {{if save_date}}
+            <span>{{>title}}</span>
+            <span class="load-date">{{>save_date}}</span>
+          {{else}}
+            <span>空存档</span>
+          {{/if}}
+        </button>
+      {{/for}}
+    </div>
+  </section>
+</div>
