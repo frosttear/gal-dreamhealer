@@ -1,7 +1,7 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 43;
-f.chapter_assets = ["data/bgimage/orphanage.webp", "data/bgimage/orphanagehall.webp", "data/bgimage/dreamstore.webp", "data/bgimage/dreamclass.webp", "data/bgimage/dreamclassfull.webp", "data/fgimage/bai.webp", "data/fgimage/chi.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yu.webp", "data/fgimage/yuresolute.webp", "data/fgimage/yuyudream.webp"];
+f.game_script_revision = 44;
+f.chapter_assets = ["data/bgimage/cgclassdoor.webp","data/bgimage/orphanage.webp", "data/bgimage/orphanagehall.webp", "data/bgimage/dreamstore.webp", "data/bgimage/dreamclass.webp", "data/bgimage/dreamclassfull.webp", "data/fgimage/bai.webp", "data/fgimage/chi.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yu.webp", "data/fgimage/yuresolute.webp", "data/fgimage/yuyudream.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yuyudream storage=yuyudream.webp jname="梦中余雨"]
@@ -296,9 +296,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat16
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yu face=determined left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgclassdoor.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n": 16, "scene": "dreamclass", "discoveries": [], "chapter": 7};
+f.game_beat = {"n":16,"scene":"cgclassdoor","discoveries":["cgclassdoor"],"chapter":7};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="前门的身影"]
@@ -311,6 +311,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat17
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=dreamclass.webp time=140 wait=true position=center]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 17, "scene": "dreamclass", "discoveries": [], "chapter": 7};

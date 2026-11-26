@@ -1,7 +1,7 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 40;
-f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
+f.game_script_revision = 41;
+f.chapter_assets = ["data/bgimage/cgdoorplea.webp","data/bgimage/yuapartment.webp", "data/bgimage/orphanage.webp", "data/bgimage/rain.webp", "data/fgimage/shen.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yuyu.webp", "data/fgimage/yuyutearful.webp", "data/fgimage/yuyufearful.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
@@ -53,9 +53,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat3
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yuyu face=tearful left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgdoorplea.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n": 3, "scene": "yuapartment", "discoveries": [], "chapter": 9};
+f.game_beat = {"n":3,"scene":"cgdoorplea","discoveries":["cgdoorplea"],"chapter":9};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="女孩开口"]

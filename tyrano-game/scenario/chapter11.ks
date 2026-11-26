@@ -4,8 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 27;
-f.chapter_assets = ["data/bgimage/hospitalroom.webp", "data/bgimage/facelesshall.webp", "data/bgimage/mirrorhall.webp", "data/bgimage/mirrorward.webp", "data/bgimage/interview.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yanfocused.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/psychdespair.webp", "data/fgimage/psychwary.webp", "data/fgimage/psychawake.webp", "data/fgimage/faceless.webp"];
+f.game_script_revision = 28;
+f.chapter_assets = ["data/bgimage/cgmirror.webp","data/bgimage/hospitalroom.webp", "data/bgimage/facelesshall.webp", "data/bgimage/mirrorhall.webp", "data/bgimage/mirrorward.webp", "data/bgimage/interview.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/yanfocused.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/psychdespair.webp", "data/fgimage/psychwary.webp", "data/fgimage/psychawake.webp", "data/fgimage/faceless.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=su storage=su.webp jname="苏禹"]
@@ -320,10 +320,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat17
 [cm]
 [chara_hide_all time=0 wait=true]
-[bg storage=mirrorward.webp time=180 wait=true position=center]
-[chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgmirror.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n": 17, "scene": "mirrorward", "discoveries": [], "chapter": 11};
+f.game_beat = {"n":17,"scene":"cgmirror","discoveries":["cgmirror"],"chapter":11};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="镜子隔开追兵"]
@@ -337,6 +336,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat18
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=mirrorward.webp time=140 wait=true position=center]
 [chara_show name=yan storage=yan.webp left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 18, "scene": "mirrorward", "discoveries": [], "chapter": 11};

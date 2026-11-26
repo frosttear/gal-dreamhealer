@@ -1,7 +1,7 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 39;
-f.chapter_assets = ["data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/chisuspicious.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp"];
+f.game_script_revision = 40;
+f.chapter_assets = ["data/bgimage/cgwakeup.webp","data/bgimage/policecar.webp", "data/bgimage/dreamclassfull.webp", "data/bgimage/blooddream.webp", "data/bgimage/yuapartment.webp", "data/fgimage/shen.webp", "data/fgimage/chi.webp", "data/fgimage/chisuspicious.webp", "data/fgimage/su.webp", "data/fgimage/yan.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=xue storage=xue.webp jname="薛淼"]
@@ -242,10 +242,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat13
 [cm]
 [chara_hide_all time=0 wait=true]
-[bg storage=yuapartment.webp time=140 wait=true position=center]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgwakeup.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n": 13, "scene": "yuapartment", "discoveries": [], "chapter": 8};
+f.game_beat = {"n":13,"scene":"cgwakeup","discoveries":["cgwakeup"],"chapter":8};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="现实 · 强制唤醒"]
@@ -258,6 +257,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat14
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=yuapartment.webp time=140 wait=true position=center]
 [chara_show name=chi left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n": 14, "scene": "yuapartment", "discoveries": [], "chapter": 8};

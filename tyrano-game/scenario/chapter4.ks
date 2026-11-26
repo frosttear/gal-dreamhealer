@@ -1,7 +1,7 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 20;
-f.chapter_assets = ["data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
+f.game_script_revision = 21;
+f.chapter_assets = ["data/bgimage/cgdoll.webp","data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yanexamining storage=yanexamining.webp jname="颜歆"]
@@ -183,17 +183,15 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat11
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgdoll.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n":11,"scene":"coffee","discoveries":[],"chapter":4};
+f.game_beat = {"n":11,"scene":"cgdoll","discoveries":["cgdoll"],"chapter":4};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="玩偶里的发现"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 【苏禹】[r]
 拆开以后，旁边的护工转身就吐了。我只看清一样东西，像是左手小指的指骨。[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 颜歆搁下杯子。她那时刚从厨房跑上楼，楼梯都还没喘匀。[p]
 【颜歆】[r]
 我本来要告诉他冰箱里的事。刚张嘴，就被屋里的味道呛得说不出话。[p]
@@ -201,6 +199,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat12
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=coffee.webp time=140 wait=true position=center]
 [chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":12,"scene":"coffee","discoveries":[],"chapter":4};

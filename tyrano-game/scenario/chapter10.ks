@@ -4,8 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 41;
-f.chapter_assets = ["data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.webp", "data/bgimage/mentalward.webp", "data/bgimage/station.webp", "data/fgimage/su.webp", "data/fgimage/suworried.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yu.webp", "data/fgimage/psych.webp"];
+f.game_script_revision = 42;
+f.chapter_assets = ["data/bgimage/cgstation.webp","data/bgimage/yuapartment.webp", "data/bgimage/mentaloffice.webp", "data/bgimage/mentalward.webp", "data/bgimage/station.webp", "data/fgimage/su.webp", "data/fgimage/suworried.webp", "data/fgimage/yan.webp", "data/fgimage/shen.webp", "data/fgimage/xue.webp", "data/fgimage/xuecasual.webp", "data/fgimage/yu.webp", "data/fgimage/psych.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=su storage=su.webp jname="苏禹"]
@@ -512,10 +512,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat27
 [cm]
 [chara_hide_all time=0 wait=true]
-[bg storage=station.webp time=180 wait=true position=center]
-[chara_show name=shen left=640 top=55 height=510 time=0 wait=true]
+[bg storage=cgstation.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n": 27, "scene": "station", "discoveries": ["stationwoman"], "chapter": 10};
+f.game_beat = {"n":27,"scene":"cgstation","discoveries":["stationwoman","cgstation"],"chapter":10};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="扬城火车站"]
@@ -528,6 +527,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 
 *ending
 [cm]
+[bg storage=station.webp time=140 wait=true position=center]
 [iscript]
 f.game_beat = {"n": 27, "scene": "station", "discoveries": [], "chapter": 10, "ended": true};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();

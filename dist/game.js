@@ -6,16 +6,16 @@ const coverMigrationKey = 'dreamhealer.chapter1.coverMilestone.v1';
 const savePrefix = 'dreamhealer-tyrano_tyrano_';
 const scenarioRevisions = {
   'chapter1.ks': 31,
-  'chapter2.ks': 42,
+  'chapter2.ks': 43,
   'chapter3.ks': 38,
-  'chapter4.ks': 20,
+  'chapter4.ks': 21,
   'chapter5.ks': 39,
   'chapter6.ks': 23,
-  'chapter7.ks': 43,
-  'chapter8.ks': 39,
-  'chapter9.ks': 40,
-  'chapter10.ks': 41,
-  'chapter11.ks': 27,
+  'chapter7.ks': 44,
+  'chapter8.ks': 40,
+  'chapter9.ks': 41,
+  'chapter10.ks': 42,
+  'chapter11.ks': 28,
   'chapter12.ks': 28
 };
 const covers = [
@@ -264,9 +264,17 @@ const characterArt = {
 
 const sceneArt = [
   ['cgshenxiaoling', '警戒线外'],
+  ['cgbistro', '蒸汽时代 · 包间门外'],
   ['cgyanreviewing', '舒颜咖啡 · 研判'],
+  ['cgdoll', '玩偶里的发现'],
   ['cgcleaver', '尽头的杂物间'],
-  ['cgloopstairs', '循环楼梯']
+  ['cgloopstairs', '循环楼梯'],
+  ['cgclassdoor', '教室前门'],
+  ['cgwakeup', '强制唤醒'],
+  ['cgdoorplea', '女孩开口'],
+  ['cgstation', '扬城火车站'],
+  ['cgmirror', '镜子隔开追兵'],
+  ['cgchip', '合照夹层']
 ];
 
 function showCatalog() {

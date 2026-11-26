@@ -1,7 +1,7 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 42;
-f.chapter_assets = ["data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/chenthoughtful.webp","data/fgimage/qin.webp","data/fgimage/qinconcerned.webp","data/fgimage/xue.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
+f.game_script_revision = 43;
+f.chapter_assets = ["data/bgimage/cgbistro.webp","data/bgimage/bistro.webp","data/bgimage/hall.webp","data/bgimage/interview.webp","data/fgimage/chi.webp","data/fgimage/chen.webp","data/fgimage/chenthoughtful.webp","data/fgimage/qin.webp","data/fgimage/qinconcerned.webp","data/fgimage/xue.webp","data/fgimage/xueinterview.webp","data/fgimage/xueanxious.webp","data/fgimage/yansmile.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=chi storage=chi.webp jname="迟欢"]
@@ -258,10 +258,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 
 *beat10
 [cm]
-[chara_hide name=chen time=0 wait=true pos_mode=false]
-[chara_show name=yan storage=yansmile.webp left=640 top=55 height=510 time=0 wait=true]
+[chara_hide_all time=0 wait=true]
+[bg storage=cgbistro.webp time=140 wait=true position=center]
 [iscript]
-f.game_beat = {"n":10,"scene":"bistro","discoveries":["deep35"],"chapter":2};
+f.game_beat = {"n":10,"scene":"cgbistro","discoveries":["deep35","cgbistro"],"chapter":2};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
 [autosave title="威士忌的暗号"]
@@ -269,12 +269,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 墙里的齿轮咬在一起。银漆包厢门上安了个转轮，像是银行金库。[p]
 【颜歆】[r]
 老苏，店里什么时候卖威士忌了？陈姐不是不喝酒吗？[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 【苏禹】[r]
 进包间聊。[p]
-[chara_hide_all time=0 wait=true]
-[chara_show name=yan storage=yansmile.webp left=640 top=55 height=510 time=0 wait=true]
 三十五指入梦时用的深眠35，三层是要下探的梦境层数。颜歆在门里听明白了，吐了吐舌头。[p]
 【颜歆】[r]
 三水哥，好久不见。[p]
@@ -282,6 +278,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat11
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=bistro.webp time=140 wait=true position=center]
 [chara_show name=xue face=interview left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":11,"scene":"bistro","discoveries":["alias"],"chapter":2};
