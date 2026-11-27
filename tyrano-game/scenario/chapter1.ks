@@ -4,8 +4,8 @@
 [delay speed=26]
 [chara_config pos_mode=false]
 [iscript]
-f.game_script_revision = 31;
-f.chapter_assets = ["data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/bgimage/cgshenxiaoling.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
+f.game_script_revision = 32;
+f.chapter_assets = ["data/bgm/ch01-police-line.mp3","data/sound/ch01-yu-001.mp3","data/sound/ch01-shen-001.mp3","data/sound/ch01-yu-002.mp3","data/bgimage/dream.webp","data/bgimage/case.webp","data/bgimage/coffee.webp","data/fgimage/yu.webp","data/fgimage/yushaken.webp","data/fgimage/shen.webp","data/fgimage/shengentle.webp","data/bgimage/cgshenxiaoling.webp","data/fgimage/bai.webp","data/fgimage/xue.webp","data/fgimage/xuecasual.webp","data/fgimage/yan.webp","data/fgimage/su.webp","data/fgimage/yucold.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [chara_new name=yu storage="yu.webp" jname="余筱玲"]
@@ -200,22 +200,33 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [iscript]
 window.parent.dreamhealer.reached(f.game_beat);
 [endscript]
+[if exp="!TYRANO.kag.stat.is_skip"]
+[fadeinbgm storage=ch01-police-line.mp3 time=900 loop=true volume=18]
+[endif]
+[voconfig sebuf=2 waittime=240]
 女孩捂着嘴，肩膀不住发抖。见沈义走近，她慢慢松开手，咬住下唇。[p]
+[playse storage=ch01-yu-001.mp3 buf=2 volume=86]
 【余筱玲】[r]
 叔叔，我想跟你们走。[p]
+[stopse buf=2]
 [chara_hide name=yu time=0 wait=true]
 [bg storage=cgshenxiaoling.webp time=140 wait=true position=center]
 [eval exp="f.game_beat.scene = 'cgshenxiaoling'"]
 [eval exp="window.parent.dreamhealer.unlock?.('cgshenxiaoling')"]
 沈义蹲了下来，和她的视线齐平，轻轻摸了摸她的头。[p]
+[playse storage=ch01-shen-001.mp3 buf=2 volume=86]
 【沈义】[r]
 你叫什么名字啊？[p]
+[stopse buf=2]
+[playse storage=ch01-yu-002.mp3 buf=2 volume=86]
 【余筱玲】[r]
 余筱玲。[p]
+[stopse buf=2]
 她的下唇还留着一排浅浅的齿印。[p]
 
 *beat11
 [cm]
+[fadeoutbgm time=650]
 [bg storage=case.webp time=140 wait=true position=center]
 [chara_show name=shen face=gentle left=640 top=55 height=510 time=0 wait=true]
 [iscript]

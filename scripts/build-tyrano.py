@@ -31,6 +31,10 @@ def install_game(project):
     for folder, name in sorted(set(re.findall(r"data/(bgimage|fgimage)/([a-z]+\.webp)", scenarios))):
         shutil.copyfile(ROOT / "dist/assets" / name, project / "data" / folder / name)
 
+    audio = re.findall(r"data/(bgm|sound)/([a-z0-9-]+\.mp3)", scenarios)
+    for folder, name in sorted(set(audio)):
+        shutil.copyfile(ROOT / "dist/assets" / folder / name, project / "data" / folder / name)
+
     config = project / "data/system/Config.tjs"
     settings = config.read_text(encoding="utf-8-sig")
     settings = settings.replace(";projectID = tyranoproject;", ";projectID = dreamhealer-tyrano;")
