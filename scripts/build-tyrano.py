@@ -32,6 +32,9 @@ def install_game(project):
         shutil.copyfile(ROOT / "dist/assets" / name, project / "data" / folder / name)
 
     audio = re.findall(r"data/(bgm|sound)/([a-z0-9-]+\.mp3)", scenarios)
+    # Copy per-page voice clips without putting the full chapter in the preload list.
+    voice_clips = re.findall(r'(?m)^\[playse\s+storage=([a-z0-9-]+\.mp3)(?=\s|\])', scenarios)
+    audio.extend(("sound", name) for name in voice_clips)
     for folder, name in sorted(set(audio)):
         shutil.copyfile(ROOT / "dist/assets" / folder / name, project / "data" / folder / name)
 
