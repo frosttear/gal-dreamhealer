@@ -18,23 +18,34 @@ const scenarioRevisions = {
   'chapter11.ks': 28,
   'chapter12.ks': 29
 };
+// Indexed by completed chapter. The first entry is the opening cover.
 const covers = [
-  ['dream', '血红之梦', 0],
-  ['case', '扬城疑案', 4],
-  ['coffee', '舒颜咖啡', 8]
+  ['dream', '血红之梦', 'title-dream'],
+  ['cgshenxiaoling', '警戒线外'],
+  ['cgbistro', '蒸汽时代 · 包间门外'],
+  ['cgyanreviewing', '舒颜咖啡 · 研判'],
+  ['case', '扬城疑案', 'title-case'],
+  ['cgcleaver', '尽头的杂物间'],
+  ['cgloopstairs', '循环楼梯'],
+  ['cgclassdoor', '教室前门'],
+  ['coffee', '舒颜咖啡', 'title-coffee'],
+  ['cgdoorplea', '女孩开口'],
+  ['cgstation', '扬城火车站'],
+  ['cgmirror', '镜子隔开追兵'],
+  ['cgchip', '合照夹层']
 ];
 const chapters = { 1: ['第一章', 16], 2: ['第二章', 13], 3: ['第三章', 15], 4: ['第四章', 20], 5: ['第五章', 22], 6: ['第六章', 24], 7: ['第七章', 21], 8: ['第八章', 26], 9: ['第九章', 28], 10: ['第十章', 27], 11: ['第十一章', 28], 12: ['第十二章', 31] };
 const unlocked = new Set(read(unlockKey) ?? []);
 const hasMigratedCover = read(coverMigrationKey) === '1';
+const storedCoverIndex = covers.findIndex(([scene]) => scene === read(coverKey));
 const legacyCoverIndex = !hasMigratedCover
-  ? unlocked.has('yan') ? 2 : unlocked.has('shen') ? 1 : 0
+  ? unlocked.has('yan') ? 8 : unlocked.has('shen') ? 4 : 0
   : 0;
-let coverIndex = Math.max(
-  0,
-  covers.findIndex(([scene]) => scene === read(coverKey)),
-  legacyCoverIndex
-);
-if (!hasMigratedCover) store(coverMigrationKey, '1');
+let coverIndex = Math.max(0, storedCoverIndex, legacyCoverIndex);
+if (!hasMigratedCover) {
+  if (legacyCoverIndex > Math.max(0, storedCoverIndex)) store(coverKey, covers[coverIndex][0]);
+  store(coverMigrationKey, '1');
+}
 let frame;
 let engine;
 let bootTimeout;
@@ -99,11 +110,11 @@ function clearRuntime() {
 function showMenu(message = '') {
   clearRuntime();
   saving = false;
-  const [scene, label] = covers[coverIndex];
+  const [scene, label, art = scene] = covers[coverIndex];
   $('main-menu').dataset.cover = scene;
   $('menu-scene').textContent = label;
   $('menu-scene').hidden = scene === 'coffee';
-  $('cover').src = 'assets/title-' + scene + '.webp';
+  $('cover').src = 'assets/' + art + '.webp';
   const manualSave = hasSave('quick');
   const canResume = hasSave('auto') || manualSave;
   $('resume').hidden = !canResume;
@@ -198,10 +209,9 @@ window.dreamhealer = {
       store(unlockKey, [...unlocked]);
       $('status').textContent ||= '图鉴已更新';
     }
-    const reachedCover = covers.findIndex(([, , milestone]) => milestone === chapter && ended);
-    if (reachedCover > coverIndex) {
-      coverIndex = reachedCover;
-      store(coverKey, covers[reachedCover][0]);
+    if (ended && chapter > coverIndex && covers[chapter]) {
+      coverIndex = chapter;
+      store(coverKey, covers[coverIndex][0]);
     }
   },
 
