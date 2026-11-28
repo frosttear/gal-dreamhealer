@@ -11,9 +11,9 @@ const scenarioRevisions = {
   'chapter4.ks': 23,
   'chapter5.ks': 40,
   'chapter6.ks': 24,
-  'chapter7.ks': 44,
-  'chapter8.ks': 40,
-  'chapter9.ks': 41,
+  'chapter7.ks': 45,
+  'chapter8.ks': 41,
+  'chapter9.ks': 42,
   'chapter10.ks': 42,
   'chapter11.ks': 28,
   'chapter12.ks': 29
