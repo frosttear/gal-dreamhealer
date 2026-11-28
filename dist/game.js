@@ -8,7 +8,7 @@ const scenarioRevisions = {
   'chapter1.ks': 35,
   'chapter2.ks': 44,
   'chapter3.ks': 39,
-  'chapter4.ks': 22,
+  'chapter4.ks': 23,
   'chapter5.ks': 40,
   'chapter6.ks': 24,
   'chapter7.ks': 44,
@@ -314,7 +314,7 @@ const sceneArt = [
   ['cgshenxiaoling', '警戒线外'],
   ['cgbistro', '蒸汽时代 · 包间门外'],
   ['cgyanreviewing', '舒颜咖啡 · 研判'],
-  ['cgdoll', '玩偶里的发现'],
+  ['cgdoll', '玩偶里的发现', 'cgdollconnector'],
   ['cgcleaver', '尽头的杂物间'],
   ['cgloopstairs', '循环楼梯'],
   ['cgclassdoor', '教室前门'],
@@ -341,13 +341,13 @@ function showCatalog() {
     });
     grid.classList.toggle('scene-gallery', category === '场景');
     if (category === '场景') {
-      for (const [key, title] of sceneArt) {
+      for (const [key, title, art = key] of sceneArt) {
         const figure = document.createElement('figure');
         figure.className = 'card';
         const caption = document.createElement('figcaption');
         if (unlocked.has(key)) {
           const img = document.createElement('img');
-          img.src = portraitUrl(key);
+          img.src = portraitUrl(art);
           img.alt = title;
           caption.textContent = title;
           figure.append(img);

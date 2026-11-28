@@ -1,11 +1,10 @@
 [chara_hide_all time=0 wait=true]
 [iscript]
-f.game_script_revision = 22;
-f.chapter_assets = ["data/bgimage/cgdoll.webp","data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/yanexamining.webp","data/fgimage/shen.webp"];
+f.game_script_revision = 23;
+f.chapter_assets = ["data/bgimage/cgdollconnector.webp","data/bgimage/coffee.webp","data/bgimage/orphanage.webp","data/fgimage/qin.webp","data/fgimage/su.webp","data/fgimage/yan.webp","data/fgimage/shen.webp"];
 [endscript]
 [preload storage=&f.chapter_assets wait=false]
 [voconfig sebuf=2 waittime=240]
-[chara_new name=yanexamining storage=yanexamining.webp jname="颜歆"]
 
 *beat1
 [cm]
@@ -156,10 +155,10 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="楼梯间的女孩"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [if exp="!TYRANO.kag.stat.is_skip"]
-[eval exp='f.beat_voice_assets = ["data/sound/ch04-edge-su-008.mp3","data/sound/ch04-edge-su-009.mp3"]']
+[eval exp='f.beat_voice_assets = ["data/sound/ch04-edge-su-008-r2.mp3","data/sound/ch04-edge-su-009.mp3"]']
 [preload storage=&f.beat_voice_assets wait=false]
 [endif]
-[playse storage=ch04-edge-su-008.mp3 buf=2 volume=86]
+[playse storage=ch04-edge-su-008-r2.mp3 buf=2 volume=86]
 【苏禹】[r]
 她叫穆雨霁。抱着只充气的泰迪熊，棕漆都磨光了，只在胳膊和腿边剩一点。[p]
 [stopse buf=2]
@@ -270,12 +269,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat11
 [cm]
 [chara_hide_all time=0 wait=true]
-[bg storage=cgdoll.webp time=140 wait=true position=center]
+[bg storage=coffee.webp time=140 wait=true position=center]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [iscript]
-f.game_beat = {"n":11,"scene":"cgdoll","discoveries":["cgdoll"],"chapter":4};
+f.game_beat = {"n":11,"scene":"coffee","discoveries":[],"chapter":4};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [endscript]
-[autosave title="玩偶里的发现"]
+[autosave title="拆开泰迪熊"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [if exp="!TYRANO.kag.stat.is_skip"]
 [eval exp='f.beat_voice_assets = ["data/sound/ch04-edge-su-018.mp3","data/sound/ch04-edge-yan-002.mp3"]']
@@ -286,6 +286,8 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 拆开以后，旁边的护工转身就吐了。我只看清一样东西，像是左手小指的指骨。[p]
 [stopse buf=2]
 颜歆搁下杯子。她那时刚从厨房跑上楼，楼梯都还没喘匀。[p]
+[chara_hide_all time=0 wait=true]
+[chara_show name=yan left=640 top=55 height=510 time=0 wait=true]
 [playse storage=ch04-edge-yan-002.mp3 buf=2 volume=86]
 【颜歆】[r]
 我本来要告诉他冰箱里的事。刚张嘴，就被屋里的味道呛得说不出话。[p]
@@ -342,7 +344,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat14
 [cm]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yanexamining left=640 top=40 height=590 time=0 wait=true]
+[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":14,"scene":"coffee","discoveries":["portable"],"chapter":4};
 f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
@@ -353,14 +355,13 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [eval exp='f.beat_voice_assets = ["data/sound/ch04-edge-su-021.mp3","data/sound/ch04-edge-yan-005.mp3","data/sound/ch04-edge-yan-006.mp3"]']
 [preload storage=&f.beat_voice_assets wait=false]
 [endif]
-[chara_hide_all time=0 wait=true]
-[chara_show name=su left=640 top=55 height=510 time=0 wait=true]
 [playse storage=ch04-edge-su-021.mp3 buf=2 volume=86]
 【苏禹】[r]
 离开的时候，我带走了一样东西。[p]
 [stopse buf=2]
 [chara_hide_all time=0 wait=true]
-[chara_show name=yanexamining left=640 top=40 height=590 time=0 wait=true]
+[bg storage=cgdollconnector.webp time=140 wait=true position=center]
+[eval exp="f.game_beat.scene = 'cgdollconnector'; window.parent.dreamhealer.unlock('cgdoll')"]
 [playse storage=ch04-edge-yan-005.mp3 buf=2 volume=86]
 【颜歆】[r]
 黄英送的洋娃娃。我拆开摸过，里面藏着一个便携式入梦连接器。[p]
@@ -373,6 +374,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 *beat15
 [cm]
 [chara_hide_all time=0 wait=true]
+[bg storage=coffee.webp time=140 wait=true position=center]
 [chara_show name=qin left=640 top=55 height=510 time=0 wait=true]
 [iscript]
 f.game_beat = {"n":15,"scene":"coffee","discoveries":[],"chapter":4};
