@@ -287,7 +287,7 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 [autosave title="两位余雨"]
 [eval exp="window.parent.dreamhealer.reached(f.game_beat)"]
 [if exp="!TYRANO.kag.stat.is_skip"]
-[eval exp='f.beat_voice_assets = ["data/sound/ch09-edge-yan-001.mp3","data/sound/ch09-edge-yan-002.mp3"]']
+[eval exp='f.beat_voice_assets = ["data/sound/ch09-edge-yan-001.mp3","data/sound/ch09-edge-yan-002-r2.mp3"]']
 [preload storage=&f.beat_voice_assets wait=false]
 [endif]
 [playse storage=ch09-edge-yan-001.mp3 buf=2 volume=86]
@@ -295,9 +295,9 @@ f.game_backlog = TYRANO.kag.variable.tf.system.backlog.slice();
 会不会就像三水哥说的？这个孩子原本叫穆雨霁，现在用余雨的名字过日子。[p]
 [stopse buf=2]
 颜歆把手收了回来，往筱玲那边看了一眼。[p]
-[playse storage=ch09-edge-yan-002.mp3 buf=2 volume=86]
+[playse storage=ch09-edge-yan-002-r2.mp3 buf=2 volume=86]
 【颜歆】[r]
-她还睡着。她到底知不知道，我们现在也问不出来。[p]
+她还睡着呢。她到底知不知道，我们现在也问不出来。[p]
 [stopse buf=2]
 
 *beat13
