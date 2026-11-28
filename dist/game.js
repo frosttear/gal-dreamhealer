@@ -14,9 +14,9 @@ const scenarioRevisions = {
   'chapter7.ks': 45,
   'chapter8.ks': 41,
   'chapter9.ks': 42,
-  'chapter10.ks': 42,
-  'chapter11.ks': 28,
-  'chapter12.ks': 29
+  'chapter10.ks': 43,
+  'chapter11.ks': 29,
+  'chapter12.ks': 30
 };
 // Indexed by completed chapter. The first entry is the opening cover.
 const covers = [
